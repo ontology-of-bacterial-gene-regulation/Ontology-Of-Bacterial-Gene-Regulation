@@ -77,9 +77,23 @@ imports/%_terms_combined.txt: seed.txt
 all_imports: $(IMPORTS_OWL)
 
 # Use ROBOT, driven entirely by terms lists NOT from source ontology
-imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
-	$(ROBOT) extract -i $< -T imports/$*_terms_combined.txt --method BOT -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/%_import.owl
+# imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
+# 	$(ROBOT) extract -i $< -T imports/$*_terms_combined.txt --method BOT -O $(BASE)/$@ -o $@
+# .PRECIOUS: imports/%_import.owl
+
+imports/bfo_import.owl: mirror/bfo.owl imports/bfo_terms.txt
+	$(ROBOT) extract -i $< -T imports/bfo_terms.txt --method BOT -O $(BASE)/$@ -o $@
+.PRECIOUS: imports/bfo_import.owl
+
+imports/ogg_import.owl: mirror/ogg.owl imports/ogg_terms.txt imports/ogg_upper_terms.txt
+	$(ROBOT) extract -i $< --method MIREOT -U imports/ogg_upper_terms.txt -L imports/ogg_terms.txt -O $(BASE)/$@ -o $@
+.PRECIOUS: imports/ogg_import.owl
+
+imports/mso_import.owl: mirror/mso.owl imports/mso_terms.txt imports/mso_upper_terms.txt
+	$(ROBOT) merge -i $< filter -T imports/mso_upper_terms.txt --select "self descendants annotations" \
+	extract --method BOT -T imports/mso_terms.txt -O $(BASE)/$@ -o $@
+.PRECIOUS: imports/mso_import.owl
+
 
 # convert imports to obo.
 # this can be useful for spot-checks and diffs.
