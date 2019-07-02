@@ -7,6 +7,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:chebi="http://purl.obolibrary.org/obo/chebi/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/prok/imports/bfo_import.owl"/>
@@ -426,6 +427,48 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/chebi/charge -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi/charge"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/chebi/formula -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi/formula"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/chebi/inchi -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi/inchi"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/chebi/inchikey -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi/inchikey"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/chebi/mass -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi/mass"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/chebi/monoisotopicmass -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi/monoisotopicmass"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/chebi/smiles -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi/smiles"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
@@ -454,7 +497,9 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">database_cross_reference</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -511,6 +556,12 @@
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_related_synonym</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
     
 
 
@@ -576,6 +627,106 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:label>has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000016 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000016">
+        <rdfs:label>is realized in functional conformation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000017 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000017">
+        <rdfs:label>has binding transcription factor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000018 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000018">
+        <rdfs:label>has effector</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000019 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000019">
+        <rdfs:label>has target TFBS</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000023 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000023">
+        <rdfs:label>is transcribed from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000024 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000024">
+        <rdfs:label>has activity regulated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000025 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000025">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000024"/>
+        <rdfs:label>has activity activated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000026 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000026">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000024"/>
+        <rdfs:label>has activity repressed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000027 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000027">
+        <rdfs:label>has expression regulated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000028 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000028">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000027"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000023"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000026"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>has expression decreased by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000029 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000029">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000027"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000023"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000025"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label>has expression increased by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1431,12 +1582,6 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/025-004"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
         <owl:annotatedTarget>An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/0000011"/>
@@ -1457,6 +1602,12 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000600"/>
         <owl:annotatedTarget xml:lang="en">b is an object aggregate means: b is a material entity consisting exactly of a plurality of objects as member_parts at all times at which b exists. (axiom label in BFO2 Reference: [025-004])</owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/025-004"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/025-004"/>
     </owl:Axiom>
     
@@ -2034,10 +2185,120 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_29805 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_29805">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000042"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A hydroxy monocarboxylic acid anion that is acetate where the methyl group has been hydroxylated.</obo:IAO_0000115>
+        <chebi:charge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-1</chebi:charge>
+        <chebi:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C2H3O3</chebi:formula>
+        <chebi:inchi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InChI=1S/C2H4O3/c3-1-2(4)5/h3H,1H2,(H,4,5)/p-1</chebi:inchi>
+        <chebi:inchikey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AEMRFAOFKBGASW-UHFFFAOYSA-M</chebi:inchikey>
+        <chebi:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75.04342</chebi:mass>
+        <chebi:monoisotopicmass rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75.00877</chebi:monoisotopicmass>
+        <chebi:smiles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCC([O-])=O</chebi:smiles>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:14348</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:24388</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAS:666-14-8</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DrugBank:DB03085</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KEGG:C00160</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MetaCyc:GLYCOLLATE</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:17190852</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22093610</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22207577</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22268146</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22327578</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22394389</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22446032</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaxys:3903689</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UM-BBD_compID:c0008</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycolate</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydroxyacetate</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chebi_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:29805</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycolate</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAS:666-14-8</owl:annotatedTarget>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaxys</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:17190852</owl:annotatedTarget>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Europe PMC</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22093610</owl:annotatedTarget>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Europe PMC</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22207577</owl:annotatedTarget>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Europe PMC</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22268146</owl:annotatedTarget>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Europe PMC</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22327578</owl:annotatedTarget>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Europe PMC</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22394389</owl:annotatedTarget>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Europe PMC</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22446032</owl:annotatedTarget>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Europe PMC</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaxys:3903689</owl:annotatedTarget>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reaxys</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UM-BBD_compID:c0008</owl:annotatedTarget>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UM-BBD</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycolate</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UniProt</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydroxyacetate</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IUPAC</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/chebi#IUPAC_NAME"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0005575 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005575">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0008372</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIF_Subcellular:sao-1337158144</oboInOwl:hasDbXref>
@@ -2361,6 +2622,7 @@
     <!-- http://purl.obolibrary.org/obo/NCIT_C18102 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C18102">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <obo:IAO_0000115>A natural phenomenon involving the physics of matter and energy.</obo:IAO_0000115>
         <obo:NCIT_NHC0>C18102</obo:NCIT_NHC0>
         <obo:NCIT_P106>Phenomenon or Process</obo:NCIT_P106>
@@ -2485,9 +2747,367 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MSO_3100211"/>
         <rdfs:label>transcription unit cluster of Escherichia coli str. K-12 substr. MG1655</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032993"/>
+        <rdfs:label>TF bound to TFBS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000005">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000016"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000021"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000006"/>
+        <rdfs:label>TF bound to TFBS in apo conformation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000006">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000016"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000022"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+        <rdfs:label>TF bound to TFBS in holo conformation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <rdfs:label>regulated system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000008">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000028"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000005"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000029"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000006"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000007"/>
+        <rdfs:label>inducible system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000009">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000006"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000008"/>
+        <rdfs:label>system induced by activation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000010">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000028"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000005"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000008"/>
+        <rdfs:label>system induced by derepression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000011">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000028"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000006"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000029"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000005"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000007"/>
+        <rdfs:label>inhibitable system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
+        <rdfs:label>system inhibited by repression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
+        <rdfs:label>system inhibited by deactivation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000014">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000029"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000015"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000009"/>
+        <rdfs:label>system induced by activation by glycolate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000015">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000006"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000018"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000006"/>
+        <rdfs:label>TF-glycolate active in holo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C13407"/>
+        <rdfs:label>functional conformation of TF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000020"/>
+        <rdfs:label>apo functional conformation of TF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000020"/>
+        <rdfs:label>holo functional conformation of TF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000016"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000017"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000041"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000018"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29805"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000019"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000044"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>GlcC-glcDo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MSO_0000613"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000025"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000030"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>glcDp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000023"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000031"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>glcDEFGBA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label>gene product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
+        <rdfs:label>protein</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
+        <rdfs:label>functional RNA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000036"/>
+        <rdfs:label>enzyme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000036"/>
+        <rdfs:label>transcription factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000036"/>
+        <rdfs:label>sigma factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000041">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000039"/>
+        <rdfs:label>GlcC</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000042 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000042">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:label>effector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000043 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MSO_0001055"/>
+        <rdfs:label>transcription factor binding site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000044 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000044">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000043"/>
+        <rdfs:label>glcDo</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

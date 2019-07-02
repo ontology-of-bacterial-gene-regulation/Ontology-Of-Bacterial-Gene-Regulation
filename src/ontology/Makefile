@@ -102,6 +102,9 @@ imports/ncit_import.owl: mirror/ncit.owl imports/ncit_terms.txt imports/ncit_upp
 	$(ROBOT) extract -i $< --method MIREOT -U imports/ncit_upper_terms.txt -L imports/ncit_terms.txt -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/ncit_import.owl
 
+imports/chebi_import.owl: mirror/chebi.owl imports/chebi_terms.txt imports/chebi_upper_terms.txt
+	$(ROBOT) extract -i $< --method MIREOT -U imports/chebi_upper_terms.txt -L imports/chebi_terms.txt -O $(BASE)/$@ -o $@
+.PRECIOUS: imports/chebi_import.owl
 
 # convert imports to obo.
 # this can be useful for spot-checks and diffs.
