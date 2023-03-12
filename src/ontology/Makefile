@@ -81,9 +81,9 @@ all_imports: $(IMPORTS_OWL)
 # 	$(ROBOT) extract -i $< -T imports/$*_terms_combined.txt --method BOT -O $(BASE)/$@ -o $@
 # .PRECIOUS: imports/%_import.owl
 
-imports/iao_import.owl: mirror/iao.owl imports/iao_terms.txt
- 	$(ROBOT) extract -i $< -T imports/iao_terms.txt --method MIREOT -O $(BASE)/$@ -o $@
- .PRECIOUS: imports/%_import.owl
+imports/iao_import.owl: mirror/iao.owl imports/iao_terms.txt imports/iao_upper_terms.txt
+	$(ROBOT) extract -i $< --method MIREOT -U imports/iao_upper_terms.txt -L imports/iao_terms.txt -O $(BASE)/$@ -o $@
+.PRECIOUS: imports/iao_import.owl
 
 # convert imports to obo.
 # this can be useful for spot-checks and diffs.
