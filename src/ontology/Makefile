@@ -56,7 +56,7 @@ $(ONT).obo: $(ONT).owl
 # These live in the imports/ folder
 # These can be regenerated with make all_imports
 
-IMPORTS = bfo mso ogg go pr ncit
+IMPORTS = bfo
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # generate seed with all referenced entities
@@ -81,26 +81,6 @@ all_imports: $(IMPORTS_OWL)
 # 	$(ROBOT) extract -i $< -T imports/$*_terms_combined.txt --method BOT -O $(BASE)/$@ -o $@
 # .PRECIOUS: imports/%_import.owl
 
-imports/bfo_import.owl: mirror/bfo.owl imports/bfo_terms.txt
-	$(ROBOT) extract -i $< -T imports/bfo_terms.txt --method BOT -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/bfo_import.owl
-
-imports/ogg_import.owl: mirror/ogg.owl imports/ogg_terms.txt imports/ogg_upper_terms.txt
-	$(ROBOT) extract -i $< --method MIREOT -U imports/ogg_upper_terms.txt -L imports/ogg_terms.txt -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/ogg_import.owl
-
-imports/mso_import.owl: mirror/mso.owl imports/mso_terms.txt imports/mso_upper_terms.txt
-	$(ROBOT) merge -i $< filter -T imports/mso_upper_terms.txt --select "self descendants annotations" \
-	extract --method BOT -T imports/mso_terms.txt -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/mso_import.owl
-
-imports/go_import.owl: mirror/go.owl imports/go_terms.txt imports/go_upper_terms.txt
-	$(ROBOT) extract -i $< --method MIREOT -U imports/go_upper_terms.txt -L imports/go_terms.txt -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/go_import.owl
-
-imports/ncit_import.owl: mirror/ncit.owl imports/ncit_terms.txt imports/ncit_upper_terms.txt
-	$(ROBOT) extract -i $< --method MIREOT -U imports/ncit_upper_terms.txt -L imports/ncit_terms.txt -O $(BASE)/$@ -o $@
-.PRECIOUS: imports/ncit_import.owl
 
 
 # convert imports to obo.

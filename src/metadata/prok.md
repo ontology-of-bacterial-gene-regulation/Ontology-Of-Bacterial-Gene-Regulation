@@ -10,8 +10,8 @@ build:
   system: git
   path: "."
 contact:
-  email: cjmungall@lbl.gov
-  label: Chris Mungall
+  email: citlalli.mejiaalmonte@gmail.com
+  label: Citlalli Mejía Almonte
 description: Prokaryotic Regulation Ontology is an ontology...
 domain: stuff
 homepage: https://github.com/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology
@@ -19,9 +19,7 @@ products:
   - id: prok.owl
   - id: prok.obo
 dependencies:
- - id: bfo
- - id: mso
- - id: ogg
+
 tracker: https://github.com/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology/issues
 license:
   url: http://creativecommons.org/licenses/by/3.0/

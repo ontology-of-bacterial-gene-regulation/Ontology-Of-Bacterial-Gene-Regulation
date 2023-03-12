@@ -1,4 +1,0 @@
-http://purl.obolibrary.org/obo/MSO_0001671 #bacterial sigma 70 RNA polymerase promoter
-http://purl.obolibrary.org/obo/MSO_0001672 #bacterial sigma 54 RNA polymerase promoter
-http://purl.obolibrary.org/obo/MSO_0001913 #bacterial ECF sigma factor RNA polymerase promoter
-http://purl.obolibrary.org/obo/BFO_0000051 #has part

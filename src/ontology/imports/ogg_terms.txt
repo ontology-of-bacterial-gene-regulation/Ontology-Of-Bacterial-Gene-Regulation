@@ -1,4 +1,0 @@
-http://purl.obolibrary.org/obo/OGG_2250511145
-http://purl.obolibrary.org/obo/OGG_2060511145
-http://purl.obolibrary.org/obo/OGG_2070511145
-http://purl.obolibrary.org/obo/OGG_2110511145

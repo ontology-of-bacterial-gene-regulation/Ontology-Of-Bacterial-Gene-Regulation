@@ -1,1 +1,0 @@
-http://purl.obolibrary.org/obo/PR_000029062 #Escherichia coli K-12 protein
