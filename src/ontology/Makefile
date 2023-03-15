@@ -56,7 +56,7 @@ $(ONT).obo: $(ONT).owl
 # These live in the imports/ folder
 # These can be regenerated with make all_imports
 
-IMPORTS = iao
+IMPORTS = iao so
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS)) $(patsubst %, imports/%_terms.txt,$(IMPORTS))
 
 # generate seed with all referenced entities
@@ -84,6 +84,11 @@ all_imports: $(IMPORTS_OWL)
 imports/iao_import.owl: mirror/iao.owl imports/iao_terms.txt imports/iao_upper_terms.txt
 	$(ROBOT) extract -i $< --method MIREOT -U imports/iao_upper_terms.txt -L imports/iao_terms.txt -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/iao_import.owl
+
+imports/so_import.owl: mirror/so.owl imports/so_terms.txt imports/so_upper_terms.txt
+	$(ROBOT) extract -i $< --method MIREOT -U imports/so_upper_terms.txt -L imports/so_terms.txt -O $(BASE)/$@ -o $@
+.PRECIOUS: imports/so_import.owl
+
 
 # convert imports to obo.
 # this can be useful for spot-checks and diffs.

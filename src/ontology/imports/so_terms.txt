@@ -1,0 +1,11 @@
+http://purl.obolibrary.org/obo/SO_0001030 # forward
+http://purl.obolibrary.org/obo/SO_0001031 # reverse
+http://purl.obolibrary.org/obo/SO_0002301 # transcription unit
+http://purl.obolibrary.org/obo/SO_0000315 # TSS
+http://purl.obolibrary.org/obo/SO_0000176 # minus_35_signal
+http://purl.obolibrary.org/obo/SO_0000175 # minus_10_signal
+http://purl.obolibrary.org/obo/SO_0001673 # minus_12_signal
+http://purl.obolibrary.org/obo/SO_0001674 # minus_24_signal
+http://purl.obolibrary.org/obo/SO_0001913 # bacterial_RNApol_promoter_sigma_ecf_element
+http://purl.obolibrary.org/obo/SO_0001671 # bacterial_RNApol_promoter_sigma_70_element
+http://purl.obolibrary.org/obo/SO_0001672 # bacterial_RNApol_promoter_sigma54_element

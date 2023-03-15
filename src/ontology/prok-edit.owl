@@ -145,6 +145,218 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000010 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000010">
+        <rdfs:label xml:lang="en">is recognized by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000013 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000013">
+        <rdfs:label xml:lang="en">initiates transcription of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000006 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000006">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <obo:IAO_0000115>a data property that specifies the exact order of bases in a nucleic acid or of amino acids in a protein</obo:IAO_0000115>
+        <obo:IAO_0000119>https://www.merriam-webster.com/dictionary/sequence</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">has sequence</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000007 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000007">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <obo:IAO_0000115>indicates the number designating the place occupied by an nucleotide in a DNA molecule int he 5&apos; to 3&apos; direction</obo:IAO_0000115>
+        <obo:IAO_0000119>adapted from https://www.merriam-webster.com/dictionary/ordinal%20number</obo:IAO_0000119>
+        <terms:contributor>https://orcid.org/0000-0002-0142-5591</terms:contributor>
+        <rdfs:label xml:lang="en">has position in the DNA</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000009 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000009">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000007"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <obo:IAO_0000115>indicates the position in a DNA molecule where transcripstion starts</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has transcription start site</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000001">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000013"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000010"/>
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000008"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000009"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <obo:IAO_0000115>A DNA segment essential for the specific initiation of transcription at a defined location in a DNA molecule, although this location might not be one single base, it is recognized by a specific Eσ, and this recognition is not necessarily autonomous.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">promoter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <obo:IAO_0000115>A DNA segment delimited by different nonspurious TSS–TTS pairs</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">transcription unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000003">
+        <rdfs:label xml:lang="en">forward</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000004">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000006"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000007"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An extent of DNA greater than zero nucleotides.</obo:IAO_0000115>
+        <terms:contributor>https://orcid.org/0000-0002-0142-5591</terms:contributor>
+        <rdfs:label xml:lang="en">DNA region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000005">
+        <rdfs:label xml:lang="en">reverse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000008">
+        <obo:IAO_0000115>﻿A molecular complex composed of the core RNAP plus a σ factor, which is capable of initiating gene transcription at specific DNA positions.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID: 32665585</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">RNA polymerase holoenzyme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
+        <obo:IAO_0000115>A promoter that lack consensus motifs.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">non-consensus promoter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
+        <obo:IAO_0000115>A promoter that has at least one consensus motif or promoter box.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">consensus promoter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000008"/>
+        <rdfs:label xml:lang="en">sigma 54 RNA polymerase holoenzyme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000008"/>
+        <rdfs:label xml:lang="en">sigma 70 RNA polymerase holoenzyme</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
