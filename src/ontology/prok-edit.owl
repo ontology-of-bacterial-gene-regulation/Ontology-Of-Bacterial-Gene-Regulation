@@ -201,10 +201,11 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000007">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <obo:IAO_0000115>indicates the number designating the place occupied by an nucleotide in a DNA molecule in the 5&apos; to 3&apos; direction</obo:IAO_0000115>
+        <obo:IAO_0000115>indicates the number designating the place occupied by a nucleotide in a DNA molecule in the 5&apos; to 3&apos; direction of the forward strand</obo:IAO_0000115>
         <obo:IAO_0000119>adapted from https://www.merriam-webster.com/dictionary/ordinal%20number</obo:IAO_0000119>
         <terms:contributor>https://orcid.org/0000-0002-0142-5591</terms:contributor>
-        <rdfs:label xml:lang="en">has position in the DNA</rdfs:label>
+        <rdfs:comment>Note that the coordinate axis is the forward strand, but the same coordinate point to a position in any of the two strands or to a position in the double stranded DNA.</rdfs:comment>
+        <rdfs:label xml:lang="en">has coordinate in the DNA</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -216,6 +217,26 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <obo:IAO_0000115>indicates the position in a DNA molecule where transcripstion starts</obo:IAO_0000115>
         <rdfs:label xml:lang="en">has transcription start site</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000012 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000012">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000007"/>
+        <obo:IAO_0000115>indicates the number designating the place occupied by the last nucleotide in a DNA molecule in the 5&apos; to 3&apos; direction of the forward strand</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has left end coordinate in the DNA</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000019 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000019">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000007"/>
+        <obo:IAO_0000115>indicates the number designating the place occupied by the first nucleotide in a DNA molecule in the 5&apos; to 3&apos; direction of the forward strand</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has right end coordinate in the DNA</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -236,25 +257,25 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000001">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
+                <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
+                        <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000013"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000010"/>
-                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000008"/>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000009"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
                             </owl:Restriction>
-                        </owl:intersectionOf>
+                        </owl:unionOf>
                     </owl:Class>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000009"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000010"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000008"/>
                     </owl:Restriction>
-                </owl:unionOf>
+                </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
@@ -277,6 +298,8 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
+        <obo:IAO_0000115>The DNA strand that is presented as reference strand in GenBank.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">forward</rdfs:label>
     </owl:Class>
     
@@ -307,6 +330,8 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
+        <obo:IAO_0000115>The DNA strand that is the reverse complement of the one presented as reference in GenBank.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">reverse</rdfs:label>
     </owl:Class>
     
@@ -322,11 +347,20 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROK_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000011">
+        <obo:IAO_0000115>One of the two nucleotide chains that form the DNA.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">DNA strand</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PROK_0000014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
-        <obo:IAO_0000115>A promoter that lack consensus motifs.</obo:IAO_0000115>
+        <obo:IAO_0000115>A promoter that lack promoter boxes with similarity to any consensus motif.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">promoter without motifs</rdfs:label>
     </owl:Class>
     
@@ -336,7 +370,7 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
-        <obo:IAO_0000115>A promoter that has at least one promoter box with similarity to consensus.</obo:IAO_0000115>
+        <obo:IAO_0000115>A promoter that has at least one promoter box with similarity to a consensus motif.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">promoter with motifs</rdfs:label>
     </owl:Class>
     
