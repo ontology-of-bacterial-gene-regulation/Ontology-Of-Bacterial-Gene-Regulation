@@ -276,12 +276,13 @@ We also have the outstanding issue of how to aim different definitions to differ
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000013"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000030"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000031"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000013"/>
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
