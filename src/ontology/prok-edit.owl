@@ -260,6 +260,34 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000001">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000024"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000025"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000026"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000027"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000028"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000029"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000013"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000030"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000031"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
         <obo:IAO_0000115>A DNA segment essential for the specific initiation of transcription at a defined location in a DNA molecule, although this location might not be one single base, it is recognized by a specific Eσ, and this recognition is not necessarily autonomous.</obo:IAO_0000115>
         <rdfs:comment>Promoter coordinates are calculated based on the most upstream TSS. The left coordinate is 60 bases upstream and the right coordinate is 20 bases downstream the TSS.</rdfs:comment>
