@@ -1,0 +1,4 @@
+http://purl.obolibrary.org/obo/RO_0002407 # indirectly positively regulates
+http://purl.obolibrary.org/obo/RO_0002409 # indirectly negatively regulates
+http://purl.obolibrary.org/obo/RO_0002629 # directly positively regulates
+http://purl.obolibrary.org/obo/RO_0002630 # directly negatively regulates
