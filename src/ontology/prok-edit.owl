@@ -442,26 +442,10 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000009">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000010"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000032"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000032"/>
+            </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
         <obo:PROK_0000033>TFBS</obo:PROK_0000033>
@@ -675,6 +659,25 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000034 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000034">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000009"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <obo:IAO_0000115>a TFBS that is involved in transcription regulation</obo:IAO_0000115>
         <obo:PROK_0000033>TFRS</obo:PROK_0000033>
         <rdfs:comment>quiero simplificar la definición formal a una sola relación de regulación con una clase que incluya todas las entidades que pueda regular directa o indirectamente un sitio, creo que todos deberían ser regiones de ADN, por el sitio es una región de ADN y regula en cis, pero ¿qué es un gen? creo que el gen está presente tanto en el adn como en el arn. De hecho sí hay rRNA-gene interactions en los datasets. Entonces tengo que crear una clase &quot;unit of expression&quot; y saber bien qué subclases hacer.</rdfs:comment>
@@ -699,7 +702,7 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
-        <obo:IAO_0000115>a nucleotide region that carries the information for the structure of a functional product</obo:IAO_0000115>
+        <obo:IAO_0000115>a nucleotide region that carries the information for the structure of a functional-RNA or a polipeptide chain.</obo:IAO_0000115>
         <rdfs:comment>Los tipos de genes del GB file
 
 Gene: region of biological interest identified as a gene 
@@ -727,6 +730,7 @@ https://www.insdc.org/submitting-standards/feature-table/#7.3
 
 
 we have had conversations with Gisela Storz, expert in sRNA, to adequately curate them and their regulation, defining for instance that for sRNAs and antisense (asRNAs) with several isoforms or transcripts, the longest transcript will be chosen as the gene sequence.</rdfs:comment>
+        <rdfs:comment>The definition is intended to regard independent cistrons that code for subunits of heteromultimeric proteins as different genes. For example, the cistros that code for subunits of IHF, ihfA and ihfB, are differente genes.</rdfs:comment>
         <rdfs:label xml:lang="en">gene</rdfs:label>
     </owl:Class>
     
