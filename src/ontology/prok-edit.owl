@@ -872,7 +872,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000049 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000049">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
         <obo:IAO_0000115>an extent of RNA greater than zero nucleotides</obo:IAO_0000115>
         <rdfs:label xml:lang="en">RNA segment</rdfs:label>
     </owl:Class>
@@ -1034,8 +1034,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115>a nucleatide region that regulates the expression of an expressed region</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">cis regulator</rdfs:label>
+        <obo:IAO_0000115>a nucleatide region that regulates the activity of a cis regulatory element or the expression of an expressed region</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">cis regulatory element</rdfs:label>
     </owl:Class>
     
 
@@ -1138,7 +1138,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000067">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000071"/>
         <obo:IAO_0000119>a biological polymer consisting of a single polymeric chain, i.e. independent molecules of atomic groups covalently bonded in the chain direction</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">simple biological polymer</rdfs:label>
+        <rdfs:label xml:lang="en">simple biomacromolecule</rdfs:label>
     </owl:Class>
     
 
@@ -1168,7 +1168,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000071">
         <obo:IAO_0000119>Adapted from: https://www.merriam-webster.com/dictionary/polymer</obo:IAO_0000119>
         <rdfs:isDefinedBy>a chemical compound or mixture of compounds formed by polymerization and consisting essentially of repeating structural units that occur naturally in cells</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">biological polymers</rdfs:label>
+        <rdfs:label xml:lang="en">biomacromolecule</rdfs:label>
     </owl:Class>
     
 
@@ -1179,7 +1179,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000071"/>
         <obo:IAO_0000119>a biological polymer consisting of at least one polymeric chain, i.e. independent molecules of atomic groups covalently bonded in the chain direction</obo:IAO_0000119>
         <obo:IAO_0000119>https://doi.org/10.1016/B978-0-08-096701-1.00050-1</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">complex biological polymer</rdfs:label>
+        <rdfs:label xml:lang="en">complex biomacromolecule</rdfs:label>
     </owl:Class>
     
 
@@ -1233,8 +1233,59 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000067"/>
-        <rdfs:isDefinedBy>a biological polymer that is produced by transcription or translation of a gene</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>a biomacromolecule that is produced by transcription or translation of a gene</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">gene product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000077">
+        <rdfs:label xml:lang="en">regulator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000078 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000078">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000050"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000076"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000077"/>
+        <rdfs:label xml:lang="en">genetically enconded regulator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000079 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000079">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000077"/>
+        <rdfs:label xml:lang="en">small molecule regulator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000080 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000080">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000078"/>
+        <rdfs:label xml:lang="en">regulatory gene product</rdfs:label>
     </owl:Class>
     
 
