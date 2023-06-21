@@ -1027,6 +1027,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000050"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000078"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
@@ -1035,7 +1036,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>a nucleatide region that regulates the activity of a cis regulatory element or the expression of an expressed region</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">cis regulatory element</rdfs:label>
+        <rdfs:label xml:lang="en">cis acting regulatory element</rdfs:label>
     </owl:Class>
     
 
@@ -1256,6 +1257,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000050"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000075"/>
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000076"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1285,7 +1287,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000080">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000078"/>
-        <rdfs:label xml:lang="en">regulatory gene product</rdfs:label>
+        <rdfs:label xml:lang="en">trans acting regulatory element</rdfs:label>
     </owl:Class>
     
 
