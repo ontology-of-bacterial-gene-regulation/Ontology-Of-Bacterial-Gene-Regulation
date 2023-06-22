@@ -756,7 +756,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
