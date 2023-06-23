@@ -734,7 +734,8 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000032 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000032">
-        <obo:IAO_0000115>DNA-binding regulatory proteins that bind near a promoter and affect transcript initiation at that promoter</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000085"/>
+        <obo:IAO_0000115>DNA-binding regulatory proteins of transcription initiation that bind near a promoter and affect transcript initiation at that promoter</obo:IAO_0000115>
         <obo:IAO_0000119>PMID: 32665585</obo:IAO_0000119>
         <rdfs:label xml:lang="en">transcription factor</rdfs:label>
     </owl:Class>
@@ -1035,7 +1036,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115>a nucleatide region that regulates the activity of a cis regulatory element or the expression of an expressed region</obo:IAO_0000115>
+        <obo:IAO_0000115>a genomically carried regulator that is a nucleotide segment that acts on a genomic segment adjacent to its own locus</obo:IAO_0000115>
         <rdfs:label xml:lang="en">cis acting regulatory element</rdfs:label>
     </owl:Class>
     
@@ -1243,6 +1244,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000077 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000077">
+        <obo:IAO_0000115>an entity that increases or decreases the expression of a specific set of genes</obo:IAO_0000115>
         <rdfs:label xml:lang="en">regulator</rdfs:label>
     </owl:Class>
     
@@ -1269,7 +1271,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000077"/>
-        <rdfs:label xml:lang="en">genetically enconded regulator</rdfs:label>
+        <obo:IAO_0000115>a regulator that is a molecule or a molecule segment carried in the genome</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">genomically carried regulator</rdfs:label>
     </owl:Class>
     
 
@@ -1278,7 +1281,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000079">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000077"/>
-        <rdfs:label xml:lang="en">small molecule regulator</rdfs:label>
+        <rdfs:comment>a regulator that is a molecular entity not carried in the genome</rdfs:comment>
+        <rdfs:label xml:lang="en">small molecular regulator</rdfs:label>
     </owl:Class>
     
 
@@ -1286,8 +1290,129 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000080 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000080">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000078"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000078"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000075"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000076"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>a genomically carried regulator that is a molecule that is the product of trascription or translation that can difusse in the cytoplasm and acts on a genomic segment away its own locus</obo:IAO_0000115>
         <rdfs:label xml:lang="en">trans acting regulatory element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000081 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000081">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000080"/>
+        <obo:IAO_0000115>a trans acting regulatory element that is a protein</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">regulatory protein</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000082 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000082">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000081"/>
+        <obo:IAO_0000115>a regulatory protein that regulates the translation of a messenger RNA into a polypeptide chain</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">regulatory protein of translation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000083 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000083">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000081"/>
+        <obo:IAO_0000115>a regulatory protein that regulates the transcription of a DNA segment into an RNA molecule</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">regulatory protein of transcription</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000084 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000084">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000083"/>
+        <obo:IAO_0000119>a regulatory protein of transcription that regulates the recognition of the promoter by the RNA polymerase holoenzyme and the formation of the open complex</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">regulatory protein of transcription initiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000085 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000085">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000084"/>
+        <obo:IAO_0000119>a regulatory protein of transcription initiation whose regulation specificity is determined by the DNA sequence that they recognize</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">DNA-binding protein of transcription initiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000086 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000085"/>
+        <obo:IAO_0000119>PMID: 32665585</obo:IAO_0000119>
+        <obo:IAO_0000119>a DNA-binding regulatory protein of transcription initiation that confer core RNAP promoter specificity, open duplex DNA and facilitate template strand entry into the RNAP active site</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">sigma factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000087 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000087">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000084"/>
+        <obo:IAO_0000119>PMID: 32665585</obo:IAO_0000119>
+        <obo:IAO_0000119>a regulatory protein of transcription initiation that regulates transcription initiation by interacting with the RNA polymerase holoenzyme and whose specificity is not determined directly by the recognition of specific a DNA sequence</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">RNAP-centered regulatory protein of transcription initiation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000088 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000088">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000083"/>
+        <obo:IAO_0000115>a regulatory protein of transcription that regulates the extension of the RNA molecule after promoter clearance</obo:IAO_0000115>
+        <obo:IAO_0000119>Adapted from GO:0006354</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">regulatory protein of transcription elongation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000089 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000089">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000083"/>
+        <obo:IAO_0000119>Adapted from GO:0006353</obo:IAO_0000119>
+        <obo:IAO_0000119>a regulatory protein of transcription initiation that regulates de dissociation of the RNA-DNA hybrid and the release of the RNA polymerase from its DNA template</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">regulatory protein of transcription termination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000090 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000090">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000080"/>
+        <obo:IAO_0000115>a trans acting regulatory element that is an RNA</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">regulatory RNA</rdfs:label>
     </owl:Class>
     
 
