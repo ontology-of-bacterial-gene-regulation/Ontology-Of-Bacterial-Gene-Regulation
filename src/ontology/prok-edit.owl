@@ -596,6 +596,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000008 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000075"/>
         <obo:IAO_0000115>﻿A molecular complex composed of the core RNAP plus a σ factor, which is capable of initiating gene transcription at specific DNA positions.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID: 32665585</obo:IAO_0000119>
         <rdfs:label xml:lang="en">RNA polymerase holoenzyme</rdfs:label>
@@ -639,6 +640,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000057"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115>A gene that carries the information of a functional RNA.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">RNA gene</rdfs:label>
     </owl:Class>
     
@@ -844,6 +846,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         </owl:equivalentClass>
         <obo:IAO_0000115>DNA-binding regulatory proteins of transcription initiation that bind near a promoter and affect transcript initiation at that promoter</obo:IAO_0000115>
         <obo:IAO_0000119>PMID: 32665585</obo:IAO_0000119>
+        <rdfs:comment>The fact that these proteins bind near the promoter should be represented in the transcription factor regulatory site class.</rdfs:comment>
         <rdfs:label xml:lang="en">transcription factor</rdfs:label>
     </owl:Class>
     
@@ -873,6 +876,8 @@ We also have the outstanding issue of how to aim different definitions to differ
         </owl:equivalentClass>
         <obo:IAO_0000115>a TFBS that is involved in transcription regulation</obo:IAO_0000115>
         <obo:PROK_0000033>TFRS</obo:PROK_0000033>
+        <rdfs:comment>TFRSs directly regulate promoter activity, but the observation of the increase or decrease expression of a DNA segment are also evidence for the reguatory activity of the site. Note tha I restrict the kind of regulated nucleotide segment because TFRS are DNA sites that act in cis, and as such, they regulate the expression of DNA segments.</rdfs:comment>
+        <rdfs:comment>The definition of transcription factor requires that these bound &quot;near&quot; the promoter. This is clearly a site property, but we have to define the meaning of &quot;near&quot;.</rdfs:comment>
         <rdfs:comment>quiero simplificar la definición formal a una sola relación de regulación con una clase que incluya todas las entidades que pueda regular directa o indirectamente un sitio, creo que todos deberían ser regiones de ADN, por el sitio es una región de ADN y regula en cis, pero ¿qué es un gen? creo que el gen está presente tanto en el adn como en el arn. De hecho sí hay rRNA-gene interactions en los datasets. Entonces tengo que crear una clase &quot;unit of expression&quot; y saber bien qué subclases hacer.</rdfs:comment>
         <rdfs:label xml:lang="en">transcription factor regulatory site</rdfs:label>
     </owl:Class>
@@ -889,7 +894,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>a nucleotide region that carries the information for the structure of some functional-RNA or a polipeptide chain.</obo:IAO_0000115>
+        <obo:IAO_0000115>a continuos nucleotide segment that carries the information for the structure of some functional-RNA or a polipeptide chain.</obo:IAO_0000115>
         <rdfs:comment>Los tipos de genes del GB file
 
 Gene: region of biological interest identified as a gene 
@@ -934,6 +939,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000057"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115>A gene that codes for a polypeptide chain.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">protein coding gene</rdfs:label>
     </owl:Class>
     
@@ -951,7 +957,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000044 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000044">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000098"/>
         <rdfs:label xml:lang="en">prymary transcript</rdfs:label>
     </owl:Class>
     
@@ -961,7 +967,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000045">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000061"/>
-        <obo:IAO_0000115>an expressed region that is transcribed into a single transcript or translated into a single polypeptide chain</obo:IAO_0000115>
+        <obo:IAO_0000115>An expressed region that is transcribed into a single transcript or translated into a single polypeptide chain.</obo:IAO_0000115>
         <rdfs:comment>In structural terms a single transcript is defined by unique non-spourious TSS-TTS and a single polipeptide chain by unique non-spouriois start codon-stop codon</rdfs:comment>
         <rdfs:label xml:lang="en">unit of expression</rdfs:label>
     </owl:Class>
@@ -980,8 +986,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000049 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000049">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
-        <obo:IAO_0000115>an extent of RNA greater than zero nucleotides</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
+        <obo:IAO_0000115>An extent of RNA greater than zero nucleotides.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">RNA segment</rdfs:label>
     </owl:Class>
     
@@ -990,7 +996,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000050 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000050">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000067"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000096"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000006"/>
@@ -1010,7 +1016,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000070"/>
-        <obo:IAO_0000115>an extent of a nucleotide molecule greater than zero. It coulde be part of a bigger segment or a stand-alone segment.</obo:IAO_0000115>
+        <obo:IAO_0000115>an extent of a nucleotide molecule greater than zero</obo:IAO_0000115>
         <rdfs:label xml:lang="en">nucleotide segment</rdfs:label>
     </owl:Class>
     
@@ -1037,6 +1043,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
+        <obo:IAO_0000115>A unit of expression that is a DNA segment an is translated into a single transcript.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">DNA unit of expression</rdfs:label>
     </owl:Class>
     
@@ -1067,6 +1074,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
+        <obo:IAO_0000115>A unit of expression that is an RNA segment and is translated into a single polypeptide chain.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">RNA unit of expression</rdfs:label>
     </owl:Class>
     
@@ -1075,7 +1083,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000055 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000055">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000070"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
         <obo:IAO_0000115>A naturally occurring chain of amin acids linked by peptidic bonds and synthesized at the ribosome from a single continouos sequence.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">polypeptide chain</rdfs:label>
     </owl:Class>
@@ -1114,7 +1122,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">transcribed coding sequence</rdfs:label>
+        <obo:IAO_0000115>An RNA segment that codes for a polypeptide chain.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">transcribed coding segment</rdfs:label>
     </owl:Class>
     
 
@@ -1122,7 +1131,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000058 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000058">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000098"/>
         <rdfs:label xml:lang="en">ncRNA</rdfs:label>
     </owl:Class>
     
@@ -1167,7 +1176,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
-        <obo:IAO_0000115>a nucleotide segment that is transcribed or translated</obo:IAO_0000115>
+        <obo:IAO_0000115>A nucleotide segment that is transcribed or translated.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">expressed segment</rdfs:label>
     </owl:Class>
     
@@ -1212,6 +1221,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000061"/>
+        <obo:IAO_0000115>An expressed segment that is a DNA segment.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">DNA expressed segment</rdfs:label>
     </owl:Class>
     
@@ -1233,6 +1243,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000061"/>
+        <obo:IAO_0000115>An expressed segment that is an RNA segment.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">RNA expressed segment</rdfs:label>
     </owl:Class>
     
@@ -1242,8 +1253,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000067">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000071"/>
-        <obo:IAO_0000119>a biological polymer consisting of a single polymeric chain, i.e. independent molecules of atomic groups covalently bonded in the chain direction</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">simple biomacromolecule</rdfs:label>
+        <obo:IAO_0000119>a biomacromolecule that consists or is part of a single polymeric chain, i.e. independent molecules of atomic groups covalently bonded in the chain direction</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">simple genomic molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -1260,8 +1271,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000070 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000070">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000067"/>
-        <obo:IAO_0000115>an extent of an amin acid molecule greater than zero. It coulde be part of a bigger segment or a stand-alone segment.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000096"/>
+        <obo:IAO_0000115>an extent of an amin acid molecule greater than zero</obo:IAO_0000115>
         <rdfs:label xml:lang="en">amin acid segment</rdfs:label>
         <rdfs:seeAlso>Si no añado al menos otra subclase, podría borrar esta clase.</rdfs:seeAlso>
     </owl:Class>
@@ -1273,8 +1284,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000071">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
         <obo:IAO_0000119>Adapted from: https://www.merriam-webster.com/dictionary/polymer</obo:IAO_0000119>
-        <rdfs:isDefinedBy>a chemical compound or mixture of compounds formed by polymerization and consisting essentially of repeating structural units that occur naturally in cells</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">biomacromolecule</rdfs:label>
+        <rdfs:isDefinedBy>a molecular entity that is carried in the genome and it is polumeric in nature</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">genomic molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -1283,9 +1294,9 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000072">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000071"/>
-        <obo:IAO_0000119>a biological polymer consisting of at least one polymeric chain, i.e. independent molecules of atomic groups covalently bonded in the chain direction</obo:IAO_0000119>
+        <obo:IAO_0000119>a genomic molecular entity consisting of at least one polymeric chain, i.e. independent molecules of atomic groups covalently bonded in the chain direction</obo:IAO_0000119>
         <obo:IAO_0000119>https://doi.org/10.1016/B978-0-08-096701-1.00050-1</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">complex biomacromolecule</rdfs:label>
+        <rdfs:label xml:lang="en">complex genomic molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -1295,7 +1306,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000073">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000072"/>
         <obo:IAO_0000119>a complex biological polymer consisting of a single type of simple biological polymer</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">homotypic complex biological polymer</rdfs:label>
+        <rdfs:label xml:lang="en">homotypic complex genomic molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -1305,7 +1316,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000074">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000072"/>
         <obo:IAO_0000119>a complex biological polymer consisting of more than one type of simple biological polymers</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">heterotypic biological polymer</rdfs:label>
+        <rdfs:label xml:lang="en">heterotypic complex genomic molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -1338,7 +1349,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000067"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
         <rdfs:isDefinedBy>a biomacromolecule produced by transcription or translation of a gene from a continous sequence and that has a function other that carrying information</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">gene product</rdfs:label>
     </owl:Class>
@@ -1461,7 +1472,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000119>a regulatory protein of transcription that regulates the recognition of the promoter by the RNA polymerase holoenzyme and the formation of the open complex</obo:IAO_0000119>
+        <obo:IAO_0000115>a regulatory protein of transcription that regulates the recognition of the promoter by the RNA polymerase holoenzyme and the formation of the open complex</obo:IAO_0000115>
         <rdfs:comment>Although this definition states that the precise point of regulation is the initiation of transcription, evidence for the regulatory activity might be the observation of the increase or decrease of the gene product, therefore, the regulated entity in the formal definition is not limited to the promoter, but it is generalized to a nucleotide sequence.</rdfs:comment>
         <rdfs:label xml:lang="en">regulatory protein of transcription initiation</rdfs:label>
     </owl:Class>
@@ -1478,7 +1489,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000084"/>
-        <obo:IAO_0000119>a regulatory protein of transcription initiation whose regulation specificity is determined by the DNA sequence that they recognize</obo:IAO_0000119>
+        <obo:IAO_0000115>a regulatory protein of transcription initiation whose regulation specificity is determined by the DNA sequence that they recognize</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID: 32665585</obo:IAO_0000119>
         <rdfs:label xml:lang="en">DNA-binding regulatory protein of transcription initiation</rdfs:label>
     </owl:Class>
     
@@ -1498,8 +1510,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <obo:IAO_0000115>a DNA-binding regulatory protein of transcription initiation that confer core RNAP promoter specificity, open duplex DNA and facilitate template strand entry into the RNAP active site</obo:IAO_0000115>
         <obo:IAO_0000119>PMID: 32665585</obo:IAO_0000119>
-        <obo:IAO_0000119>a DNA-binding regulatory protein of transcription initiation that confer core RNAP promoter specificity, open duplex DNA and facilitate template strand entry into the RNAP active site</obo:IAO_0000119>
         <rdfs:label xml:lang="en">sigma factor</rdfs:label>
     </owl:Class>
     
@@ -1570,7 +1582,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000092 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000092">
-        <rdfs:label xml:lang="en">molecule</rdfs:label>
+        <rdfs:label xml:lang="en">molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -1579,7 +1591,48 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000093">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
+        <obo:IAO_0000115>a molecular that is not carried in the genome</obo:IAO_0000115>
         <rdfs:label xml:lang="en">small molecule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000096 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000096">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000067"/>
+        <obo:IAO_0000115>a biomacromolecule that is part of a single polymeric chain</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">genomic molecule segment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000097 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000097">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000067"/>
+        <obo:IAO_0000115>a biomacromolecule that consists of a single polymeric chain</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">genomic molecule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000098 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000098">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
+        <obo:IAO_0000115>a biomacromolecule that consists of ribonucleotides</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">RNA molecule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000099 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000099">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
+        <obo:IAO_0000115>a biomacromolecule that consists of desoxyribonucleotides</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">DNA molecule</rdfs:label>
     </owl:Class>
     
 
