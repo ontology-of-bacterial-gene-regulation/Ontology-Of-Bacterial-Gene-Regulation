@@ -1359,6 +1359,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000077 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
         <obo:IAO_0000115>an entity that increases or decreases the expression of a specific set of genes</obo:IAO_0000115>
         <rdfs:label xml:lang="en">regulator</rdfs:label>
     </owl:Class>
