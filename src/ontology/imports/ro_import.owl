@@ -7,7 +7,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ro.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-02-22/ro.owl"/>
@@ -23,18 +23,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114"/>
     
 
 
@@ -64,126 +52,16 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232"/>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000589 -->
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000589">
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <rdfs:label xml:lang="en">OBO foundry unique label</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000600 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000600"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002423 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002423">
-        <rdfs:label xml:lang="en">logical macro assertion on an annotation property</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002575 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002575">
-        <obo:IAO_0000115>relation p is the direct form of relation q iff p is a subPropertyOf q, p does not have the Transitive characteristic, q does have the Transitive characteristic, and for all x, y: x q y -&gt; exists z1, z2, ..., zn such that x p z1 ... z2n y</obo:IAO_0000115>
-        <obo:IAO_0000116>The general property hierarchy is:
-
-  &quot;directly P&quot; SubPropertyOf &quot;P&quot;
-  Transitive(P)
-
-Where we have an annotation assertion
-
-  &quot;directly P&quot; &quot;is direct form of&quot; &quot;P&quot;</obo:IAO_0000116>
-        <obo:RO_0002423>If we have the annotation P is-direct-form-of Q, and we have inverses P&apos; and Q&apos;, then it follows that P&apos; is-direct-form-of Q&apos;</obo:RO_0002423>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <rdfs:label>is direct form of</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/ro/docs/direct-and-indirect-relations/"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002579 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002579">
-        <obo:IAO_0000115>relation p is the indirect form of relation q iff p is a subPropertyOf q, and there exists some p&apos; such that p&apos; is the direct form of q, p&apos; o p&apos; -&gt; p, and forall x,y : x q y -&gt; either (1) x p y or (2) x p&apos; y</obo:IAO_0000115>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <rdfs:label>is indirect form of</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/ro/docs/direct-and-indirect-relations/"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0004049 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004049">
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-14T00:03:16Z</oboInOwl:creation_date>
-        <rdfs:label>is positive form of</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0004050 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004050">
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-14T00:03:24Z</oboInOwl:creation_date>
-        <rdfs:label>is negative form of</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/source -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym">
-        <rdfs:label>has_related_synonym</rdfs:label>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
+        <rdfs:label>has_exact_synonym</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -193,12 +71,6 @@ Where we have an annotation assertion
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset">
         <rdfs:label>in_subset</rdfs:label>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
     
 
 
@@ -214,6 +86,12 @@ Where we have an annotation assertion
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -225,349 +103,35 @@ Where we have an annotation assertion
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000063 -->
+    <!-- http://purl.obolibrary.org/obo/RO_0002434 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000063">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002222"/>
-        <obo:IAO_0000111 xml:lang="en">precedes</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) &lt;= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.</obo:IAO_0000115>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <rdfs:label xml:lang="en">precedes</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002090 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002090">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-7073-9172"/>
-        <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
-        <obo:IAO_0000118>ends_at_start_of</obo:IAO_0000118>
-        <obo:IAO_0000118>meets</obo:IAO_0000118>
-        <obo:RO_0002575 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <rdfs:comment xml:lang="en">X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)</rdfs:comment>
-        <rdfs:label xml:lang="en">immediately precedes</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002211 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002211">
-        <obo:IAO_0000115>p regulates q iff p is causally upstream of q, the execution of p is not constant and varies according to specific conditions, and p influences the rate or magnitude of execution of q due to an effect either on some enabler of q or some enabler of a part of q.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-7476-6306"/>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-3837-8864"/>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
-        <obo:IAO_0000119>GO</obo:IAO_0000119>
-        <obo:IAO_0000232>Regulation precludes parthood; the regulatory process may not be within the regulated process.</obo:IAO_0000232>
-        <obo:IAO_0000589>regulates (processual)</obo:IAO_0000589>
-        <obo:IAO_0000600 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</obo:IAO_0000600>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <rdfs:label xml:lang="en">regulates</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002212 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002212">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002305"/>
-        <obo:IAO_0000115>p negatively regulates q iff p regulates q, and p decreases the rate or magnitude of execution of q.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
-        <obo:IAO_0000589>negatively regulates (process to process)</obo:IAO_0000589>
-        <obo:RO_0004050 rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <rdfs:label xml:lang="en">negatively regulates</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002213 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002213">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002304"/>
-        <obo:IAO_0000115>p positively regulates q iff p regulates q, and p increases the rate or magnitude of execution of q.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
-        <obo:IAO_0000589>positively regulates (process to process)</obo:IAO_0000589>
-        <obo:RO_0004049 rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <rdfs:label xml:lang="en">positively regulates</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002222 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002222">
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002434">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115>A relationship that holds between two entities in which the processes executed by the two entities are causally connected.</obo:IAO_0000115>
+        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Considering relabeling as &apos;pairwise interacts with&apos;</obo:IAO_0000116>
+        <obo:IAO_0000116>This relation and all sub-relations can be applied to either (1) pairs of entities that are interacting at any moment of time (2) populations or species of entity whose members have the disposition to interact (3) classes whose members have the disposition to interact.</obo:IAO_0000116>
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Allen%27s_interval_algebra"/>
-        <obo:IAO_0000232>Do not use this relation directly. It is ended as a grouping for relations between occurrents involving the relative timing of their starts and ends.</obo:IAO_0000232>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://docs.google.com/document/d/1kBv1ep_9g3sTR-SD3jqzFqhuwo9TPNF-l-9fUDbO6rM/edit?pli=1</terms:source>
+        <obo:IAO_0000232>Note that this relationship type, and sub-relationship types may be redundant with process terms from other ontologies. For example, the symbiotic relationship hierarchy parallels GO. The relations are provided as a convenient shortcut. Consider using the more expressive processual form to capture your data. In the future, these relations will be linked to their cognate processes through rules.</obo:IAO_0000232>
+        <oboInOwl:hasExactSynonym>in pairwise interaction with</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <rdfs:comment>A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations.</rdfs:comment>
-        <rdfs:label xml:lang="en">temporally related to</rdfs:label>
+        <rdfs:label>interacts with</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ro/docs/interaction-relations/</rdfs:seeAlso>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/MI_0914</skos:closeMatch>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002304 -->
+    <!-- http://purl.obolibrary.org/obo/RO_0002436 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002304">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0004047"/>
-        <obo:IAO_0000115>p is causally upstream of, positive effect q iff p is casually upstream of q, and the execution of p is required for the execution of q.</obo:IAO_0000115>
-        <obo:RO_0004049 rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <rdfs:comment>holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y</rdfs:comment>
-        <rdfs:label>causally upstream of, positive effect</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002305 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002305">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0004046"/>
-        <obo:IAO_0000115>p is causally upstream of, negative effect q iff p is casually upstream of q, and the execution of p decreases the execution of q.</obo:IAO_0000115>
-        <obo:RO_0004050 rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-        <terms:creator rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <rdfs:label>causally upstream of, negative effect</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002407 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002407">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0012012"/>
-        <obo:IAO_0000115>p indirectly positively regulates q iff p is indirectly causally upstream of q and p positively regulates q.</obo:IAO_0000115>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002436">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002434"/>
+        <obo:IAO_0000115>An interaction relationship in which the two partners are molecular entities that directly physically interact with each other for example via a stable binding interaction or a brief interaction during which one modifies the other.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <obo:IAO_0000118>indirectly activates</obo:IAO_0000118>
-        <obo:RO_0002579 rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-        <rdfs:label xml:lang="en">indirectly positively regulates</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002409 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002409">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0012012"/>
-        <obo:IAO_0000115>p indirectly negatively regulates q iff p is indirectly causally upstream of q and p negatively regulates q.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <obo:IAO_0000118>indirectly inhibits</obo:IAO_0000118>
-        <obo:RO_0002579 rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-        <rdfs:label xml:lang="en">indirectly negatively regulates</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002410 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002410">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <obo:IAO_0000115>relation that links two events, processes, states, or objects such that one event, process, state, or object (a cause) contributes to the production of another event, process, state, or object (an effect) where the cause is partly or wholly responsible for the effect, and the effect is partly or wholly dependent on the cause.</obo:IAO_0000115>
-        <obo:IAO_0000116>This branch of the ontology deals with causal relations between entities. It is divided into two branches: causal relations between occurrents/processes, and causal relations between material entities. We take an &apos;activity flow-centric approach&apos;, with the former as primary, and define causal relations between material entities in terms of causal relations between occurrents.
-
-To define causal relations in an activity-flow type network, we make use of 3 primitives:
-
- * Temporal: how do the intervals of the two occurrents relate? 
- * Is the causal relation regulatory?
- * Is the influence positive or negative?
-
-The first of these can be formalized in terms of the Allen Interval Algebra. Informally, the 3 bins we care about are &apos;direct&apos;, &apos;indirect&apos; or overlapping. Note that all causal relations should be classified under a RO temporal relation (see the branch under &apos;temporally related to&apos;). Note that all causal relations are temporal, but not all temporal relations are causal. Two occurrents can be related in time without being causally connected. We take causal influence to be primitive, elucidated as being such that has the upstream changed, some qualities of the donwstream would necessarily be modified.
-
-For the second, we consider a relationship to be regulatory if the system in which the activities occur is capable of altering the relationship to achieve some objective. This could include changing the rate of production of a molecule.
-
-For the third, we consider the effect of the upstream process on the output(s) of the downstream process. If the level of output is increased, or the rate of production of the output is increased, then the direction is increased. Direction can be positive, negative or neutral or capable of either direction. Two positives in succession yield a positive, two negatives in succession yield a positive, otherwise the default assumption is that the net effect is canceled and the influence is neutral.
-
-Each of these 3 primitives can be composed to yield a cross-product of different relation types.</obo:IAO_0000116>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <obo:IAO_0000232>Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect.</obo:IAO_0000232>
-        <rdfs:label xml:lang="en">causally related to</rdfs:label>
-    </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002410"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>relation that links two events, processes, states, or objects such that one event, process, state, or object (a cause) contributes to the production of another event, process, state, or object (an effect) where the cause is partly or wholly responsible for the effect, and the effect is partly or wholly dependent on the cause.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Causality</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002411 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002411">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002418"/>
-        <obo:IAO_0000115>p is causally upstream of q iff p is causally related to q, the end of p precedes the end of q, and p is not an occurrent part of q.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <rdfs:label xml:lang="en">causally upstream of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002412 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002412">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002090"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-        <obo:IAO_0000115>p is immediately causally upstream of q iff p is causally upstream of q, and the end of p is coincident with the beginning of q.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <obo:RO_0002575 rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-        <rdfs:label xml:lang="en">immediately causally upstream of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002418 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002418">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002501"/>
-        <obo:IAO_0000115>p is &apos;causally upstream or within&apos; q iff p is causally related to q, and the end of p precedes, or is coincident with, the end of q.</obo:IAO_0000115>
-        <obo:IAO_0000116>We would like to make this disjoint with &apos;preceded by&apos;, but this is prohibited in OWL2</obo:IAO_0000116>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <obo:IAO_0000118>influences (processual)</obo:IAO_0000118>
-        <oboInOwl:hasRelatedSynonym>affects</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>causally upstream of or within</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002501 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002501">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002410"/>
-        <obo:IAO_0000115>p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one where the execution of p influences the execution of q. p may be upstream, downstream, part of, or a container of q.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
-        <obo:IAO_0000232>Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect.</obo:IAO_0000232>
-        <rdfs:label>causal relation between processes</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002578 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002578">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002412"/>
-        <obo:IAO_0000115>p directly regulates q iff p is immediately causally upstream of q and p regulates q.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
-        <obo:IAO_0000589>directly regulates (processual)</obo:IAO_0000589>
-        <obo:RO_0002575 rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <rdfs:label>directly regulates</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002629 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002629">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002578"/>
-        <obo:IAO_0000115>p directly positively regulates q iff p is immediately causally upstream of q, and p positively regulates q.</obo:IAO_0000115>
-        <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
-        <obo:IAO_0000589>directly positively regulates (process to process)</obo:IAO_0000589>
-        <obo:RO_0004049 rdf:resource="http://purl.obolibrary.org/obo/RO_0002578"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <rdfs:label>directly positively regulates</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002630 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002630">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002578"/>
-        <obo:IAO_0000115>p directly negatively regulates q iff p is immediately causally upstream of q, and p negatively regulates q.</obo:IAO_0000115>
-        <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
-        <obo:IAO_0000589>directly negatively regulates (process to process)</obo:IAO_0000589>
-        <obo:RO_0004050 rdf:resource="http://purl.obolibrary.org/obo/RO_0002578"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <rdfs:label>directly negatively regulates</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0004046 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004046">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002418"/>
-        <obo:RO_0004050 rdf:resource="http://purl.obolibrary.org/obo/RO_0002418"/>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T23:55:05Z</oboInOwl:creation_date>
-        <rdfs:label>causally upstream of or within, negative effect</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0004047 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004047">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002418"/>
-        <obo:RO_0004049 rdf:resource="http://purl.obolibrary.org/obo/RO_0002418"/>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T23:55:19Z</oboInOwl:creation_date>
-        <rdfs:label>causally upstream of or within, positive effect</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0012011 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0012011">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
-        <obo:IAO_0000115>p is indirectly causally upstream of q iff p is causally upstream of q and there exists some process r such that p is causally upstream of r and r is causally upstream of q.</obo:IAO_0000115>
-        <oboInOwl:created_by>pg</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-09-26T06:07:17Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">indirectly causally upstream of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0012012 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0012012">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0012011"/>
-        <obo:IAO_0000115>p indirectly regulates q iff p is indirectly causally upstream of q and p regulates q.</obo:IAO_0000115>
-        <oboInOwl:created_by>pg</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-09-26T06:08:01Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">indirectly regulates</rdfs:label>
+        <obo:IAO_0000118>binds</obo:IAO_0000118>
+        <obo:IAO_0000118>molecularly binds with</obo:IAO_0000118>
+        <rdfs:label>molecularly interacts with</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/ECO_0000353"/>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/MI_0915</skos:closeMatch>
     </owl:ObjectProperty>
     
 
