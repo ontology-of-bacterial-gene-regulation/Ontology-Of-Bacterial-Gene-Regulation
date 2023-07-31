@@ -882,14 +882,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000035">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000096"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000040"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>a continuos nucleotide segment that carries the information for the structure of at least one functional-RNA or polipeptide chain.</obo:IAO_0000115>
+        <obo:IAO_0000115>a continuos DNA segment that carries the information for the structure of at least one functional-RNA or polipeptide chain. If the gene carries the information for more than one product, it means that the gene is composed of overlapping CDSs or overlapping functional RNA bearer regions.</obo:IAO_0000115>
         <rdfs:comment>Los tipos de genes del GB file
 
 Gene: region of biological interest identified as a gene 
@@ -938,6 +938,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000043">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
+        <obo:IAO_0000115>a segment of an mRNA that interacts with the complementary anti-Shine Dalgarno (anti-SD) sequence in the 16S ribosomal RNA to recruit the ribosome small subunit (SSU, 30S) to the ribosome binding site (RBS) during SD-led initiation of translation.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID: ﻿29661790</obo:IAO_0000119>
         <rdfs:label xml:lang="en">shine dalgarno sequence</rdfs:label>
     </owl:Class>
     
@@ -976,7 +978,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000049">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
-        <obo:IAO_0000115>An extent of RNA greater than zero nucleotides.</obo:IAO_0000115>
+        <obo:IAO_0000115>an extent of RNA greater than zero nucleotides</obo:IAO_0000115>
         <rdfs:label xml:lang="en">RNA segment</rdfs:label>
     </owl:Class>
     
@@ -1098,7 +1100,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000041"/>
@@ -1111,7 +1113,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>An RNA segment that codes for a polypeptide chain.</obo:IAO_0000115>
+        <obo:IAO_0000115>an RNA segment that codes for at least one polypeptide chain</obo:IAO_0000115>
         <rdfs:label xml:lang="en">transcribed coding segment</rdfs:label>
     </owl:Class>
     
@@ -1598,6 +1600,16 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROK_0000095 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000095">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
+        <obo:IAO_0000115>A continuos RNA segment that carries the information for the structure of at least one functional-RNA or polipeptide chain. If the gene carries the information for more than one product, it means that the gene is composed of overlapping CDSs or overlapping functional RNA bearer regions.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">transcribed gene</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PROK_0000096 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000096">
@@ -1634,6 +1646,25 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
         <obo:IAO_0000115>a biomacromolecule that consists of desoxyribonucleotides</obo:IAO_0000115>
         <rdfs:label xml:lang="en">DNA molecule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000100">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
+        <obo:IAO_0000115>an RNA segment that carries the information for at least one funtional RNA</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">transcribed RNA gene</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000101 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000101">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000098"/>
+        <rdfs:label xml:lang="en">mRNA</rdfs:label>
     </owl:Class>
     
 
