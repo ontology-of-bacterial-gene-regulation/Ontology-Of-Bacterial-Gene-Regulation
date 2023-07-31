@@ -937,7 +937,17 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000043 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000043">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000049"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <obo:IAO_0000115>a segment of an mRNA that interacts with the complementary anti-Shine Dalgarno (anti-SD) sequence in the 16S ribosomal RNA to recruit the ribosome small subunit (SSU, 30S) to the ribosome binding site (RBS) during SD-led initiation of translation.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID: ﻿29661790</obo:IAO_0000119>
         <rdfs:label xml:lang="en">shine dalgarno sequence</rdfs:label>
@@ -1105,12 +1115,6 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000041"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000055"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>an RNA segment that codes for at least one polypeptide chain</obo:IAO_0000115>
