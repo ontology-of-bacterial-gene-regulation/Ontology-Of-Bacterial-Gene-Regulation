@@ -635,12 +635,6 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000040"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A gene that carries the information of a functional RNA.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">RNA gene</rdfs:label>
     </owl:Class>
@@ -934,12 +928,6 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000042">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000040"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A gene that codes for a polypeptide chain.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">protein coding gene</rdfs:label>
     </owl:Class>
