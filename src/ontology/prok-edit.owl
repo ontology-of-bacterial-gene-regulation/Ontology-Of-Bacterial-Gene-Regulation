@@ -952,7 +952,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115>a segment of an mRNA that interacts with the complementary anti-Shine Dalgarno (anti-SD) sequence in the 16S ribosomal RNA to recruit the ribosome small subunit (SSU, 30S) to the ribosome binding site (RBS) during SD-led initiation of translation.</obo:IAO_0000115>
+        <obo:IAO_0000115>a segment of an mRNA that interacts with the complementary anti-Shine Dalgarno (anti-SD) sequence in the 16S ribosomal RNA to recruit the ribosome small subunit (SSU, 30S) to the ribosome binding site (RBS) during SD-led initiation of translation</obo:IAO_0000115>
         <obo:IAO_0000119>PMID: ﻿29661790</obo:IAO_0000119>
         <rdfs:label xml:lang="en">shine dalgarno sequence</rdfs:label>
     </owl:Class>
@@ -963,6 +963,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000044">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000098"/>
+        <obo:IAO_0000115>the unedited RNA molecule that is produced by transcription of a transcription unit</obo:IAO_0000115>
         <rdfs:label xml:lang="en">prymary transcript</rdfs:label>
     </owl:Class>
     
@@ -1131,6 +1132,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000058">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000098"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000101"/>
+        <obo:IAO_0000115>an RNA molecule that does not carry any protein coding segment</obo:IAO_0000115>
         <rdfs:label xml:lang="en">ncRNA</rdfs:label>
     </owl:Class>
     
@@ -1672,6 +1675,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000101">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000098"/>
+        <obo:IAO_0000115>an RNA molecule that carries at least one transcribed coding segment</obo:IAO_0000115>
+        <obo:PROK_0000033>messenger RNA</obo:PROK_0000033>
         <rdfs:label xml:lang="en">mRNA</rdfs:label>
     </owl:Class>
     
@@ -1718,6 +1723,52 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         <obo:IAO_0000119>PMID: 33349119</obo:IAO_0000119>
         <obo:PROK_0000033>SD(-)</obo:PROK_0000033>
         <rdfs:label xml:lang="en">mRNA without Shine Dalgarno sequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000106 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000106">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000058"/>
+        <obo:PROK_0000033>an RNA molecule that binds to an amin acid to its 3&apos; end and and, by means of its anti-codon region, takes it to complementary codon in the mRNA that is being translated by the ribosome</obo:PROK_0000033>
+        <obo:PROK_0000033>transfer RNA</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">tRNA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000107 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000107">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000058"/>
+        <obo:PROK_0000033>an RNA molecule that is part of the ribosome</obo:PROK_0000033>
+        <obo:PROK_0000033>ribosomal RNA</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">rRNA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000108 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000108">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000058"/>
+        <obo:PROK_0000033>sRNA</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">small RNA</rdfs:label>
     </owl:Class>
     
 
