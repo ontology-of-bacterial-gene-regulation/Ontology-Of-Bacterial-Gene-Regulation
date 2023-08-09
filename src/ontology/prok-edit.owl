@@ -960,7 +960,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000044">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000098"/>
-        <obo:IAO_0000115>the unedited RNA molecule that is produced by transcription of a transcription unit</obo:IAO_0000115>
+        <obo:IAO_0000115>the unedited RNA molecule that is produced by transcription of a transcription unit; it starts in a transcription start site and ends in a transcription termination site</obo:IAO_0000115>
         <rdfs:label xml:lang="en">prymary transcript</rdfs:label>
     </owl:Class>
     
@@ -1137,7 +1137,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000101"/>
         <obo:IAO_0000115>an RNA molecule that does not carry any protein coding segment</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">ncRNA</rdfs:label>
+        <obo:PROK_0000033>ncRNA</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">non coding RNA</rdfs:label>
     </owl:Class>
     
 
@@ -1356,6 +1357,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
+        <rdfs:comment>What about 6S product? [﻿32213244]</rdfs:comment>
         <rdfs:isDefinedBy>a biomacromolecule produced by transcription or translation of a gene from a continous sequence and that has a function other that carrying information</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">gene product</rdfs:label>
     </owl:Class>
@@ -1679,8 +1681,9 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000101">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000098"/>
         <obo:IAO_0000115>an RNA molecule that carries at least one transcribed coding segment</obo:IAO_0000115>
-        <obo:PROK_0000033>messenger RNA</obo:PROK_0000033>
-        <rdfs:label xml:lang="en">mRNA</rdfs:label>
+        <obo:PROK_0000033>mRNA</obo:PROK_0000033>
+        <rdfs:comment>some mRNAs have ther ends processed, so not all of them can be regarded as primary transcripts nor as mature transcripts [PMID: ﻿2992951, 2433046]</rdfs:comment>
+        <rdfs:label xml:lang="en">messenger RNA</rdfs:label>
     </owl:Class>
     
 
@@ -1734,9 +1737,9 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000106">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000058"/>
-        <obo:PROK_0000033>an RNA molecule that binds to an amin acid to its 3&apos; end and and, by means of its anti-codon region, takes it to complementary codon in the mRNA that is being translated by the ribosome</obo:PROK_0000033>
-        <obo:PROK_0000033>transfer RNA</obo:PROK_0000033>
-        <rdfs:label xml:lang="en">tRNA</rdfs:label>
+        <obo:PROK_0000033>an RNA molecule that binds an amin acid to its 3&apos; end and, by means of its anti-codon region, takes it to complementary codon in the mRNA that is being translated by the ribosome</obo:PROK_0000033>
+        <obo:PROK_0000033>tRNA</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">transfer RNA</rdfs:label>
     </owl:Class>
     
 
@@ -1746,8 +1749,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000107">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000058"/>
         <obo:PROK_0000033>an RNA molecule that is part of the ribosome</obo:PROK_0000033>
-        <obo:PROK_0000033>ribosomal RNA</obo:PROK_0000033>
-        <rdfs:label xml:lang="en">rRNA</rdfs:label>
+        <obo:PROK_0000033>rRNA</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">ribosomal RNA</rdfs:label>
     </owl:Class>
     
 
@@ -1769,9 +1772,35 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000058"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000098"/>
+        <obo:IAO_0000115>a short RNA molecule, 100-200 nt long, that regulate gene expression</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID: 32213244</obo:IAO_0000119>
         <obo:PROK_0000033>sRNA</obo:PROK_0000033>
-        <rdfs:label xml:lang="en">small RNA</rdfs:label>
+        <rdfs:comment>Some sRNA are carried in the genome as independent transcription units, but some other are transcribed as part mRNA and produced by cleavage in a process called maturation.</rdfs:comment>
+        <rdfs:comment>sRNAs are not necessarily non-coding. Some sRNA are also mRNA, for example, SgrS encode the 38 amin acid protein SgrT.</rdfs:comment>
+        <rdfs:label xml:lang="en">small regulatory RNA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000109">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000099"/>
+        <obo:IAO_0000115>a DNA molecule that naturally occurs in cells</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">chromosome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000110 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000110">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000098"/>
+        <obo:IAO_0000115>an RNA molecule that was processed by one or more RNases to be a functional molecule</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID: 16452296</obo:IAO_0000119>
+        <obo:PROK_0000033>mature RNA</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">mature transcript</rdfs:label>
     </owl:Class>
     
 
