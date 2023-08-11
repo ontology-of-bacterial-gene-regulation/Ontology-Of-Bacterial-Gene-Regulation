@@ -1581,9 +1581,16 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000090">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000080"/>
-        <obo:IAO_0000115>a trans acting regulatory element that is an RNA</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">regulatory RNA</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000080"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000098"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>a trans acting regulatory element that is an RNA molecule</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">regulatory RNA molecule</rdfs:label>
     </owl:Class>
     
 
@@ -1703,7 +1710,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000103">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000101"/>
-        <obo:IAO_0000115>an mRNA that has 5&apos;UTR or leader</obo:IAO_0000115>
+        <obo:IAO_0000115>an mRNA that has 5&apos; untranslated region (UTR) or leader</obo:IAO_0000115>
         <rdfs:label xml:lang="en">mRNA with leader</rdfs:label>
     </owl:Class>
     
@@ -1713,7 +1720,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000104">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000103"/>
-        <obo:IAO_0000119>PMID: 33349119</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:33349119</obo:IAO_0000119>
         <obo:IAO_0000119>SD(+)</obo:IAO_0000119>
         <obo:IAO_0000119>an mRNA that has a Shine-Dalgarno sequence</obo:IAO_0000119>
         <rdfs:label xml:lang="en">mRNA with Shine-Dalgarno sequence</rdfs:label>
@@ -1726,9 +1733,9 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000105">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000103"/>
         <obo:IAO_0000115>an mRNA that does not have a Shine Dalgarno sequence</obo:IAO_0000115>
-        <obo:IAO_0000119>PMID: 33349119</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:33349119</obo:IAO_0000119>
         <obo:PROK_0000033>SD(-)</obo:PROK_0000033>
-        <rdfs:label xml:lang="en">mRNA without Shine Dalgarno sequence</rdfs:label>
+        <rdfs:label xml:lang="en">mRNA without Shine-Dalgarno sequence</rdfs:label>
     </owl:Class>
     
 
@@ -1760,25 +1767,33 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000108">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000046"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
                     </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
-                    </owl:Restriction>
-                </owl:unionOf>
+                </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000098"/>
         <obo:IAO_0000115>a short RNA molecule, 100-200 nt long, that regulate gene expression</obo:IAO_0000115>
-        <obo:IAO_0000119>PMID: 32213244</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:32213244</obo:IAO_0000119>
         <obo:PROK_0000033>sRNA</obo:PROK_0000033>
-        <rdfs:comment>Some sRNA are carried in the genome as independent transcription units, but some other are transcribed as part mRNA and produced by cleavage in a process called maturation.</rdfs:comment>
+        <rdfs:comment>Some sRNA are carried in the genome as sRNA-only transcription units, but some other are transcribed as part of an mRNA and produced by cleavage in a process called maturation.</rdfs:comment>
         <rdfs:comment>sRNAs are not necessarily non-coding. Some sRNA are also mRNA, for example, SgrS encode the 38 amin acid protein SgrT.</rdfs:comment>
-        <rdfs:label xml:lang="en">small regulatory RNA</rdfs:label>
+        <rdfs:label xml:lang="en">small RNA</rdfs:label>
     </owl:Class>
     
 
