@@ -837,7 +837,7 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>DNA-binding regulatory proteins of transcription initiation that bind near a promoter and affect transcript initiation at that promoter with some mechanisms that allows it to be active in some conditions and inactive in other conditions</obo:IAO_0000115>
-        <obo:IAO_0000119>PMID: 32665585</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:32665585</obo:IAO_0000119>
         <rdfs:comment>The fact that these proteins bind near the promoter should be represented in the transcription factor regulatory site class.</rdfs:comment>
         <rdfs:label xml:lang="en">transcription factor</rdfs:label>
     </owl:Class>
@@ -1499,7 +1499,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000084"/>
         <obo:IAO_0000115>a regulatory protein of transcription initiation whose regulation specificity is determined by the DNA sequence that they recognize</obo:IAO_0000115>
-        <obo:IAO_0000119>PMID: 32665585</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:32665585</obo:IAO_0000119>
         <rdfs:label xml:lang="en">DNA-binding regulatory protein of transcription initiation</rdfs:label>
     </owl:Class>
     
@@ -1520,7 +1520,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>a DNA-binding regulatory protein of transcription initiation that confer core RNAP promoter specificity, open duplex DNA and facilitate template strand entry into the RNAP active site</obo:IAO_0000115>
-        <obo:IAO_0000119>PMID: 32665585</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:32665585</obo:IAO_0000119>
         <rdfs:label xml:lang="en">sigma factor</rdfs:label>
     </owl:Class>
     
@@ -1549,7 +1549,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>a regulatory protein of transcription initiation that regulates transcription initiation by interacting with the RNA polymerase holoenzyme and whose specificity is not determined directly by the recognition of specific a DNA sequence</obo:IAO_0000115>
-        <obo:IAO_0000119>PMID: 32665585</obo:IAO_0000119>
+        <obo:IAO_0000119>PMID:32665585</obo:IAO_0000119>
         <rdfs:comment>Using a negation in formal definitions requires the assertion of negative facts in the whole ontology, because the lack of a positive assertion does not imply the negative assertion (OWA). In this particular case, the definition implies that RNAP-centered regulatory protein is a disjoint class with DNA-binding regulatory protein of transcription initiation, i. e., that RNAP-centered regulatory proteins do not regulate transcription initiation in any case by recognizing a DNA sequence.</rdfs:comment>
         <rdfs:label xml:lang="en">RNAP-centered regulatory protein of transcription initiation</rdfs:label>
     </owl:Class>
@@ -1791,7 +1791,9 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         <obo:IAO_0000115>a short RNA molecule, 100-200 nt long, that regulate gene expression</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:32213244</obo:IAO_0000119>
         <obo:PROK_0000033>sRNA</obo:PROK_0000033>
-        <rdfs:comment>Some sRNA are carried in the genome as sRNA-only transcription units, but some other are transcribed as part of an mRNA and produced by cleavage in a process called maturation.</rdfs:comment>
+        <rdfs:comment>Some sRNA are carried in the genome as sRNA-only transcription units, but some other are transcribed as part of an mRNA and produced by cleavage in a process called maturation. Thus we cannot say that the class of sRNA is subclass of RNAs that are part of mRNAs nor of the class of ncRNA, but they are not disjoint.</rdfs:comment>
+        <rdfs:comment>Some sRNA require a protein cofactor to function. Currently in RegulonDB, there are included RNAs whose cofactors are RNA-binding protein Hfq, ATP-dependent RNA helicase DeaD or ribonuclease E.</rdfs:comment>
+        <rdfs:comment>sRNA regulate gene expression through different mechanisms. Currently in RegulonDB, there are sRNA that act by translation-blocking and mRNA degradation.</rdfs:comment>
         <rdfs:comment>sRNAs are not necessarily non-coding. Some sRNA are also mRNA, for example, SgrS encode the 38 amin acid protein SgrT.</rdfs:comment>
         <rdfs:label xml:lang="en">small RNA</rdfs:label>
     </owl:Class>
