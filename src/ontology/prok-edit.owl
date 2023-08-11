@@ -367,6 +367,42 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROK_0000111 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000111">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000112"/>
+        <rdfs:label xml:lang="en">is activated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000112 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000112">
+        <obo:IAO_0000115>a relation that holds between a biomacromolecuar entity and an entity, which brings about a change necessary for the biomacromolecule to be functional</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">activates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000113 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000113">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000114"/>
+        <obo:IAO_0000115>a relation that holds between a biomacromolecuar entity and an entity, which brings about a change necessary for the biomacromolecule to stop being functional</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">deactivates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000114 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000114">
+        <rdfs:label xml:lang="en">is deactivated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002434 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002434">
@@ -1387,6 +1423,18 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000076"/>
                         </owl:unionOf>
                     </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000111"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000114"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
@@ -1395,7 +1443,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000077"/>
-        <obo:IAO_0000115>a regulator that is a molecule or a molecule segment carried in the genome</obo:IAO_0000115>
+        <obo:IAO_0000115>a regulator that is a molecule or a molecule segment carried in the genome and that has a mechanism of activation or deactivation</obo:IAO_0000115>
         <rdfs:label xml:lang="en">genomically carried regulator</rdfs:label>
     </owl:Class>
     
