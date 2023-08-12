@@ -987,7 +987,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         </owl:equivalentClass>
         <obo:IAO_0000115>a segment of an mRNA that interacts with the complementary anti-Shine Dalgarno (anti-SD) sequence in the 16S ribosomal RNA to recruit the ribosome small subunit (SSU, 30S) to the ribosome binding site (RBS) during SD-led initiation of translation</obo:IAO_0000115>
         <obo:IAO_0000119>PMID: ﻿29661790</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">shine dalgarno sequence</rdfs:label>
+        <rdfs:label xml:lang="en">shine-dalgarno sequence</rdfs:label>
     </owl:Class>
     
 
