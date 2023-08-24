@@ -1865,6 +1865,40 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROK_0000115 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000115">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000094"/>
+        <obo:IAO_0000115>an operon whose transcription is coordinated from a single transcription unit</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">simple operon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000116 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000116">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000094"/>
+        <obo:IAO_0000115>an operon whose transcription is coordinated through several mutually overlapping transcription units that are transcribed in the same direction and share at least one gene</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">complex operon</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
