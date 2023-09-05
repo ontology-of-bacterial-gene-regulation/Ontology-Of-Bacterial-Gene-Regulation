@@ -1977,8 +1977,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000117 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000117">
-        <obo:IAO_0000115>a set of units of gene expression directly regulated by a common set
-of one or more common regulatory gene products</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000073"/>
+        <obo:IAO_0000115>a set of units of gene expression directly regulated by a common set of one or more common regulators</obo:IAO_0000115>
         <rdfs:label xml:lang="en">regulon</rdfs:label>
     </owl:Class>
     
@@ -2019,6 +2019,26 @@ of one or more common regulatory gene products</obo:IAO_0000115>
         <obo:IAO_0000115>﻿sites of dissociation of transcription complexes mediated by an RNA helicase called Rho</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21439297</obo:IAO_0000119>
         <rdfs:label xml:lang="en">rho-dependent terminator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000130 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000130">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000117"/>
+        <obo:IAO_0000115>a regulon defined by considering one regulator</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">simple regulon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000131 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000131">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000117"/>
+        <obo:IAO_0000115>a regulon defined by considering the units of expression regulated by a specified set of regulators</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">complex regulon</rdfs:label>
     </owl:Class>
     
 
