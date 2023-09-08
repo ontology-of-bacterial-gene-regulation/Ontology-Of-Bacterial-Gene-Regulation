@@ -374,7 +374,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000111 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000111">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000132"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000112"/>
+        <obo:IAO_0000115>a relation that holds between a biomacromolecuar entity and an entity (activator), which brings about a change necessary for the biomacromolecule to be functional</obo:IAO_0000115>
         <rdfs:label xml:lang="en">is activated by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -383,7 +385,8 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000112 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000112">
-        <obo:IAO_0000115>a relation that holds between a biomacromolecuar entity and an entity, which brings about a change necessary for the biomacromolecule to be functional</obo:IAO_0000115>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
+        <obo:IAO_0000115>a relation that holds between an entity (activator) and a biomacromolecuar entity, in which the activator brings about a change necessary for the biomacromolecular entity to be functional</obo:IAO_0000115>
         <rdfs:label xml:lang="en">activates</rdfs:label>
     </owl:ObjectProperty>
     
@@ -392,8 +395,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000113 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000113">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000114"/>
-        <obo:IAO_0000115>a relation that holds between a biomacromolecuar entity and an entity, which brings about a change necessary for the biomacromolecule to stop being functional</obo:IAO_0000115>
+        <obo:IAO_0000115>a relation that holds between an entity (deactivator) and a biomacromolecuar entity, in which the deactivator brings about a change necessary for the biomacromolecular entity to stop being functional</obo:IAO_0000115>
         <rdfs:label xml:lang="en">deactivates</rdfs:label>
     </owl:ObjectProperty>
     
@@ -402,6 +406,8 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000114 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000114">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000132"/>
+        <obo:IAO_0000115>a relation that holds between a biomacromolecuar entity and an entity (deactivator), which brings about a change necessary for the biomacromolecule to stop being functional</obo:IAO_0000115>
         <rdfs:label xml:lang="en">is deactivated by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -471,6 +477,27 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/PROK_0000118"/>
         <obo:IAO_0000115>a relationship that holds between a transcription termination site and the terminator that produces it</obo:IAO_0000115>
         <rdfs:label xml:lang="en">TTS selected by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000129 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000129">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000132"/>
+        <obo:IAO_0000115>a relation that holds between an regulator entity and a biomacromolecuar entity, in which the regulator changes the functional state of the biomacromolecular entity</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">regulates activity of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000132 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000132">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
+        <obo:IAO_0000115>a relation that holds between a biomacromolecuar entity and a regulator entity, which changes the functional state of the biomacromolecule</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has activity regulated by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2019,6 +2046,25 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         <obo:IAO_0000115>﻿sites of dissociation of transcription complexes mediated by an RNA helicase called Rho</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21439297</obo:IAO_0000119>
         <rdfs:label xml:lang="en">rho-dependent terminator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000127 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000127">
+        <obo:IAO_0000119>a continuant that produces a change in a molecule and modifies its activity and/or specificity</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">effector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000128 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000128">
+        <obo:IAO_0000115>The three-dimensional arrangement of something in space. Often refers to the arrangement of the side groups on a molecule which can freely rotate into different positions without breaking any bonds.</obo:IAO_0000115>
+        <obo:IAO_0000119>NCIT</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">conformation</rdfs:label>
     </owl:Class>
     
 
