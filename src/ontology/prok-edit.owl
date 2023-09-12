@@ -502,6 +502,49 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROK_0000134 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000134">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000135"/>
+        <rdfs:label xml:lang="en">regulates expression of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000135 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000135">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
+        <rdfs:label xml:lang="en">has expression regulated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000136">
+        <rdfs:label xml:lang="en">changes property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000150 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000150">
+        <rdfs:label xml:lang="en">has interaction type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000151 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000151">
+        <rdfs:label xml:lang="en">is interaction type of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002434 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002434">
@@ -2005,7 +2048,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000117">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000073"/>
-        <obo:IAO_0000115>a set of units of gene expression directly regulated by a common set of one or more common regulators</obo:IAO_0000115>
+        <obo:IAO_0000115>a set of units of gene expression directly regulated by a common set of one or more common gene products or by ppGpp</obo:IAO_0000115>
+        <rdfs:comment>Currently, all except one regulon displayed in RegulonDB are defined by regulators that are gene products. The only exception is the regulon defined by ppGpp, for which references can be found in which researchers talk about it as such. As more regulons defined by small molecules are curated, we will be able to define more acurrately the class of small molecules that define regulons.</rdfs:comment>
         <rdfs:label xml:lang="en">regulon</rdfs:label>
     </owl:Class>
     
@@ -2053,7 +2097,19 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000127 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000127">
-        <obo:IAO_0000119>a continuant that produces a change in a molecule and modifies its activity and/or specificity</obo:IAO_0000119>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000137"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119>a continuant that produces a change in a molecular entity and modifies its activity and/or specificity</obo:IAO_0000119>
         <rdfs:label xml:lang="en">effector</rdfs:label>
     </owl:Class>
     
@@ -2062,8 +2118,9 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000128 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000128">
-        <obo:IAO_0000115>The three-dimensional arrangement of something in space. Often refers to the arrangement of the side groups on a molecule which can freely rotate into different positions without breaking any bonds.</obo:IAO_0000115>
-        <obo:IAO_0000119>NCIT</obo:IAO_0000119>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000140"/>
+        <obo:IAO_0000115>the arrangement of the side groups on a molecule which can freely rotate into different positions without breaking any bonds.</obo:IAO_0000115>
+        <obo:IAO_0000119>Adapted from NCIT</obo:IAO_0000119>
         <rdfs:label xml:lang="en">conformation</rdfs:label>
     </owl:Class>
     
@@ -2085,6 +2142,154 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000117"/>
         <obo:IAO_0000115>a regulon defined by considering the units of expression regulated by a specified set of regulators</obo:IAO_0000115>
         <rdfs:label xml:lang="en">complex regulon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000133 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000133">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000077"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>an effector that acts on a regulatory component of a genetic switch</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">effector of a gene expression regulator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000137 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000137">
+        <rdfs:label xml:lang="en">pyshico-chemical property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000138 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000138">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000128"/>
+        <obo:IAO_0000115>the conformation of a molecular entity in a lingand-unbound state</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID: 20066034</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">apo conformation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000139 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000139">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000128"/>
+        <obo:IAO_0000115>the conformation of a molecular entity in a lingand-bound state</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID: 20066034</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">holo conformation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000137"/>
+        <obo:IAO_0000119>a physico-chemical property of a molecule or part of a molecule</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">molecular property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000141 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000141">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000137"/>
+        <obo:IAO_0000119>a physco-chemical property that describes how distinct molecules interact</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">property of chemical interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000142 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000142">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000141"/>
+        <obo:IAO_0000119>a property of chemical interaction that describes athe fact that the site of ligand binding is  different than the active site of an enzyme or the nucleotide binding site of a gene expression regulator</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">allosteric interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000143 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000143">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000145"/>
+        <obo:IAO_0000119>a chemical bond that consists of the simultaneous attraction of two nuclei for one or more pairs of electrons</obo:IAO_0000119>
+        <obo:IAO_0000119>https://www.sciencedirect.com/topics/chemistry/covalent-bond</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">covalent bond</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000144 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000144">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000145"/>
+        <obo:IAO_0000119>a chemical bond in which no sharing of electrons takes place</obo:IAO_0000119>
+        <obo:PROK_0000033>non-covalent interaction</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">non-covalent bond</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000145 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000145">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000141"/>
+        <obo:IAO_0000119>a property of chemical interaction that describes how different atoms or ions attract each other and form a lasting molecular entity</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">chemical bond</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000146 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000146">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000144"/>
+        <obo:IAO_0000115>attractive or repulsive non covalent interaction between objects having electric charges</obo:IAO_0000115>
+        <obo:IAO_0000119>http://www.chem.ucla.edu/~harding/IGOC/E/electrostatic_interaction.html</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">electrostatic ineraction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000147 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000147">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
+        <obo:IAO_0000115>an effector that is a molecular entity</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">molecular effector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000148 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000148">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
+        <rdfs:label xml:lang="en">physical effector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000149 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000149">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
+        <obo:IAO_0000115>an effector that acts on an enzyme</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">effector of enzyme</rdfs:label>
     </owl:Class>
     
 
