@@ -545,6 +545,30 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROK_0000156 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000156">
+        <rdfs:label xml:lang="en">has property change</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000159 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000159">
+        <rdfs:label xml:lang="en">is effector of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000169 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000169">
+        <rdfs:label xml:lang="en">has functional conformation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0002434 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002434">
@@ -859,7 +883,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000018 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000018">
-        <obo:IAO_0000115>﻿Representations of a collection of binding sites that summarize the binding- site characteristics.</obo:IAO_0000115>
+        <obo:IAO_0000115>﻿representations of a collection of binding sites that summarize the binding-site characteristics</obo:IAO_0000115>
         <rdfs:label xml:lang="en">motif</rdfs:label>
     </owl:Class>
     
@@ -1034,11 +1058,11 @@ We also have the outstanding issue of how to aim different definitions to differ
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
                             </owl:Restriction>
                         </owl:unionOf>
@@ -1779,6 +1803,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000092 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000092">
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000137"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000152"/>
         <rdfs:label xml:lang="en">molecular entity</rdfs:label>
     </owl:Class>
     
@@ -1788,7 +1814,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000093">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
-        <obo:IAO_0000115>a molecular that is not carried in the genome</obo:IAO_0000115>
+        <obo:IAO_0000115>a molecular entity that is not carried in the genome</obo:IAO_0000115>
         <rdfs:label xml:lang="en">small molecule</rdfs:label>
     </owl:Class>
     
@@ -2165,7 +2191,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000137 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000137">
-        <rdfs:label xml:lang="en">pyshico-chemical property</rdfs:label>
+        <rdfs:label xml:lang="en">physico-chemical property</rdfs:label>
     </owl:Class>
     
 
@@ -2260,7 +2286,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000144"/>
         <obo:IAO_0000115>attractive or repulsive non covalent interaction between objects having electric charges</obo:IAO_0000115>
         <obo:IAO_0000119>http://www.chem.ucla.edu/~harding/IGOC/E/electrostatic_interaction.html</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">electrostatic ineraction</rdfs:label>
+        <rdfs:label xml:lang="en">electrostatic interaction</rdfs:label>
     </owl:Class>
     
 
@@ -2268,6 +2294,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000147 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000147">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
         <obo:IAO_0000115>an effector that is a molecular entity</obo:IAO_0000115>
         <rdfs:label xml:lang="en">molecular effector</rdfs:label>
@@ -2279,6 +2306,15 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000148">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000137"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000152"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>an effector that is a physical process or a physico-chemical property</rdfs:comment>
         <rdfs:label xml:lang="en">physical effector</rdfs:label>
     </owl:Class>
     
@@ -2290,6 +2326,199 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
         <obo:IAO_0000115>an effector that acts on an enzyme</obo:IAO_0000115>
         <rdfs:label xml:lang="en">effector of enzyme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000152 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000152">
+        <rdfs:label xml:lang="en">physical process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000153 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000153">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000152"/>
+        <obo:IAO_0000115>electromagnetic radiation of any wavelength that travels in a vacuum with a speed of 299,792,458 meters (about 186,000 miles) per second</obo:IAO_0000115>
+        <obo:IAO_0000119>https://www.merriam-webster.com/dictionary/light</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">light</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000154 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000154">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000074"/>
+        <rdfs:label xml:lang="en">ribosome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000157 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000157">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000032"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000150"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000141"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000156"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000140"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>a molecular complex formed by a transcription factor and a molecular effector</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">TF and molecular effector complex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000158 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000158">
+        <obo:IAO_0000115>the state of a transcription factor (TF) in which it has some regulatory effect</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">TF regulatory state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000160 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000160">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
+        <obo:IAO_0000115>a TF alternative regulatory state that results of the modification of the TF by a physical effector sucha as light or termperature</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">TF modified by physical effector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000161 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000161">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
+        <obo:IAO_0000115>a TF alternative regulatory state that results when the effector is a protease</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">TF lysed by protein</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000162 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000162">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
+        <rdfs:label xml:lang="en">TF sequestered by protein</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000163 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000163">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
+        <obo:IAO_0000115>the TF alternative regulatory state in which if has formed a dimer with anoher unit of the same protein</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">dimerized TF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000164 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000164">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
+        <rdfs:label xml:lang="en">molecular complex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000165 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000165">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000164"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000061"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000034"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000158"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The complex of the TF with the TFRS directly regulates a promoter and, thereby, it regulates the expression of TUs and genes. This fact is reflected in two axioms and by adding these two axioms we want to represent the fact that there are experiments that can observe the regulatory effects of this entity at different levels of the expression process.</rdfs:comment>
+        <rdfs:label xml:lang="en">TF bound to TFRS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000166 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000166">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000158"/>
+        <obo:IAO_0000115>the state of a TF in which it has not been modified by an effector</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">unmodified TF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000167 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000167">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000158"/>
+        <obo:IAO_0000115>the state of a TF after being modified by an effector</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">modified TF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000168 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000168">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000165"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000169"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000128"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>a TF bound to TFRS whose TF has its activity regulated by a molecular effector</obo:IAO_0000115>
+        <rdfs:comment>This class has a functional conformation (holo or apo) associated as opossed to the TF whose activity is regulated by physical effectors for which we cannot associate such property, since the conformational change is not due to a ligand interacting with the TF.</rdfs:comment>
+        <rdfs:comment>When there is a molecular effector, the functional conformation is a property of the TF bound to the TFRS, since alternative conformations of the same TF can act on diferent sites.</rdfs:comment>
+        <rdfs:label xml:lang="en">TF with molecular effector bound to TFRS</rdfs:label>
     </owl:Class>
     
 
