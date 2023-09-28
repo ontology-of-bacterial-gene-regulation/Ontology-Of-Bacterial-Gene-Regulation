@@ -883,6 +883,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000018 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000164"/>
         <obo:IAO_0000115>﻿representations of a collection of binding sites that summarize the binding-site characteristics</obo:IAO_0000115>
         <rdfs:label xml:lang="en">motif</rdfs:label>
     </owl:Class>
@@ -1359,7 +1360,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>a genomically carried regulator that is a nucleotide segment that acts on a genomic segment adjacent to its own locus</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">cis acting regulatory element</rdfs:label>
+        <rdfs:label xml:lang="en">regulatory site</rdfs:label>
     </owl:Class>
     
 
@@ -1572,7 +1573,6 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000077 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000077">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
         <obo:IAO_0000115>an entity that increases or decreases the expression of a specific set of genes</obo:IAO_0000115>
         <rdfs:label xml:lang="en">regulator</rdfs:label>
     </owl:Class>
@@ -1634,7 +1634,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         </owl:equivalentClass>
         <obo:IAO_0000115>a genomically carried regulator that is a molecule that is the product of trascription or translation that can difusse in the cytoplasm and acts on a genomic segment away its own locus</obo:IAO_0000115>
         <rdfs:comment>Although the classification under this class are defined by the precise points of regulation, evidence for the regulatory activity might be the observation of the increase or decrease of the gene product, therefore, the regulated entity in the formal definition is not limited to the specific one for the gene expression phase, but it is generalized to a nucleotide sequence. For example, in the case of TF, the direct regulated entity is the promoter, but, in RegulonDB can be found these kind of regulators that are not associated to a promoter, but to a regulated transcription unit or gene.</rdfs:comment>
-        <rdfs:label xml:lang="en">trans acting regulatory element</rdfs:label>
+        <rdfs:label xml:lang="en">regulatory gene product</rdfs:label>
     </owl:Class>
     
 
@@ -1650,7 +1650,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115>a trans acting regulatory element that is a protein</obo:IAO_0000115>
+        <obo:IAO_0000115>a regulatory gene product that is a protein</obo:IAO_0000115>
         <rdfs:label xml:lang="en">regulatory protein</rdfs:label>
     </owl:Class>
     
@@ -1805,6 +1805,9 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000092">
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000137"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000152"/>
+        <obo:IAO_0000115>A material entity that consists of two or more atoms that are all connected via covalent bonds such that any atom can be transitively connected with any other atom.</obo:IAO_0000115>
+        <obo:IAO_0000119>COB
+COB_0000013</obo:IAO_0000119>
         <rdfs:label xml:lang="en">molecular entity</rdfs:label>
     </owl:Class>
     
@@ -2191,6 +2194,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000137 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000137">
+        <obo:IAO_0000115>a quality of matter and its interactions</obo:IAO_0000115>
         <rdfs:label xml:lang="en">physico-chemical property</rdfs:label>
     </owl:Class>
     
@@ -2242,7 +2246,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000142">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000141"/>
-        <obo:IAO_0000119>a property of chemical interaction that describes athe fact that the site of ligand binding is  different than the active site of an enzyme or the nucleotide binding site of a gene expression regulator</obo:IAO_0000119>
+        <obo:IAO_0000119>a property of chemical interaction that describes the fact that the site of ligand binding is different than the active site of an enzyme or the nucleotide binding site of a gene expression regulator</obo:IAO_0000119>
         <rdfs:label xml:lang="en">allosteric interaction</rdfs:label>
     </owl:Class>
     
@@ -2294,7 +2298,6 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000147 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000147">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
         <obo:IAO_0000115>an effector that is a molecular entity</obo:IAO_0000115>
         <rdfs:label xml:lang="en">molecular effector</rdfs:label>
@@ -2333,6 +2336,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000152 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000152">
+        <obo:IAO_0000115>a phenomenon or series of events that involve a change in the physical properties or state of a system or substance. These processes typically occur due to interactions between various physical factors, such as forces, energy transfers, or the exchange of matter.</obo:IAO_0000115>
+        <obo:IAO_0000119>chatGTP</obo:IAO_0000119>
         <rdfs:label xml:lang="en">physical process</rdfs:label>
     </owl:Class>
     
@@ -2353,7 +2358,19 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000154">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000074"/>
+        <obo:IAO_0000115>an heterotypic complex biomolecular entity formed by RNA molecules and proteins, in which protein synthesis takes place</obo:IAO_0000115>
         <rdfs:label xml:lang="en">ribosome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000155 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000155">
+        <obo:IAO_0000115>A complex of two or more molecular entities that are not covalently bound.</obo:IAO_0000115>
+        <obo:IAO_0000119>COB
+COB_0000080</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">complex of molecular entities</rdfs:label>
     </owl:Class>
     
 
@@ -2361,6 +2378,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000157 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000157">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000155"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2386,8 +2404,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000140"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>a molecular complex formed by a transcription factor and a molecular effector</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">TF and molecular effector complex</rdfs:label>
+        <obo:IAO_0000115>a complex of molecular entities formed by a transcription factor and a molecular effector</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">TF bound to molecular effector</rdfs:label>
     </owl:Class>
     
 
@@ -2395,6 +2413,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000158 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000158">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000170"/>
         <obo:IAO_0000115>the state of a transcription factor (TF) in which it has some regulatory effect</obo:IAO_0000115>
         <rdfs:label xml:lang="en">TF regulatory state</rdfs:label>
     </owl:Class>
@@ -2434,7 +2453,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000163">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
-        <obo:IAO_0000115>the TF alternative regulatory state in which if has formed a dimer with anoher unit of the same protein</obo:IAO_0000115>
+        <obo:IAO_0000115>the TF alternative regulatory state in which it has formed a dimer with anoher unit of the same protein</obo:IAO_0000115>
         <rdfs:label xml:lang="en">dimerized TF</rdfs:label>
     </owl:Class>
     
@@ -2443,8 +2462,10 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000164 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000164">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
-        <rdfs:label xml:lang="en">molecular complex</rdfs:label>
+        <obo:IAO_0000115>something disassociated from any specific instance</obo:IAO_0000115>
+        <obo:IAO_0000119>adapted from https://www.merriam-webster.com/dictionary/abstraction</obo:IAO_0000119>
+        <obo:PROK_0000033>generically dependent continuant</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">abstraction</rdfs:label>
     </owl:Class>
     
 
@@ -2452,7 +2473,7 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
     <!-- http://purl.obolibrary.org/obo/PROK_0000165 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000165">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000164"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000155"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -2479,7 +2500,8 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000158"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>The complex of the TF with the TFRS directly regulates a promoter and, thereby, it regulates the expression of TUs and genes. This fact is reflected in two axioms and by adding these two axioms we want to represent the fact that there are experiments that can observe the regulatory effects of this entity at different levels of the expression process.</rdfs:comment>
+        <obo:IAO_0000115>a complex of molecular entities formed by a transcription factor, a DNA fragment, and, optionally, a molecular effector, depending on the functional conformation of the complex.</obo:IAO_0000115>
+        <rdfs:comment>The complex of the TF with the TFRS directly regulates the activity of a promoter and, thereby, it regulates the expression of TUs and genes. This fact is reflected in two axioms and by adding these two axioms we want to represent the fact that there are experiments that can observe the regulatory effects of this entity at different levels of the expression process.</rdfs:comment>
         <rdfs:label xml:lang="en">TF bound to TFRS</rdfs:label>
     </owl:Class>
     
@@ -2519,6 +2541,16 @@ we have had conversations with Gisela Storz, expert in sRNA, to adequately curat
         <rdfs:comment>This class has a functional conformation (holo or apo) associated as opossed to the TF whose activity is regulated by physical effectors for which we cannot associate such property, since the conformational change is not due to a ligand interacting with the TF.</rdfs:comment>
         <rdfs:comment>When there is a molecular effector, the functional conformation is a property of the TF bound to the TFRS, since alternative conformations of the same TF can act on diferent sites.</rdfs:comment>
         <rdfs:label xml:lang="en">TF with molecular effector bound to TFRS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000170 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000170">
+        <obo:IAO_0000115>A specific condition or configuration of a physical entity or object at a particular moment in time. It is a way of describing the attributes, properties, and characteristics of a physical object at a given instant.</obo:IAO_0000115>
+        <obo:IAO_0000119>chatGTP</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">physico-chemical state</rdfs:label>
     </owl:Class>
     
 
