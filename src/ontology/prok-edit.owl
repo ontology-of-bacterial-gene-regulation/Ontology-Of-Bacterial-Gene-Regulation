@@ -259,6 +259,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000039 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000039">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000056"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000046"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/PROK_0000065"/>
@@ -283,6 +284,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000041 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000041">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000056"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000048"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/PROK_0000055"/>
         <rdfs:label xml:lang="en">translates into</rdfs:label>
@@ -293,7 +295,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000046 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000046">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000059"/>
         <rdfs:label xml:lang="en">is transcribed from</rdfs:label>
     </owl:ObjectProperty>
     
@@ -302,7 +304,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000048 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000048">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000059"/>
         <rdfs:label xml:lang="en">is translated from</rdfs:label>
     </owl:ObjectProperty>
     
@@ -330,6 +332,7 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000056">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000059"/>
         <rdfs:label xml:lang="en">expressed into</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1124,7 +1127,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000049"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000057"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000040"/>
