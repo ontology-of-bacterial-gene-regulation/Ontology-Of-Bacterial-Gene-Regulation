@@ -261,10 +261,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000039">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000056"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000046"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000039"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000041"/>
-        </owl:propertyChainAxiom>
         <rdfs:label xml:lang="en">transcribes into</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1545,7 +1541,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000046"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000013"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000048"/>
@@ -1991,7 +1987,7 @@ COB_0000013</obo:IAO_0000119>
                     </owl:Class>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000046"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000013"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
