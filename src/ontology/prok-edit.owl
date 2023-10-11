@@ -227,8 +227,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000030">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000037"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/PROK_0000031"/>
         <obo:IAO_0000115>a relationshipt that hold between a promoter and the transcription start sites that it produces</obo:IAO_0000115>
         <rdfs:label xml:lang="en">selects TSS</rdfs:label>
     </owl:ObjectProperty>
@@ -239,8 +237,6 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000037">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROK_0000031"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
         <obo:IAO_0000115>a relationship that holds between a transcription termination site and the terminator that produces it</obo:IAO_0000115>
         <rdfs:label xml:lang="en">TSS selected by</rdfs:label>
     </owl:ObjectProperty>
@@ -466,8 +462,6 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000126">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PROK_0000062"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/PROK_0000118"/>
         <obo:IAO_0000115>a relationship that holds between a transcription termination site and the terminator that produces it</obo:IAO_0000115>
         <rdfs:label xml:lang="en">TTS selected by</rdfs:label>
     </owl:ObjectProperty>
@@ -557,7 +551,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000169 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000169">
-        <rdfs:label xml:lang="en">has functional conformation</rdfs:label>
+        <rdfs:label xml:lang="en">has conformation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -718,20 +712,18 @@ We also have the outstanding issue of how to aim different definitions to differ
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000029"/>
                         </owl:unionOf>
                     </owl:Class>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000030"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000031"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000124"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000030"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000031"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000124"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+            </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
         <obo:IAO_0000115>A DNA segment essential for the specific initiation of transcription at a defined location in a DNA molecule, although this location might not be one single base, it is recognized by a specific Eσ, and this recognition is not necessarily autonomous.</obo:IAO_0000115>
@@ -827,6 +819,12 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000036"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>DNA segment where a TF binds specifically</obo:IAO_0000115>
         <obo:PROK_0000033>TFBS</obo:PROK_0000033>
         <rdfs:label xml:lang="en">transcription factor binding site</rdfs:label>
@@ -1067,26 +1065,22 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000034">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000009"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
+                    </owl:Restriction>
+                </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000009"/>
         <obo:IAO_0000115>a TFBS that is involved in transcription regulation</obo:IAO_0000115>
         <obo:PROK_0000033>TFRS</obo:PROK_0000033>
-        <rdfs:comment>TFRSs directly regulate promoter activity, but the observation of the increase or decrease expression of a DNA segment are also evidence for the reguatory activity of the site. Note tha I restrict the kind of regulated nucleotide segment because TFRS are DNA sites that act in cis, and as such, they regulate the expression of DNA segments.</rdfs:comment>
+        <rdfs:comment>TFRSs directly regulate promoter activity, but the observation of the increase or decrease expression of a DNA segment are also evidence for the reguatory activity of the site. Note tha I restrict the kind of regulated nucleotide segment to DNA because TFRS are DNA sites that act in cis.</rdfs:comment>
         <rdfs:comment>The definition of transcription factor requires that these bound &quot;near&quot; the promoter. This is clearly a site property, but we have to define the meaning of &quot;near&quot;.</rdfs:comment>
         <rdfs:comment>quiero simplificar la definición formal a una sola relación de regulación con una clase que incluya todas las entidades que pueda regular directa o indirectamente un sitio, creo que todos deberían ser regiones de ADN, por el sitio es una región de ADN y regula en cis, pero ¿qué es un gen? creo que el gen está presente tanto en el adn como en el arn. De hecho sí hay rRNA-gene interactions en los datasets. Entonces tengo que crear una clase &quot;unit of expression&quot; y saber bien qué subclases hacer.</rdfs:comment>
         <rdfs:label xml:lang="en">transcription factor regulatory site</rdfs:label>
@@ -1243,7 +1237,7 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
-        <obo:IAO_0000115>A unit of expression that is a DNA segment an is translated into a single transcript.</obo:IAO_0000115>
+        <obo:IAO_0000115>A unit of expression that is a DNA segment and is translated into a single transcript.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">DNA unit of expression</rdfs:label>
     </owl:Class>
     
@@ -2085,8 +2079,14 @@ COB_0000013</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000117">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000073"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000077"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>a set of units of gene expression directly regulated by a common set of one or more common gene products or by ppGpp</obo:IAO_0000115>
-        <rdfs:comment>Currently, all except one regulon displayed in RegulonDB are defined by regulators that are gene products. The only exception is the regulon defined by ppGpp, for which references can be found in which researchers talk about it as such. As more regulons defined by small molecules are curated, we will be able to define more acurrately the class of small molecules that define regulons.</rdfs:comment>
+        <rdfs:comment>Currently, all except one regulon displayed in RegulonDB are defined by regulators that are gene products, more specifically proteins called transcription factors. The only exception is the regulon defined by ppGpp, for which references can be found in which researchers talk about it as such. As more regulons defined by small molecules are curated, we will be able to define more acurrately the class of small molecules that define regulons.</rdfs:comment>
         <rdfs:label xml:lang="en">regulon</rdfs:label>
     </owl:Class>
     
@@ -2412,6 +2412,12 @@ COB_0000080</obo:IAO_0000119>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000140"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000169"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000139"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>a complex of molecular entities formed by a transcription factor and a molecular effector</obo:IAO_0000115>
         <rdfs:label xml:lang="en">TF bound to molecular effector</rdfs:label>
     </owl:Class>
@@ -2519,6 +2525,12 @@ COB_0000080</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000166">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000158"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000169"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000138"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>the state of a TF in which it has not been modified by an effector</obo:IAO_0000115>
         <rdfs:label xml:lang="en">unmodified TF</rdfs:label>
     </owl:Class>
