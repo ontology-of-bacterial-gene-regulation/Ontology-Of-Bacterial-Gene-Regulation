@@ -225,7 +225,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000030 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000030">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000037"/>
         <obo:IAO_0000115>a relationshipt that hold between a promoter and the transcription start sites that it produces</obo:IAO_0000115>
         <rdfs:label xml:lang="en">selects TSS</rdfs:label>
@@ -300,10 +300,18 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROK_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000052">
+        <rdfs:label xml:lang="en">produces</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PROK_0000053 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000053">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
         <rdfs:label xml:lang="en">negatively regulates</rdfs:label>
     </owl:ObjectProperty>
     
@@ -312,7 +320,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000054 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000054">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
         <rdfs:label xml:lang="en">positively regulates</rdfs:label>
     </owl:ObjectProperty>
     
@@ -409,7 +417,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000121 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000121">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
         <obo:IAO_0000115>a relationship that holds between a terminator and the transcription termination sites that it produces</obo:IAO_0000115>
         <rdfs:label xml:lang="en">selects TTS</rdfs:label>
     </owl:ObjectProperty>
@@ -441,7 +449,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000124 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000124">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
         <obo:IAO_0000115>a relationshipt that holds between a promoter and the transcription unit whose transcription it initiates</obo:IAO_0000115>
         <rdfs:label xml:lang="en">inititates transcription of</rdfs:label>
     </owl:ObjectProperty>
@@ -451,7 +459,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000125 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000125">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
         <obo:IAO_0000115>a relationshipt that holds between a terminator and the transcription unit whose transcription it ends</obo:IAO_0000115>
         <rdfs:label xml:lang="en">terminates transcription of</rdfs:label>
     </owl:ObjectProperty>
@@ -559,7 +567,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000171 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000171">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000172"/>
         <rdfs:label xml:lang="en">regulates translation of</rdfs:label>
     </owl:ObjectProperty>
@@ -569,8 +577,26 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000172 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000172">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
         <rdfs:label xml:lang="en">has translation regulated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000173 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000173">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
+        <rdfs:label xml:lang="en">regulates transcription of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000174 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000174">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
+        <rdfs:label xml:lang="en">has transcription regulated by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -701,31 +727,33 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000001">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
+                <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000024"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000025"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000026"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000027"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000028"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000029"/>
-                        </owl:unionOf>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000024"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000025"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000026"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000027"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000028"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000029"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000030"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000031"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
                     </owl:Class>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000030"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000031"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000124"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
                     </owl:Restriction>
-                </owl:intersectionOf>
+                </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000124"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
         <obo:IAO_0000115>A DNA segment essential for the specific initiation of transcription at a defined location in a DNA molecule, although this location might not be one single base, it is recognized by a specific Eσ, and this recognition is not necessarily autonomous.</obo:IAO_0000115>
         <rdfs:comment>Promoter coordinates are calculated based on the most upstream TSS. The left coordinate is 60 bases upstream and the right coordinate is 20 bases downstream the TSS.</rdfs:comment>
         <rdfs:label xml:lang="en">promoter</rdfs:label>
@@ -752,7 +780,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000039"/>
@@ -818,7 +846,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000032"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000036"/>
@@ -1065,19 +1093,23 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000034">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
-                    </owl:Restriction>
-                </owl:unionOf>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000009"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000009"/>
         <obo:IAO_0000115>a TFBS that is involved in transcription regulation</obo:IAO_0000115>
         <obo:PROK_0000033>TFRS</obo:PROK_0000033>
         <rdfs:comment>TFRSs directly regulate promoter activity, but the observation of the increase or decrease expression of a DNA segment are also evidence for the reguatory activity of the site. Note tha I restrict the kind of regulated nucleotide segment to DNA because TFRS are DNA sites that act in cis.</rdfs:comment>
@@ -1091,7 +1123,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000035">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000040"/>
@@ -1160,10 +1192,8 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000045 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000045">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000061"/>
-        <obo:IAO_0000115>An expressed region that is transcribed into a single and complete transcript or translated into a single and complete polypeptide chain.</obo:IAO_0000115>
-        <rdfs:comment>In structural terms a single transcript is defined by unique non-spourious TSS-TTS and a single polipeptide chain by unique non-spouriois start codon-stop codon</rdfs:comment>
-        <rdfs:label xml:lang="en">unit of expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <rdfs:label xml:lang="en">DNA continuous segment</rdfs:label>
     </owl:Class>
     
 
@@ -1219,57 +1249,8 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000051 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000051">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000064"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000122"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000123"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000118"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
-        <obo:IAO_0000115>A unit of expression that is a DNA segment and is translated into a single transcript.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">DNA unit of expression</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROK_0000052 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000052">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000065"/>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
-                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000047"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
-                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000069"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
-        <obo:IAO_0000115>A unit of expression that is an RNA segment and is translated into a single polypeptide chain.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">RNA unit of expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <rdfs:label xml:lang="en">DNA discontinuous segment</rdfs:label>
     </owl:Class>
     
 
@@ -1379,6 +1360,10 @@ We also have the outstanding issue of how to aim different definitions to differ
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000041"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000055"/>
                     </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000061"/>
+                    </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1424,6 +1409,10 @@ We also have the outstanding issue of how to aim different definitions to differ
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000040"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
@@ -1829,12 +1818,20 @@ COB_0000013</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000094">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
         <obo:IAO_0000115>Set of adjacent genes whose transcription is coordinated by one or several mutually overlapping transcription units that are transcribed in the same direction and share at least one gene.</obo:IAO_0000115>
         <rdfs:comment>The fact that the genes of an operon are coordinated by transcription units is represented in the axiom gene &apos;is part of&apos; some &apos;transcription unit&apos;. To calculate the operon, we have to find the TUs that overlap, but I think this is outside de capabilites of OWL. So we should assert the relation operon &apos;has part&apos; some &apos;transcription unit&apos;.</rdfs:comment>
         <rdfs:label xml:lang="en">operon</rdfs:label>
@@ -1990,12 +1987,12 @@ COB_0000013</obo:IAO_0000119>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000171"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
                             </owl:Restriction>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000173"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -2078,7 +2075,7 @@ COB_0000013</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000117 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000117">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000073"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
@@ -2134,18 +2131,20 @@ COB_0000013</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000127 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000127">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000137"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000170"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <obo:IAO_0000119>a continuant that produces a change in a molecular entity and modifies its activity and/or specificity</obo:IAO_0000119>
         <rdfs:label xml:lang="en">effector</rdfs:label>
     </owl:Class>
@@ -2316,15 +2315,19 @@ COB_0000013</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000148 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000148">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000137"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000152"/>
-                </owl:unionOf>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000127"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000137"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000152"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
         <rdfs:comment>an effector that is a physical process or a physico-chemical property</rdfs:comment>
         <rdfs:label xml:lang="en">physical effector</rdfs:label>
     </owl:Class>
@@ -2355,6 +2358,18 @@ COB_0000013</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000153">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000152"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000170"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000129"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>electromagnetic radiation of any wavelength that travels in a vacuum with a speed of 299,792,458 meters (about 186,000 miles) per second</obo:IAO_0000115>
         <obo:IAO_0000119>https://www.merriam-webster.com/dictionary/light</obo:IAO_0000119>
         <rdfs:label xml:lang="en">light</rdfs:label>
@@ -2467,8 +2482,8 @@ COB_0000080</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000163">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
-        <obo:IAO_0000115>the TF alternative regulatory state in which it has formed a dimer with anoher unit of the same protein</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">dimerized TF</rdfs:label>
+        <obo:IAO_0000115>the TF alternative regulatory state in which it has formed a multimer with another unit of the same protein</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">multimeric TF</rdfs:label>
     </owl:Class>
     
 
@@ -2570,7 +2585,7 @@ COB_0000080</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000170">
         <obo:IAO_0000115>A specific condition or configuration of a physical entity or object at a particular moment in time. It is a way of describing the attributes, properties, and characteristics of a physical object at a given instant.</obo:IAO_0000115>
         <obo:IAO_0000119>chatGTP</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">physico-chemical state</rdfs:label>
+        <rdfs:label xml:lang="en">alternative state of a molecular entity</rdfs:label>
     </owl:Class>
     
 
