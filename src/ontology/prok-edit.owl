@@ -519,6 +519,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000136 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000136">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000156"/>
         <rdfs:label xml:lang="en">changes property</rdfs:label>
     </owl:ObjectProperty>
     
@@ -727,30 +728,30 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000001">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
+                <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000024"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000025"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000026"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000027"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000028"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000029"/>
-                                </owl:unionOf>
-                            </owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000024"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000025"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000026"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000027"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000028"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000029"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000030"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000031"/>
                             </owl:Restriction>
-                        </owl:intersectionOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000124"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
                     </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000124"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
-                    </owl:Restriction>
-                </owl:unionOf>
+                </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
@@ -787,7 +788,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000044"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A DNA segment delimited by different nonspurious TSS–TTS pairs</obo:IAO_0000115>
+        <obo:IAO_0000115>A DNA segment delimited by different nonspurious TSS–TTS pairs or, more precisely, the DNA bases that correspond to the first and last bases of a transcript.</obo:IAO_0000115>
         <rdfs:comment>Transcription units (TUs) are delimited by exactly one promoter-terminator pair. Promoters can produce more than one transcription start site (TSS), and terminators can generate more than one transcription termination site (TTS).  Only when alternative TSSs or alternative TTSs are known to have a function or to be produced by alternative regulation, two DNA transcribed segments that have microvarioation at their ends are regarded as different TUs.</rdfs:comment>
         <rdfs:label xml:lang="en">transcription unit</rdfs:label>
     </owl:Class>
@@ -2108,7 +2109,7 @@ COB_0000013</obo:IAO_0000119>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>nucleotide regions near the end of the transcript that intervene in termination of transcription and determine the location of transcript termination, although this might not be a single site</obo:IAO_0000115>
-        <rdfs:comment>In RegulonDB terminator sequences are DNA sequences, meaning that if the terminator is, in reality, an RNA sequence, a projection onto the DNA is stored in the database.</rdfs:comment>
+        <rdfs:comment>In RegulonDB terminator sequences are DNA sequences, meaning that if the terminator is, in reality, an RNA sequence, it&apos;s template DNA is stored in the database.</rdfs:comment>
         <rdfs:label xml:lang="en">terminator</rdfs:label>
     </owl:Class>
     
@@ -2130,7 +2131,7 @@ COB_0000013</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000120">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000118"/>
         <obo:IAO_0000115>﻿sites of dissociation of transcription complexes mediated by an RNA helicase called Rho</obo:IAO_0000115>
-        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21439297</obo:IAO_0000119>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID: 21439297</obo:IAO_0000119>
         <rdfs:label xml:lang="en">rho-dependent terminator</rdfs:label>
     </owl:Class>
     
@@ -2153,6 +2154,7 @@ COB_0000013</obo:IAO_0000119>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000077"/>
         <obo:IAO_0000119>a continuant that produces a change in a molecular entity and modifies its activity and/or specificity</obo:IAO_0000119>
         <rdfs:label xml:lang="en">effector</rdfs:label>
     </owl:Class>
@@ -2436,6 +2438,7 @@ COB_0000080</obo:IAO_0000119>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>a complex of molecular entities formed by a transcription factor and a molecular effector</obo:IAO_0000115>
+        <rdfs:comment>Here methylated and phosphorylated forms can be included, since methyl ans phospate groups are molecules. Then, we can add the interaction property &quot;covalent&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">TF bound to molecular effector</rdfs:label>
     </owl:Class>
     
