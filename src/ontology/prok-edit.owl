@@ -481,7 +481,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000129">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000132"/>
-        <obo:IAO_0000115>a relation that holds between an regulator entity and a biomacromolecuar entity, in which the regulator changes the functional state of the biomacromolecular entity</obo:IAO_0000115>
+        <obo:IAO_0000115>a relation that holds between a regulator entity and a biomacromolecuar entity, in which the regulator changes the functional state of the biomacromolecular entity</obo:IAO_0000115>
         <rdfs:label xml:lang="en">regulates activity of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2242,7 +2242,6 @@ COB_0000013</obo:IAO_0000119>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000077"/>
         <obo:IAO_0000119>a continuant that produces a change in a molecular entity and modifies its activity and/or specificity</obo:IAO_0000119>
         <rdfs:label xml:lang="en">effector</rdfs:label>
     </owl:Class>
@@ -2499,12 +2498,11 @@ COB_0000080</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000157 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000157">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000155"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000133"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
