@@ -1645,6 +1645,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000077 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
         <obo:IAO_0000115>an entity that increases or decreases the expression of a specific set of genes</obo:IAO_0000115>
         <rdfs:label xml:lang="en">regulator</rdfs:label>
     </owl:Class>
@@ -1873,6 +1874,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000092 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000092">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000176"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000137"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000152"/>
         <obo:IAO_0000115>A material entity that consists of two or more atoms that are all connected via covalent bonds such that any atom can be transitively connected with any other atom.</obo:IAO_0000115>
@@ -2487,6 +2489,7 @@ COB_0000013</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000155 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000155">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000176"/>
         <obo:IAO_0000115>A complex of two or more molecular entities that are not covalently bound.</obo:IAO_0000115>
         <obo:IAO_0000119>COB
 COB_0000080</obo:IAO_0000119>
@@ -2533,7 +2536,7 @@ COB_0000080</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000158 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000158">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000170"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000176"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
@@ -2678,9 +2681,18 @@ COB_0000080</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000170 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000170">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
         <obo:IAO_0000115>A specific condition or configuration of a physical entity or object at a particular moment in time. It is a way of describing the attributes, properties, and characteristics of a physical object at a given instant.</obo:IAO_0000115>
         <obo:IAO_0000119>chatGTP</obo:IAO_0000119>
         <rdfs:label xml:lang="en">alternative state of a molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000176 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000176">
+        <rdfs:label xml:lang="en">material entity</rdfs:label>
     </owl:Class>
     
 
