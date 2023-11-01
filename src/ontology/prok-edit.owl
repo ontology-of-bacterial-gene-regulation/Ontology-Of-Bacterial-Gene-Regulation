@@ -809,6 +809,7 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A DNA segment delimited by different nonspurious TSS–TTS pairs or, more precisely, the DNA bases that correspond to the first and last bases of a transcript.</obo:IAO_0000115>
+        <obo:PROK_0000033>TU</obo:PROK_0000033>
         <rdfs:comment>Transcription units (TUs) are delimited by exactly one promoter-terminator pair. Promoters can produce more than one transcription start site (TSS), and terminators can generate more than one transcription termination site (TTS).  Only when alternative TSSs or alternative TTSs are known to have a function or to be produced by alternative regulation, two DNA transcribed segments that have microvarioation at their ends are regarded as different TUs.</rdfs:comment>
         <rdfs:label xml:lang="en">transcription unit</rdfs:label>
     </owl:Class>
@@ -1187,7 +1188,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         </owl:equivalentClass>
         <obo:IAO_0000115>a TFBS that is involved in transcription regulation</obo:IAO_0000115>
         <obo:PROK_0000033>TFRS</obo:PROK_0000033>
-        <rdfs:comment>TFRSs directly regulate promoter activity, but the observation of the increase or decrease expression of a DNA segment are also evidence for the reguatory activity of the site. Note tha I restrict the kind of regulated nucleotide segment to DNA because TFRS are DNA sites that act in cis.</rdfs:comment>
+        <rdfs:comment>TFRSs directly regulate promoter activity, but the observation of the increase or decrease expression of a DNA segment are also evidence for the regulatory activity of the site.</rdfs:comment>
         <rdfs:comment>The definition of transcription factor requires that these bound &quot;near&quot; the promoter. This is clearly a site property, but we have to define the meaning of &quot;near&quot;.</rdfs:comment>
         <rdfs:comment>quiero simplificar la definición formal a una sola relación de regulación con una clase que incluya todas las entidades que pueda regular directa o indirectamente un sitio, creo que todos deberían ser regiones de ADN, por el sitio es una región de ADN y regula en cis, pero ¿qué es un gen? creo que el gen está presente tanto en el adn como en el arn. De hecho sí hay rRNA-gene interactions en los datasets. Entonces tengo que crear una clase &quot;unit of expression&quot; y saber bien qué subclases hacer.</rdfs:comment>
         <rdfs:label xml:lang="en">transcription factor regulatory site</rdfs:label>
@@ -2692,6 +2693,7 @@ COB_0000080</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000176 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000176">
+        <rdfs:isDefinedBy>BFO</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">material entity</rdfs:label>
     </owl:Class>
     
