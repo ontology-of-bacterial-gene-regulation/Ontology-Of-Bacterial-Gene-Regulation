@@ -1322,6 +1322,7 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000070"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
         <obo:IAO_0000115>an extent of a nucleotide molecule greater than zero</obo:IAO_0000115>
         <rdfs:label xml:lang="en">nucleotide segment</rdfs:label>
     </owl:Class>
@@ -1528,17 +1529,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROK_0000067 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000067">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000071"/>
-        <obo:IAO_0000115>a biomacromolecule that consists or is part of a single polymeric chain, i.e. independent molecules of atomic groups covalently bonded in the chain direction</obo:IAO_0000115>
-        <obo:IAO_0000119>https://doi.org/10.1016/B978-0-08-096701-1.00050-1</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">simple biomacromolecular entity</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PROK_0000069 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000069">
@@ -1570,45 +1560,20 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROK_0000072 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000072">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000071"/>
-        <obo:IAO_0000119>a biomacromolecular entity consisting of at least one polymeric chain, i.e. independent molecules of atomic groups covalently bonded in the chain direction</obo:IAO_0000119>
-        <obo:IAO_0000119>https://doi.org/10.1016/B978-0-08-096701-1.00050-1</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">complex biomacromolecular entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROK_0000073 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000073">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000072"/>
-        <obo:IAO_0000119>a complex biological polymer consisting of a single type of simple biological polymer</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">homotypic complex biomacromolecular entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROK_0000074 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000074">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000072"/>
-        <obo:IAO_0000119>a complex biological polymer consisting of more than one type of simple biological polymers</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">heterotypic complex biomacromolecular entity</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PROK_0000075 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000075">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000073"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000055"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000055"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119>a biological macromolecule minimally consisting of one polypeptide chain synthesized at the ribosome</obo:IAO_0000119>
@@ -1635,10 +1600,10 @@ We also have the outstanding issue of how to aim different definitions to differ
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000178"/>
         <rdfs:comment>What about 6S product? [﻿32213244]</rdfs:comment>
-        <rdfs:isDefinedBy>a biomacromolecule produced by transcription or translation of a gene from a continous sequence and that has a function other than carrying information</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">gene product</rdfs:label>
+        <rdfs:isDefinedBy>a gene product produced from a continous sequence</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">simple gene product</rdfs:label>
     </owl:Class>
     
 
@@ -1662,8 +1627,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000050"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000075"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000076"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000178"/>
                         </owl:unionOf>
                     </owl:Class>
                     <owl:Restriction>
@@ -1697,12 +1661,7 @@ We also have the outstanding issue of how to aim different definitions to differ
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000078"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000075"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000076"/>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000178"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1764,6 +1723,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000085 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000085">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000085"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000091"/>
@@ -1934,7 +1899,7 @@ COB_0000013</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000096 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000096">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000067"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000071"/>
         <obo:IAO_0000115>a biomacromolecular entity that is part of a polymeric chain</obo:IAO_0000115>
         <rdfs:label xml:lang="en">biomacromolecular segment</rdfs:label>
     </owl:Class>
@@ -1944,8 +1909,8 @@ COB_0000013</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000097 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000097">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000067"/>
-        <obo:IAO_0000115>a biomacromolecular entity that consists of a single complete polymeric chain</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000071"/>
+        <obo:IAO_0000115>a biomacromolecular entity that consists of one or more complete polymeric chains</obo:IAO_0000115>
         <rdfs:label xml:lang="en">biomacromolecule</rdfs:label>
     </owl:Class>
     
@@ -2480,7 +2445,31 @@ COB_0000013</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000154 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000154">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000074"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000075"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000107"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000075"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000107"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>an heterotypic complex biomolecular entity formed by RNA molecules and proteins, in which protein synthesis takes place</obo:IAO_0000115>
         <rdfs:label xml:lang="en">ribosome</rdfs:label>
     </owl:Class>
@@ -2528,7 +2517,7 @@ COB_0000080</obo:IAO_0000119>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>a complex of molecular entities formed by a transcription factor and a molecular effector</obo:IAO_0000115>
-        <rdfs:comment>Here methylated and phosphorylated forms can be included, since methyl ans phospate groups are molecules. Then, we can add the interaction property &quot;covalent&quot;</rdfs:comment>
+        <rdfs:comment>Here we intend to include both  non-covalent and covalent bound molecular effectors, so methylated and phosphorylated forms can be included. The interaction property &quot;covalent&quot; or &quot;non-covalent&quot; should be added to specific instances of the class.</rdfs:comment>
         <rdfs:label xml:lang="en">TF bound to molecular effector</rdfs:label>
     </owl:Class>
     
@@ -2537,7 +2526,7 @@ COB_0000080</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000158 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000158">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000176"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000170"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
@@ -2682,7 +2671,7 @@ COB_0000080</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000170 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000170">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000176"/>
         <obo:IAO_0000115>A specific condition or configuration of a physical entity or object at a particular moment in time. It is a way of describing the attributes, properties, and characteristics of a physical object at a given instant.</obo:IAO_0000115>
         <obo:IAO_0000119>chatGTP</obo:IAO_0000119>
         <rdfs:label xml:lang="en">alternative state of a molecular entity</rdfs:label>
@@ -2695,6 +2684,41 @@ COB_0000080</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000176">
         <rdfs:isDefinedBy>BFO</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">material entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000177 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000177">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000178"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000178"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000178"/>
+        <obo:IAO_0000115>a gene product</obo:IAO_0000115>
+        <obo:IAO_0000115>a gene product produced by the union of more than one gene product</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">complex gene product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000178 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000178">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
+        <obo:IAO_0000115>a biomacromolecule that is produced by transcription or translation of gene and that has a function other than carrying information</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">gene product</rdfs:label>
     </owl:Class>
     
 
