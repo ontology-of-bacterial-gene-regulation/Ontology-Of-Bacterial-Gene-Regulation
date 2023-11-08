@@ -825,16 +825,16 @@ We also have the outstanding issue of how to aim different definitions to differ
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000039"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000044"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
         <obo:IAO_0000115>A DNA segment delimited by different nonspurious TSS–TTS pairs or, more precisely, the DNA bases that correspond to the first and last bases of a transcript.</obo:IAO_0000115>
         <obo:PROK_0000033>TU</obo:PROK_0000033>
-        <rdfs:comment>Transcription units (TUs) are delimited by exactly one promoter-terminator pair. Promoters can produce more than one transcription start site (TSS), and terminators can generate more than one transcription termination site (TTS).  Only when alternative TSSs or alternative TTSs are known to have a function or to be produced by alternative regulation, two DNA transcribed segments that have microvarioation at their ends are regarded as different TUs.</rdfs:comment>
+        <rdfs:comment>Transcription units (TUs) are delimited by exactly one promoter-terminator pair. Promoters can produce more than one transcription start site (TSS), and terminators can generate more than one transcription termination site (TTS).  Only when alternative TSSs or alternative TTSs are known to have a function or to be produced by alternative regulation, two DNA transcribed segments produced by the same promoter-terminator pair that have microvarioation at their ends are regarded as different TUs.</rdfs:comment>
         <rdfs:label xml:lang="en">transcription unit</rdfs:label>
     </owl:Class>
     
@@ -1295,7 +1295,7 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000044">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000098"/>
-        <obo:IAO_0000115>the unedited RNA molecule that is produced by transcription of a transcription unit; it starts in a transcription start site and ends in a transcription termination site</obo:IAO_0000115>
+        <obo:IAO_0000115>the unedited RNA molecule that is produced by transcription from a transcription unit; it starts in a transcription start site and ends in a transcription termination site</obo:IAO_0000115>
         <rdfs:label xml:lang="en">prymary transcript</rdfs:label>
     </owl:Class>
     
