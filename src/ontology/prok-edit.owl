@@ -832,7 +832,10 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000094"/>
         <obo:IAO_0000115>A DNA segment delimited by different nonspurious TSS–TTS pairs or, more precisely, the DNA bases that correspond to the first and last bases of a transcript.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID: ﻿32665585</obo:IAO_0000119>
         <obo:PROK_0000033>TU</obo:PROK_0000033>
         <rdfs:comment>Transcription units (TUs) are delimited by exactly one promoter-terminator pair. Promoters can produce more than one transcription start site (TSS), and terminators can generate more than one transcription termination site (TTS).  Only when alternative TSSs or alternative TTSs are known to have a function or to be produced by alternative regulation, two DNA transcribed segments produced by the same promoter-terminator pair that have microvarioation at their ends are regarded as different TUs.</rdfs:comment>
         <rdfs:label xml:lang="en">transcription unit</rdfs:label>
@@ -1248,6 +1251,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000094"/>
         <obo:IAO_0000115>a continuos DNA segment that carries the information for the structure of at least one functional-RNA or polipeptide chain. If the gene carries the information for more than one product, it means that the gene is composed of overlapping CDSs or overlapping functional RNA bearing regions.</obo:IAO_0000115>
         <rdfs:comment>The definition is intended to include genes that produce more than one product, e. g. dnaX produces by frameshifting both subunit tau and subunit gamma of the DNA polymerase.</rdfs:comment>
         <rdfs:comment>The definition is intended to regard independent cistrons that code for subunits of heteromultimeric proteins as different genes. For example, the cistrons that code for subunits of IHF, ihfA and ihfB, are differente genes.</rdfs:comment>
@@ -1514,29 +1518,29 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000064">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000039"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000044"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000040"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
                     </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
-                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
+                </owl:unionOf>
             </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000039"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000044"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000040"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
-            </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000061"/>
         <obo:IAO_0000115>An expressed segment that is a DNA segment.</obo:IAO_0000115>
@@ -1927,6 +1931,7 @@ COB_0000013</obo:IAO_0000119>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
         <obo:IAO_0000115>Set of adjacent genes whose transcription is coordinated by one or several mutually overlapping transcription units that are transcribed in the same direction and share at least one gene.</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID: ﻿32665585</obo:IAO_0000119>
         <rdfs:comment>The fact that the genes of an operon are coordinated by transcription units is represented in the axiom gene &apos;is part of&apos; some &apos;transcription unit&apos;. To calculate the operon, we have to find the TUs that overlap, but I think this is outside de capabilites of OWL. So we should assert the relation operon &apos;has part&apos; some &apos;transcription unit&apos;.</rdfs:comment>
         <rdfs:label xml:lang="en">operon</rdfs:label>
     </owl:Class>
