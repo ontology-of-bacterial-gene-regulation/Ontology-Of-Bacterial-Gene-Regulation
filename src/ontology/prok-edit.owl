@@ -266,6 +266,11 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000040">
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000040"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000073"/>
+        </owl:propertyChainAxiom>
         <rdfs:label xml:lang="en">is part of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -364,6 +369,11 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000068 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000068">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000073"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000068"/>
+        </owl:propertyChainAxiom>
         <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
     
@@ -373,6 +383,14 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000072">
         <rdfs:label xml:lang="en">ends at</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000073 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000073">
+        <rdfs:label xml:lang="en">overlaps</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1521,14 +1539,19 @@ We also have the outstanding issue of how to aim different definitions to differ
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
-                                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
-                            </owl:Restriction>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000004"/>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000064"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
                         </owl:intersectionOf>
                     </owl:Class>
                     <owl:Restriction>
@@ -1599,6 +1622,25 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000119>Adapted from: https://www.merriam-webster.com/dictionary/polymer</obo:IAO_0000119>
         <rdfs:isDefinedBy>a molecular entity that is carried or encoded in the genome and it is polymeric in nature</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">biomacromolecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000074 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000074">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">transcription unit with genes</rdfs:label>
     </owl:Class>
     
 
@@ -1919,12 +1961,12 @@ COB_0000013</obo:IAO_0000119>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000073"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000074"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
-                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000073"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000074"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -2148,9 +2190,9 @@ COB_0000013</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000115">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000073"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000074"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000094"/>
@@ -2165,9 +2207,9 @@ COB_0000013</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000116">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000073"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000074"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000094"/>
@@ -2771,6 +2813,25 @@ COB_0000080</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
         <obo:IAO_0000115>a biomacromolecule that is produced by transcription or translation of gene and that has a function other than carrying information, or by the union of such biomacromolecules</obo:IAO_0000115>
         <rdfs:label xml:lang="en">gene product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000179 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000179">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">transcription unit without genes</rdfs:label>
     </owl:Class>
     
 
