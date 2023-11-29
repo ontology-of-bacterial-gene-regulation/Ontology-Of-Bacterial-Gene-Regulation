@@ -267,10 +267,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000040">
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000040"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000073"/>
-        </owl:propertyChainAxiom>
         <rdfs:label xml:lang="en">is part of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -370,10 +366,6 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000068">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000073"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000068"/>
-        </owl:propertyChainAxiom>
         <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
     
@@ -390,7 +382,8 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000073 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000073">
-        <rdfs:label xml:lang="en">overlaps</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+        <rdfs:label xml:lang="en">has part transcription unit</rdfs:label>
     </owl:ObjectProperty>
     
 
