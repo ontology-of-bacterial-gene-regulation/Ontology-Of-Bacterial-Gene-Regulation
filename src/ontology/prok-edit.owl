@@ -236,7 +236,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000037 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000037">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000135"/>
         <obo:IAO_0000115>a relationship that holds between a transcription termination site and the terminator that produces it</obo:IAO_0000115>
         <rdfs:label xml:lang="en">TSS selected by</rdfs:label>
     </owl:ObjectProperty>
@@ -455,7 +455,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000122 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000122">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000135"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000124"/>
         <obo:IAO_0000115>a relationship that holds between a transcription unit and the promoter that begins its transcription</obo:IAO_0000115>
         <rdfs:label xml:lang="en">has transcription initiated by</rdfs:label>
@@ -466,7 +466,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000123 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000123">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000135"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000125"/>
         <obo:IAO_0000115>a relationship that holds between a transcription unit and the terminator that ends its transcription</obo:IAO_0000115>
         <rdfs:label xml:lang="en">has transcription terminated by</rdfs:label>
@@ -497,7 +497,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000126 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000126">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000135"/>
         <obo:IAO_0000115>a relationship that holds between a transcription termination site and the terminator that produces it</obo:IAO_0000115>
         <rdfs:label xml:lang="en">TTS selected by</rdfs:label>
     </owl:ObjectProperty>
@@ -606,7 +606,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000172 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000172">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000135"/>
         <rdfs:label xml:lang="en">has translation regulated by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -624,7 +624,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000174 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000174">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000135"/>
         <rdfs:label xml:lang="en">has transcription regulated by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1701,7 +1701,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000178"/>
         <rdfs:comment>What about 6S product? [﻿32213244]</rdfs:comment>
-        <rdfs:isDefinedBy>a gene product produced from a continous sequence</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>a gene product produced from a continuous sequence</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">simple gene product</rdfs:label>
     </owl:Class>
     
@@ -1989,7 +1989,7 @@ COB_0000013</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
         <obo:IAO_0000115>Set of adjacent genes whose transcription is coordinated by one or several mutually overlapping transcription units that are transcribed in the same direction and share at least one gene.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID: ﻿32665585</obo:IAO_0000119>
-        <rdfs:comment>In the website of RegulonDB, the operon region begins at the start of the most upstream regulatory site and ends at the transcription termination site of the last TU. Thus, operons summarize all the information available for the maximal sets of overlapping TUs. However, it should be noticed that ontologically, we cannot add transitivity of regulatory properties to infer that if a TF bound to a TFRS regulates a TU, then it regulates the operon to which the TU belongs. This is because, if there is an operon with genes ABC formed by two TUs, one with genes AB and one with genes BC, the regulatory properties for the TU BC do not hold for the TU AB.</rdfs:comment>
+        <rdfs:comment>In the website of RegulonDB, the operon region begins at the start of the most upstream regulatory site and ends at the transcription termination site of the last TU, and includes internal TFRS and promoters. Thus, operons summarize all the information available for the maximal sets of overlapping TUs. It should be noticed that ontologically, we cannot add transitivity to regulatory properties to infer that if a TF bound to a TFRS regulates a TU, then it regulates the operon to which the TU belongs. This is because, for example, if there is an operon with genes ABC formed by two TUs, one with genes AB and one with genes BC, the regulatory properties of the BC TU do not hold for the AB TU.</rdfs:comment>
         <rdfs:comment>The fact that the genes of an operon are coordinated by transcription units is represented in the axiom gene &apos;is part of&apos; some &apos;transcription unit&apos;. To calculate the operon, we have to find the TUs that overlap, but I think this is outside the capabilites of OWL. So we should assert the relation operon &apos;has part&apos; some &apos;transcription unit&apos;.</rdfs:comment>
         <rdfs:label xml:lang="en">operon</rdfs:label>
     </owl:Class>
