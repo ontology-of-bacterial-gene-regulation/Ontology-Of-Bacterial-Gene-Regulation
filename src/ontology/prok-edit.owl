@@ -1250,7 +1250,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115>a TFBS that is involved in transcription regulation</obo:IAO_0000115>
         <obo:PROK_0000033>TFRS</obo:PROK_0000033>
         <rdfs:comment>TFRSs directly regulate promoter activity, but the observation of the increase or decrease expression of a DNA segment are also evidence for the regulatory activity of the site.</rdfs:comment>
-        <rdfs:comment>The definition of transcription factor requires that these bound &quot;near&quot; the promoter. This is clearly a site property, but we have to define the meaning of &quot;near&quot;.</rdfs:comment>
+        <rdfs:comment>The definition of transcription factor requires that these bound &quot;near&quot; the promoter. This is clearly a site property, but we have to define the meaning of &quot;near&quot; and/or of the complex TF bound to TFRS.</rdfs:comment>
         <rdfs:comment>quiero simplificar la definición formal a una sola relación de regulación con una clase que incluya todas las entidades que pueda regular directa o indirectamente un sitio, creo que todos deberían ser regiones de ADN, por el sitio es una región de ADN y regula en cis, pero ¿qué es un gen? creo que el gen está presente tanto en el adn como en el arn. De hecho sí hay rRNA-gene interactions en los datasets. Entonces tengo que crear una clase &quot;unit of expression&quot; y saber bien qué subclases hacer.</rdfs:comment>
         <rdfs:label xml:lang="en">transcription factor regulatory site</rdfs:label>
     </owl:Class>
@@ -1338,20 +1338,6 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000045">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000012"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000019"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">DNA continuous segment</rdfs:label>
     </owl:Class>
     
@@ -1899,7 +1885,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         </owl:equivalentClass>
         <obo:IAO_0000115>a regulatory protein of transcription initiation that regulates transcription initiation by interacting with the RNA polymerase holoenzyme and whose specificity is not determined directly by the recognition of specific a DNA sequence</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:32665585</obo:IAO_0000119>
-        <rdfs:comment>Using a negation in formal definitions requires the assertion of negative facts in the whole ontology, because the lack of a positive assertion does not imply the negative assertion (OWA). In this particular case, the definition implies that RNAP-centered regulatory protein is a disjoint class with DNA-binding regulatory protein of transcription initiation, i. e., that RNAP-centered regulatory proteins do not regulate transcription initiation in any case by recognizing a DNA sequence.</rdfs:comment>
+        <rdfs:comment>Using a negation in formal definitions requires the assertion of negative facts in the whole ontology, because the lack of a positive assertion does not imply the negative assertion (OWA). In this particular case, the definition implies that RNAP-centered regulatory protein is a disjoint class with DNA-binding regulatory protein of transcription initiation, i. e., RNAP-centered regulatory proteins do not regulate transcription initiation in any case by recognizing a DNA sequence.</rdfs:comment>
         <rdfs:label xml:lang="en">RNAP-centered regulatory protein of transcription initiation</rdfs:label>
     </owl:Class>
     
@@ -2740,7 +2726,7 @@ COB_0000080</obo:IAO_0000119>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>a complex of molecular entities formed by a transcription factor, a DNA fragment, and, optionally, a molecular effector, depending on the functional conformation of the complex.</obo:IAO_0000115>
-        <rdfs:comment>The complex of the TF with the TFRS directly regulates the activity of a promoter and, thereby, it regulates the expression of TUs and genes. This fact is reflected in two axioms and by adding these two axioms we want to represent the fact that there are experiments that can observe the regulatory effects of this entity at different levels of the expression process.</rdfs:comment>
+        <rdfs:comment>The complex of the TF with the TFRS directly regulates the activity of a promoter and, thereby, it regulates the expression of TUs and genes. This fact is reflected in two &apos;regulatory&apos; axioms, with wich we want to represent the fact that there are experiments that can observe the regulatory effects of this entity at different levels of the expression process.</rdfs:comment>
         <rdfs:label xml:lang="en">TF bound to TFRS</rdfs:label>
     </owl:Class>
     
@@ -2778,8 +2764,8 @@ COB_0000080</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000165"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000169"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000128"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000157"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>a TF bound to TFRS whose TF has its activity regulated by a molecular effector</obo:IAO_0000115>
