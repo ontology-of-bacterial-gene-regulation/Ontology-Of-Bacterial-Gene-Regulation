@@ -544,15 +544,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PROK_0000136 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000136">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000156"/>
-        <rdfs:label xml:lang="en">changes property</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PROK_0000150 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000150">
@@ -565,14 +556,6 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000151">
         <rdfs:label xml:lang="en">is interaction type of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROK_0000156 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000156">
-        <rdfs:label xml:lang="en">has property change</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2610,12 +2593,6 @@ COB_0000080</obo:IAO_0000119>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000150"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000141"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000156"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000140"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
