@@ -2759,7 +2759,7 @@ COB_0000080</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000176"/>
         <obo:IAO_0000115>A specific condition or configuration of a physical entity or object at a particular moment in time. It is a way of describing the attributes, properties, and characteristics of a physical object at a given instant.</obo:IAO_0000115>
         <obo:IAO_0000119>chatGTP</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">alternative state of a molecular entity</rdfs:label>
+        <rdfs:label xml:lang="en">alternative state of molecular entity</rdfs:label>
     </owl:Class>
     
 
