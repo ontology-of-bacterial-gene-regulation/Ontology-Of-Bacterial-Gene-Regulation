@@ -2602,8 +2602,8 @@ COB_0000080</obo:IAO_0000119>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>a complex of molecular entities formed by a transcription factor and a molecular effector</obo:IAO_0000115>
-        <rdfs:comment>Here we intend to include both  non-covalent and covalent bound molecular effectors, so methylated and phosphorylated forms can be included. The interaction property &quot;covalent&quot; or &quot;non-covalent&quot; should be added to specific instances of the class.</rdfs:comment>
-        <rdfs:label xml:lang="en">TF bound to molecular effector</rdfs:label>
+        <rdfs:comment>Here we intend to include both  non-covalently and covalently bound  ligands, so methylated and phosphorylated forms can be included. The interaction property &quot;covalent&quot; or &quot;non-covalent&quot; should be added to specific instances of the class.</rdfs:comment>
+        <rdfs:label xml:lang="en">TF bound to ligand</rdfs:label>
     </owl:Class>
     
 
