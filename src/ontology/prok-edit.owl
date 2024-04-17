@@ -2461,6 +2461,7 @@ COB_0000013</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000147 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000147">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
         <obo:IAO_0000115>an effector that is a molecular entity</obo:IAO_0000115>
         <rdfs:label xml:lang="en">molecular effector</rdfs:label>
