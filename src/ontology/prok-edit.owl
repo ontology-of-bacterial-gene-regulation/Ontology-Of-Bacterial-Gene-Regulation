@@ -2673,9 +2673,9 @@ COB_0000080</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000164">
         <obo:IAO_0000115>something disassociated from any specific instance</obo:IAO_0000115>
-        <obo:IAO_0000116>Although the class Abstraction so far has a single subclass, it was created to make clear that motifs are not molecular entities, nor processes or qualities.</obo:IAO_0000116>
         <obo:IAO_0000119>adapted from https://www.merriam-webster.com/dictionary/abstraction</obo:IAO_0000119>
         <obo:PROK_0000033>generically dependent continuant</obo:PROK_0000033>
+        <rdfs:comment>Although the class Abstraction so far has a single subclass, it was created to make clear that motifs are not molecular entities, nor processes or qualities.</rdfs:comment>
         <rdfs:label xml:lang="en">abstraction</rdfs:label>
     </owl:Class>
     
