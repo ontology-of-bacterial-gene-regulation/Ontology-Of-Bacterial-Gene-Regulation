@@ -1419,7 +1419,7 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>an RNA segment that codes for at least one polypeptide chain</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">transcribed coding segment</rdfs:label>
+        <rdfs:label xml:lang="en">transcribed coding gene</rdfs:label>
     </owl:Class>
     
 
@@ -2243,7 +2243,7 @@ COB_0000013</obo:IAO_0000119>
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000061"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>a set of units of gene expression directly regulated by a common set of one or more common gene products or by ppGpp</obo:IAO_0000115>
+        <obo:IAO_0000115>a set of units of gene expression directly regulated by a common set of one or more gene products or by ppGpp</obo:IAO_0000115>
         <rdfs:comment>Currently, all except one regulon displayed in RegulonDB are defined by regulators that are gene products, more specifically proteins called transcription factors. The only exception is the regulon defined by ppGpp, for which references can be found in which researchers talk about it as such. As more regulons defined by small molecules are curated, we will be able to define more acurrately the class of small molecules that define regulons.</rdfs:comment>
         <rdfs:label xml:lang="en">regulon</rdfs:label>
     </owl:Class>
@@ -2673,6 +2673,7 @@ COB_0000080</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000164">
         <obo:IAO_0000115>something disassociated from any specific instance</obo:IAO_0000115>
+        <obo:IAO_0000116>Although the class Abstraction so far has a single subclass, it was created to make clear that motifs are not molecular entities, nor processes or qualities.</obo:IAO_0000116>
         <obo:IAO_0000119>adapted from https://www.merriam-webster.com/dictionary/abstraction</obo:IAO_0000119>
         <obo:PROK_0000033>generically dependent continuant</obo:PROK_0000033>
         <rdfs:label xml:lang="en">abstraction</rdfs:label>
