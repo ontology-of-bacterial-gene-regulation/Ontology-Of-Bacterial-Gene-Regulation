@@ -976,8 +976,8 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000015"/>
-        <obo:IAO_0000115>A promoter that lack promoter boxes with similarity to any consensus motif.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">promoter without motifs</rdfs:label>
+        <obo:IAO_0000115>A promoter that requires aditional elements to initiate transcripion; for example, activators that compensate the absence of motifs in the promoter sequences.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">non-autonomous promoter</rdfs:label>
     </owl:Class>
     
 
@@ -986,8 +986,8 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
-        <obo:IAO_0000115>A promoter that has at least one promoter box with similarity to a consensus motif.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">promoter with motifs</rdfs:label>
+        <obo:IAO_0000115>A promoter that is able to initiate transcription wihout additional elements.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">autonomous promoter</rdfs:label>
     </owl:Class>
     
 
