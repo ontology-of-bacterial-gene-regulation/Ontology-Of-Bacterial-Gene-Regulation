@@ -2304,7 +2304,7 @@ COB_0000013</obo:IAO_0000119>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>a nucleotide region near the end of the transcript that intervenes in termination of transcription and determine the location of transcript termination, although this might not be a single site</obo:IAO_0000115>
+        <obo:IAO_0000115>a nucleotide region near the end of the transcription unit or of the transcript that determines the location of transcript termination, although this might not be a single site</obo:IAO_0000115>
         <rdfs:comment>In RegulonDB terminator sequences are DNA sequences, meaning that if the terminator is, in reality, an RNA sequence, it&apos;s template DNA is stored in the database.</rdfs:comment>
         <rdfs:label xml:lang="en">terminator</rdfs:label>
     </owl:Class>
