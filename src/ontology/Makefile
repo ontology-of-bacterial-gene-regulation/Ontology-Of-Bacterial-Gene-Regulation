@@ -93,7 +93,9 @@ imports/ro_import.owl: mirror/ro.owl imports/ro_terms.txt imports/ro_upper_terms
 	$(ROBOT) extract -i $< --method MIREOT -U imports/ro_upper_terms.txt -L imports/ro_terms.txt -O $(BASE)/$@ -o $@
 .PRECIOUS: imports/ro_import.owl
 
-
+imports/ecto_import.owl: mirror/ecto.owl imports/ecto_terms.txt
+	$(ROBOT) extract -i $< --method MIREOT -U imports/ecto_upper_terms.txt -L imports/ecto_terms.txt -O $(BASE)/$@ -o $@
+.PRECIOUS: imports/ecto_import.owl
 
 # convert imports to obo.
 # this can be useful for spot-checks and diffs.
