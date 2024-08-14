@@ -2806,10 +2806,16 @@ COB_0000013</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000147 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000147">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000127"/>
-        <obo:IAO_0000115>an effector that is a molecular entity</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">molecular effector</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000127"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000176"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>an effector that is a material entity</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">material effector</rdfs:label>
     </owl:Class>
     
 
