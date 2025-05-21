@@ -1450,10 +1450,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000031 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000031">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000063"/>
-        <obo:IAO_0000115>the first base of a transcript</obo:IAO_0000115>
-        <obo:PROK_0000033>TSS</obo:PROK_0000033>
-        <rdfs:label xml:lang="en">transcription start site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
+        <obo:IAO_0000115>the first deoxyribonucleotide that serves as a template for RNA synthesis</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">transcription start site in the DNA</rdfs:label>
     </owl:Class>
     
 
@@ -1563,7 +1562,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000035">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000056"/>
@@ -1584,7 +1583,7 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000094"/>
-        <obo:IAO_0000115>a continuos DNA segment that carries the information for the structure of at least one functional-RNA or polipeptide chain. If the gene carries the information for more than one product, it means that the gene is composed of overlapping CDSs or overlapping functional RNA bearing regions.</obo:IAO_0000115>
+        <obo:IAO_0000115>a DNA segment that carries the information for the structure of at least one functional RNA or polypeptide chain, or a non-functional copy of a parent gene (pseudogene). If a gene carries information for more than one simple product, it implies overlapping coding sequences or overlapping functional RNA-bearing regions.</obo:IAO_0000115>
         <rdfs:comment>The definition is intended to include genes that produce more than one product, e. g. dnaX produces by frameshifting both subunit tau and subunit gamma of the DNA polymerase.</rdfs:comment>
         <rdfs:comment>The definition is intended to regard independent cistrons that code for subunits of heteromultimeric proteins as different genes. For example, the cistrons that code for subunits of IHF, ihfA and ihfB, are differente genes.</rdfs:comment>
         <rdfs:label xml:lang="en">gene</rdfs:label>
@@ -1641,6 +1640,20 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000045">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000012"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000019"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">DNA continuous segment</rdfs:label>
     </owl:Class>
     
@@ -1687,6 +1700,20 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000051">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000012"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000019"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">DNA discontinuous segment</rdfs:label>
     </owl:Class>
     
@@ -1827,10 +1854,9 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000062 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000062">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000063"/>
-        <obo:IAO_0000115>the last base of a transcript</obo:IAO_0000115>
-        <obo:PROK_0000033>TTS</obo:PROK_0000033>
-        <rdfs:label xml:lang="en">transcription termination site</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
+        <obo:IAO_0000115>the last deoxyribonucleotide that serves as a template for RNA synthesis</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">transcription termination site in the DNA</rdfs:label>
     </owl:Class>
     
 
@@ -1990,7 +2016,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000178"/>
         <rdfs:comment>What about 6S product? [﻿32213244]</rdfs:comment>
-        <rdfs:isDefinedBy>a gene product produced from a continuous sequence</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>a gene product derived from a continuous DNA sequence</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">simple gene product</rdfs:label>
     </owl:Class>
     
@@ -2601,7 +2627,7 @@ COB_0000013</obo:IAO_0000119>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>a hybrid segment near the end of the transcription unit (or transcript) that determines the location of transcript termination, although this might not be a single site</obo:IAO_0000115>
+        <obo:IAO_0000115>an heterotypic discontinuos near the end of the transcription unit (or transcript) that determines the location of transcript termination, although this might not be a single site</obo:IAO_0000115>
         <rdfs:comment>In RegulonDB terminator sequences are DNA sequences, meaning that if the terminator is, in reality, an RNA sequence, it&apos;s template DNA is stored in the database.</rdfs:comment>
         <rdfs:label xml:lang="en">terminator</rdfs:label>
     </owl:Class>
@@ -3192,6 +3218,26 @@ COB_0000080</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000118"/>
         <obo:IAO_0000115>sites of dissociation of transcription complexes mediated by a non-canonical intrinsic terminator and the RNA helicase Rho</obo:IAO_0000115>
         <rdfs:label xml:lang="en">hybrid terminator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000183 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000183">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
+        <obo:IAO_0000115>the last ribonucleotide incorporated into the transcript before termination</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">transcription termination site in the RNA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000184 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000184">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
+        <obo:IAO_0000115>the first ribonucleotide in the RNA molecule resulting from transcription</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">transcription start site in the RNA</rdfs:label>
     </owl:Class>
     
 
