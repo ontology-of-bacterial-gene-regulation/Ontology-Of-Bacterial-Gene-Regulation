@@ -1162,8 +1162,8 @@ We also have the outstanding issue of how to aim different definitions to differ
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000094"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
         <obo:IAO_0000115>A DNA segment delimited by different nonspurious TSS–TTS pairs or, more precisely, the DNA bases that correspond to the first and last bases of a transcript.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID: ﻿32665585</obo:IAO_0000119>
         <obo:PROK_0000033>TU</obo:PROK_0000033>
@@ -1244,7 +1244,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>DNA segment where a TF binds specifically</obo:IAO_0000115>
+        <obo:IAO_0000115>DNA segment where a TF binds in a sequence-specific manner</obo:IAO_0000115>
         <obo:PROK_0000033>TFBS</obo:PROK_0000033>
         <rdfs:label xml:lang="en">transcription factor binding site</rdfs:label>
     </owl:Class>
@@ -1484,7 +1484,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1532,7 +1532,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000009"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1561,31 +1561,11 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000035">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000056"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000076"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000180"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000175"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000094"/>
-        <obo:IAO_0000115>a DNA segment that carries the information for the structure of at least one functional RNA or polypeptide chain, or a non-functional copy of a parent gene (pseudogene). If a gene carries information for more than one simple product, it implies overlapping coding sequences or overlapping functional RNA-bearing regions.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
+        <obo:IAO_0000115>a DNA continuous segment that carries the information for the structure of at least one functional RNA. If a gene carries information for more than one simple product, it implies overlapping coding sequences or overlapping functional RNA-bearing regions.</obo:IAO_0000115>
         <rdfs:comment>The definition is intended to include genes that produce more than one product, e. g. dnaX produces by frameshifting both subunit tau and subunit gamma of the DNA polymerase.</rdfs:comment>
         <rdfs:comment>The definition is intended to regard independent cistrons that code for subunits of heteromultimeric proteins as different genes. For example, the cistrons that code for subunits of IHF, ihfA and ihfB, are differente genes.</rdfs:comment>
-        <rdfs:label xml:lang="en">gene</rdfs:label>
+        <rdfs:label xml:lang="en">functional gene</rdfs:label>
     </owl:Class>
     
 
@@ -1681,12 +1661,6 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000050">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000096"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000006"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000070"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
         <obo:IAO_0000115>an extent of a nucleotide molecule greater than zero</obo:IAO_0000115>
@@ -1947,6 +1921,24 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000071">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000006"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000012"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000019"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000119>Adapted from: https://www.merriam-webster.com/dictionary/polymer</obo:IAO_0000119>
         <rdfs:isDefinedBy>a molecular entity that is carried or encoded in the genome and it is polymeric in nature</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">biomacromolecular entity</rdfs:label>
@@ -1963,7 +1955,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000002"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000073"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -2093,8 +2085,14 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000081 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000081">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000075"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000080"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000075"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000080"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <obo:IAO_0000115>a regulatory gene product that is a protein</obo:IAO_0000115>
         <rdfs:label xml:lang="en">regulatory protein</rdfs:label>
     </owl:Class>
@@ -2305,6 +2303,7 @@ COB_0000013</obo:IAO_0000119>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
         <obo:IAO_0000115>Set of adjacent genes whose transcription is coordinated by one or several mutually overlapping transcription units that are transcribed in the same direction and share at least one gene.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID: ﻿32665585</obo:IAO_0000119>
         <rdfs:comment>In the website of RegulonDB, the operon region begins at the start of the most upstream regulatory site and ends at the transcription termination site of the last TU, and includes internal TFRS and promoters. Thus, operons summarize all the information available for the maximal sets of overlapping TUs. It should be noticed that ontologically, we cannot add transitivity to regulatory properties to infer that if a TF bound to a TFRS regulates a TU, then it regulates the operon to which the TU belongs. This is because, for example, if there is an operon with genes ABC formed by two TUs, one with genes AB and one with genes BC, the regulatory properties of the BC TU do not hold for the AB TU.</rdfs:comment>
@@ -2328,18 +2327,6 @@ COB_0000013</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000096">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000071"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000012"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000019"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>a biomacromolecular entity that is part of a polymeric chain</obo:IAO_0000115>
         <rdfs:label xml:lang="en">biomacromolecular segment</rdfs:label>
     </owl:Class>
@@ -3191,7 +3178,7 @@ COB_0000080</obo:IAO_0000119>
                 <owl:complementOf>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000035"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
                     </owl:Restriction>
                 </owl:complementOf>
             </owl:Class>
@@ -3237,6 +3224,46 @@ COB_0000080</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
         <obo:IAO_0000115>the first ribonucleotide in the RNA molecule resulting from transcription</obo:IAO_0000115>
         <rdfs:label xml:lang="en">transcription start site in the RNA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000185 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000185">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000056"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000076"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000180"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000175"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>a DNA continuous segment that carries the information for the structure of at least one functional RNA or polypeptide chain, or a non-functional copy of a parent gene (pseudogene). If a gene carries information for more than one simple product, it implies overlapping coding sequences or overlapping functional RNA-bearing regions.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">gene</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000186 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000186">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
+        <obo:IAO_0000115>﻿DNA sequences that resemble genes but have been mutated into defective forms over the course of evolution</obo:IAO_0000115>
+        <obo:IAO_0000119>PMID: ﻿35489061</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">pseudogene</rdfs:label>
     </owl:Class>
     
 
