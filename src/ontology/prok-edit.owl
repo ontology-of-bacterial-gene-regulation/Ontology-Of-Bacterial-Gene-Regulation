@@ -1562,6 +1562,18 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000035">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000039"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000180"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>a DNA continuous segment that carries the information for the structure of at least one functional RNA. If a gene carries information for more than one simple product, it implies overlapping coding sequences or overlapping functional RNA-bearing regions.</obo:IAO_0000115>
         <rdfs:comment>The definition is intended to include genes that produce more than one product, e. g. dnaX produces by frameshifting both subunit tau and subunit gamma of the DNA polymerase.</rdfs:comment>
         <rdfs:comment>The definition is intended to regard independent cistrons that code for subunits of heteromultimeric proteins as different genes. For example, the cistrons that code for subunits of IHF, ihfA and ihfB, are differente genes.</rdfs:comment>
@@ -1593,7 +1605,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000171"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000057"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000196"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1696,12 +1708,6 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000055">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000048"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A naturally occurring chain of amin acids linked by peptidic bonds and synthesized at the ribosome from a single continouos sequence.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">polypeptide chain</rdfs:label>
     </owl:Class>
@@ -1711,35 +1717,22 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000057 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000057">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000067"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000047"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000072"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000069"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000041"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000055"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000196"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000046"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000042"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000042"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>an RNA segment that codes for at least one polypeptide chain</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">transcribed coding gene</rdfs:label>
+        <rdfs:label xml:lang="en">transcribed region of protein coding gene</rdfs:label>
     </owl:Class>
     
 
@@ -2000,7 +1993,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000048"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000057"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000196"/>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
@@ -2318,7 +2311,7 @@ COB_0000013</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000095">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
         <obo:IAO_0000115>A continuos RNA segment that carries the information for the structure of at least one functional-RNA or polipeptide chain. If the gene carries the information for more than one product, it means that the gene is composed of overlapping CDSs or overlapping functional RNA bearer regions.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">transcribed gene</rdfs:label>
+        <rdfs:label xml:lang="en">transcribed region of a gene</rdfs:label>
     </owl:Class>
     
 
@@ -2368,7 +2361,7 @@ COB_0000013</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000100">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
         <obo:IAO_0000115>an RNA segment that carries the information for at least one functional RNA</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">transcribed RNA gene</rdfs:label>
+        <rdfs:label xml:lang="en">transcribed region of RNA gene</rdfs:label>
     </owl:Class>
     
 
@@ -2965,8 +2958,8 @@ COB_0000080</obo:IAO_0000119>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000032"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>the state of a transcription factor (TF) in which it has some regulatory effect</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">TF regulatory state</rdfs:label>
+        <obo:IAO_0000115>a molecular state of a transcription factor (TF) that causally affects or enables its regulatory activity on gene expression</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">TF state</rdfs:label>
     </owl:Class>
     
 
@@ -2975,7 +2968,7 @@ COB_0000080</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000160">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
-        <obo:IAO_0000115>a TF alternative regulatory state that results of the modification of the TF by a physical effector sucha as light or termperature</obo:IAO_0000115>
+        <obo:IAO_0000115>a TF alternative state that results of the modification of the TF by a physical effector sucha as light or termperature</obo:IAO_0000115>
         <rdfs:label xml:lang="en">TF modified by physical effector</rdfs:label>
     </owl:Class>
     
@@ -2985,8 +2978,8 @@ COB_0000080</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000161">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
-        <obo:IAO_0000115>a TF alternative regulatory state that results when the effector is a protease</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">TF lysed by protein</rdfs:label>
+        <obo:IAO_0000115>a TF alternative state that is a consequence of proteolysis of the TF</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">lysed TF</rdfs:label>
     </owl:Class>
     
 
@@ -2995,6 +2988,7 @@ COB_0000080</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000162">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
+        <obo:IAO_0000115>a structural state in which a TF is physically bound by another protein, preventing it from accessing its DNA binding site</obo:IAO_0000115>
         <rdfs:label xml:lang="en">TF sequestered by protein</rdfs:label>
     </owl:Class>
     
@@ -3004,7 +2998,7 @@ COB_0000080</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000163">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000167"/>
-        <obo:IAO_0000115>the TF alternative regulatory state in which it has formed a multimer with another unit of the same protein</obo:IAO_0000115>
+        <obo:IAO_0000115>a structural state in which it has formed a multimer with one or more units of protein</obo:IAO_0000115>
         <rdfs:label xml:lang="en">multimeric TF</rdfs:label>
     </owl:Class>
     
@@ -3073,14 +3067,14 @@ COB_0000080</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000166 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000166">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000158"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000194"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000169"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000138"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>the state of a TF in which it has not been modified by an effector</obo:IAO_0000115>
+        <obo:IAO_0000115>a structural state in which the TF has not undergone post-translational modifications that alter its regulatory capacity</obo:IAO_0000115>
         <rdfs:label xml:lang="en">unmodified TF</rdfs:label>
     </owl:Class>
     
@@ -3089,7 +3083,7 @@ COB_0000080</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000167 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000167">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000158"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000194"/>
         <obo:IAO_0000115>the state of a TF after being modified by an effector</obo:IAO_0000115>
         <rdfs:label xml:lang="en">modified TF</rdfs:label>
     </owl:Class>
@@ -3119,7 +3113,7 @@ COB_0000080</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000170">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000176"/>
         <obo:IAO_0000115>A specific condition or configuration of a physical entity or object at a particular moment in time. It is a way of describing the attributes, properties, and characteristics of a physical object at a given instant.</obo:IAO_0000115>
-        <obo:IAO_0000119>chatGTP</obo:IAO_0000119>
+        <obo:IAO_0000119>chatGPT</obo:IAO_0000119>
         <rdfs:label xml:lang="en">alternative state of molecular entity</rdfs:label>
     </owl:Class>
     
@@ -3234,18 +3228,6 @@ COB_0000080</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000056"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000076"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000180"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000175"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
@@ -3263,7 +3245,129 @@ COB_0000080</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
         <obo:IAO_0000115>﻿DNA sequences that resemble genes but have been mutated into defective forms over the course of evolution</obo:IAO_0000115>
         <obo:IAO_0000119>PMID: ﻿35489061</obo:IAO_0000119>
+        <rdfs:comment>Pseudogenes may or may not be transcribed; consequently, not all of them are necessarily part of functional transcription units. Pseudogenes resulting from insertion sequences are continous DNA sequences that have two or more disjoint CDS.</rdfs:comment>
         <rdfs:label xml:lang="en">pseudogene</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000187 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000187">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000193"/>
+        <obo:IAO_0000115>A TF functional disposition that is realized independently of any effector binding or covalent modification. In this case, the TF’s ability to bind its target DNA and modulate transcription is governed solely by its expression level, such that the disposition is constitutively realizable whenever the TF is present.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">constituvely active TF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000189 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000189">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000163"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000190"/>
+        <obo:IAO_0000115>the TFstructural state in which it has formed a multimer with units of  the different proteins</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">heterotypic multimeric TF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000190 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000190">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000163"/>
+        <obo:IAO_0000115>the TF alternative regulatory state in which it has formed a multimer with other units of  the same protein</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">homotypic multimeric TF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000191 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000191">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000195"/>
+        <obo:IAO_0000115>A conditionally active TF functional disposition that is currently realized; that is, the TF is in a molecular state that enables it to bind its target DNA and modulate transcription.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">TF active state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000192 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000192">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000195"/>
+        <obo:IAO_0000115>A conditionally active TF functional disposition that is currently not realized due to the absence of necessary enabling conditions, such as lack of effector binding, absence of covalent modification, or sequestration by another molecule.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">TF inactive state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000193">
+        <obo:IAO_0000115>A realizable property that inheres in a transcription factor (TF), by means of which the TF is capable of regulating gene expression under appropriate conditions. The realization of this disposition occurs when the TF binds its target DNA and modulates transcription.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">TF functional disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000194 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000194">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000158"/>
+        <obo:IAO_0000115>a TF state characterized by molecular configurations or modifications that affect its activity, stability, or interactions</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">structural state</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000195 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000195">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000193"/>
+        <obo:IAO_0000115>A TF functional disposition that is realized only under specific conditions, such as the binding of an effector molecule, a covalent modification, or the presence of particular environmental signals. The disposition enables the TF to regulate gene expression by binding to its DNA target and modulating transcription, but this realization is contingent on context-dependent molecular or environmental triggers.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">conditionally active TF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000196 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000196">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000067"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000047"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000072"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000069"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000041"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000055"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000041"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000055"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>an RNA segment that begins with start codon and ends with a stop codon</obo:IAO_0000115>
+        <obo:PROK_0000033>CDS</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">coding sequence</rdfs:label>
     </owl:Class>
     
 
