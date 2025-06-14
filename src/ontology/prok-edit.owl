@@ -1187,6 +1187,12 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
         <obo:IAO_0000115>An extent of DNA greater than zero nucleotides.</obo:IAO_0000115>
         <terms:contributor>https://orcid.org/0000-0002-0142-5591</terms:contributor>
@@ -1663,6 +1669,12 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000049">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000049"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>an extent of RNA greater than zero nucleotides</obo:IAO_0000115>
         <rdfs:label xml:lang="en">RNA segment</rdfs:label>
     </owl:Class>
@@ -1677,29 +1689,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
         <obo:IAO_0000115>an extent of a nucleotide molecule greater than zero</obo:IAO_0000115>
         <rdfs:label xml:lang="en">nucleotide segment</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PROK_0000051 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000051">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000012"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000019"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">DNA discontinuous segment</rdfs:label>
     </owl:Class>
     
 
@@ -2557,40 +2546,25 @@ COB_0000013</obo:IAO_0000119>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000136"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000136"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000196"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000135"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000077"/>
                     </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000136"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000178"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000188"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000066"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000077"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000068"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000061"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>a set of units of gene expression directly regulated by a common set of one or more gene products or by ppGpp</obo:IAO_0000115>
-        <rdfs:comment>Currently, all except one regulon displayed in RegulonDB are defined by regulators that are gene products, more specifically proteins called transcription factors. The only exception is the regulon defined by ppGpp, for which references can be found in which researchers talk about it as such. As more regulons defined by small molecules are curated, we will be able to define more acurrately the class of small molecules that define regulons.</rdfs:comment>
+        <obo:IAO_0000115>A regulon is a set of gene products whose corresponding genes may be scattered throughout the genome, and whose expression is co-regulated by the same trans-acting factor or regulatory complex. This regulation occurs through a unitary mechanistic process involving specificity, either via direct binding of the regulator to a nucleotide segment or through direct modulation of the binding affinity of RNA polymerase or the ribosome to such segments.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">regulon</rdfs:label>
     </owl:Class>
     
@@ -3263,6 +3237,16 @@ COB_0000080</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000193"/>
         <obo:IAO_0000115>A TF functional disposition that is realized independently of any effector binding or covalent modification. In this case, the TF’s ability to bind its target DNA and modulate transcription is governed solely by its expression level, such that the disposition is constitutively realizable whenever the TF is present.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">constituvely active TF</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000188 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000188">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
+        <obo:IAO_0000115>A material entity that consists of two or more molecular entities that are grouped together based on spatial, functional, or contextual association, without being covalently bonded or forming a single chemical structure.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">aggregate of molecular entities</rdfs:label>
     </owl:Class>
     
 
