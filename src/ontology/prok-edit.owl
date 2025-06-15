@@ -1686,7 +1686,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000050">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000096"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000070"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000097"/>
         <obo:IAO_0000115>an extent of a nucleotide molecule greater than zero</obo:IAO_0000115>
         <rdfs:label xml:lang="en">nucleotide segment</rdfs:label>
     </owl:Class>
@@ -1994,8 +1993,8 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000178"/>
+        <obo:IAO_0000115>a gene product derived from a continuous DNA sequence</obo:IAO_0000115>
         <rdfs:comment>What about 6S product? [﻿32213244]</rdfs:comment>
-        <rdfs:isDefinedBy>a gene product derived from a continuous DNA sequence</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">simple gene product</rdfs:label>
     </owl:Class>
     
@@ -3244,7 +3243,7 @@ COB_0000080</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000188 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000188">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000092"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000176"/>
         <obo:IAO_0000115>A material entity that consists of two or more molecular entities that are grouped together based on spatial, functional, or contextual association, without being covalently bonded or forming a single chemical structure.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">aggregate of molecular entities</rdfs:label>
     </owl:Class>
