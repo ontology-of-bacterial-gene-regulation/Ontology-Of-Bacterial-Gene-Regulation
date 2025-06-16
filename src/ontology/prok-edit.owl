@@ -674,6 +674,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000038"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000132"/>
         <obo:IAO_0000115>a relation that holds between a regulator entity and a biomacromolecuar entity, in which the regulator changes the functional state of the biomacromolecular entity</obo:IAO_0000115>
+        <rdfs:comment>We use this property to describe the relation between all promoter regulators and the promoter, and the relation between effectors and its targets. Since the targets of effectors can be enzymes, we did not make this property a subproperty of “regulates expression of”.</rdfs:comment>
         <rdfs:label xml:lang="en">regulates activity of</rdfs:label>
     </owl:ObjectProperty>
     
