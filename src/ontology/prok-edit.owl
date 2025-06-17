@@ -1693,6 +1693,16 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROK_0000051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000018"/>
+        <obo:IAO_0000115>A motif abstracted from a collection of bacterial promoter binding sites, summarizing the sequence features recognized by sigma factors and the α-subunit of RNA polymerase during transcription initiation.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">promoter motif</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PROK_0000055 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000055">
@@ -3362,6 +3372,93 @@ COB_0000080</obo:IAO_0000119>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PROK_0000197 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000197">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
+        <obo:IAO_0000115>A promoter motif recognized by the σ⁴ domain of σ factors other than σ⁵⁴. It is typically located around 35 base pairs upstream of the transcription start site (TSS, +1).</obo:IAO_0000115>
+        <obo:PROK_0000033>-35 promoter element</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">-35 promoter motif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000198 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000198">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
+        <obo:IAO_0000115>A promoter motif recognized by the σ² domain of σ factors other than σ⁵⁴. It is typically located around 10 base pairs upstream of the TSS (+1).</obo:IAO_0000115>
+        <obo:PROK_0000033>-10 promoter element</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">-10 promoter motif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000199 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000199">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
+        <obo:IAO_0000115>A promoter motif recognized by the σ³ domain of σ factors other than σ⁵⁴. It plays a compensatory role in promoters with weak or absent -35 or -10 elements.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">extended -10 promoter motif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000200 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000200">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
+        <obo:IAO_0000115>A promoter motif recognized by σ54 factor. It is located around -12 base pairs upstream the TSS (+1).</obo:IAO_0000115>
+        <obo:PROK_0000033>-12 consensus promoter sequence</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">-12 promoter motif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000201 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000201">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
+        <obo:IAO_0000115>-24 promoter consensus sequence</obo:IAO_0000115>
+        <obo:IAO_0000115>A promoter motif recognized by the σ⁵⁴ factor, typically located around 24 base pairs upstream of the TSS (+1).</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">-24 promoter motif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000202 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000202">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
+        <obo:IAO_0000115>A promoter motif recognized by the core RNA polymerase enzyme, located on the template strand between positions -4 and +2 relative to the TSS (+1).</obo:IAO_0000115>
+        <obo:PROK_0000033>CRE</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">core recognition element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000203 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000203">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
+        <obo:IAO_0000115>A promoter motif recognized by the α subunits of RNA polymerase. It typically consists of two subsites located upstream of the -35 element.</obo:IAO_0000115>
+        <obo:PROK_0000033>UP element</obo:PROK_0000033>
+        <rdfs:label xml:lang="en">upstream promoter motif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000204 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000204">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000051"/>
+        <obo:IAO_0000115>A promoter motif recognized by the σ² domain, specifically by region σ1.2, of σ factors other than σ⁵⁴.</obo:IAO_0000115>
+        <rdfs:comment>This is an element frequently found in promoters that regulate the response to amin acid starvation.</rdfs:comment>
+        <rdfs:label xml:lang="en">discriminator element</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -3390,6 +3487,18 @@ COB_0000080</obo:IAO_0000119>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000027"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000028"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000029"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000197"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000198"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000199"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000200"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000201"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000202"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000203"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
