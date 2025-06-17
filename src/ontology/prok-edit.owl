@@ -3381,6 +3381,17 @@ COB_0000080</obo:IAO_0000119>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000023"/>
         </owl:members>
     </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000024"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000025"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000026"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000027"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000028"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000029"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
