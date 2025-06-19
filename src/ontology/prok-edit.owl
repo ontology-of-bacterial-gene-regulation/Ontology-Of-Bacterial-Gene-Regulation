@@ -2842,7 +2842,7 @@ COB_0000013</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000152">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
         <obo:IAO_0000115>a nucleotide segment constituted by a segment of DNA and a segment of RNA</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">heterotypic discontinuos segment</rdfs:label>
+        <rdfs:label xml:lang="en">heterotypic discontinuos nucleotide segment</rdfs:label>
     </owl:Class>
     
 
