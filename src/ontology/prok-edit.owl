@@ -3087,7 +3087,7 @@ COB_0000080</obo:IAO_0000119>
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>a complex of molecular entities formed by a transcription factor, a DNA fragment, and, optionally, a molecular effector, depending on the functional conformation of the complex.</obo:IAO_0000115>
-        <rdfs:comment>The complex of the TF with the TFRS directly regulates the activity of a promoter and, thereby, it regulates the expression of TUs and genes. This fact is reflected in two &apos;regulatory&apos; axioms, with wich we want to represent the fact that there are experiments that can observe the regulatory effects of this entity at different levels of the expression process.</rdfs:comment>
+        <rdfs:comment>The complex of the TF with the TFRS directly regulates the activity of a promoter and, thereby, it regulates the expression of TUs and genes. This fact is reflected in three &apos;regulatory&apos; axioms, with wich we want to represent the fact that there are experiments that can observe the regulatory effects of this entity at different levels of the expression process.</rdfs:comment>
         <rdfs:label xml:lang="en">TF bound to TFRS</rdfs:label>
     </owl:Class>
     
