@@ -2379,6 +2379,12 @@ COB_0000013</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000100">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000095"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000046"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>an RNA segment that carries the information for at least one functional RNA</obo:IAO_0000115>
         <rdfs:label xml:lang="en">transcribed region of RNA gene</rdfs:label>
     </owl:Class>
@@ -3237,7 +3243,7 @@ COB_0000080</obo:IAO_0000119>
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>a DNA continuous segment that carries the information for the structure of at least one functional RNA or polypeptide chain, or a non-functional copy of a parent gene (pseudogene). If a gene carries information for more than one simple product, it implies overlapping coding sequences or overlapping functional RNA-bearing regions.</obo:IAO_0000115>
+        <obo:IAO_0000115>a DNA continuous segment that carries the information for the structure of at least one functional RNA or polypeptide chain, or a non-functional copy of a parent gene (pseudogene).</obo:IAO_0000115>
         <rdfs:label xml:lang="en">gene</rdfs:label>
     </owl:Class>
     
