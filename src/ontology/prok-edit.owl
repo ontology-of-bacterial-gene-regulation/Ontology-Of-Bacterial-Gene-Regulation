@@ -1114,6 +1114,26 @@ We also have the outstanding issue of how to aim different definitions to differ
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000024"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000025"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000026"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000027"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000028"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000029"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
         <obo:IAO_0000115>A DNA segment essential for the specific initiation of transcription at a defined location in a DNA molecule, although this location might not be one single base, it is recognized by a specific Eσ, and this recognition is not necessarily autonomous.</obo:IAO_0000115>
         <rdfs:comment>Promoter coordinates are calculated based on the most upstream TSS. The left coordinate is 60 bases upstream and the right coordinate is 20 bases downstream the TSS.</rdfs:comment>
@@ -2185,6 +2205,21 @@ We also have the outstanding issue of how to aim different definitions to differ
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000075"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000091"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000001"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <obo:IAO_0000115>a DNA-binding regulatory protein of transcription initiation that confer core RNAP promoter specificity, open duplex DNA and facilitate template strand entry into the RNAP active site</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:32665585</obo:IAO_0000119>
         <rdfs:label xml:lang="en">sigma factor</rdfs:label>
@@ -2473,6 +2508,20 @@ COB_0000013</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000108 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000108">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000046"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000013"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
