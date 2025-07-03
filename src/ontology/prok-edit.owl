@@ -1534,6 +1534,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115>DNA-binding regulatory protein of transcription initiation that bind near a promoter and affect transcript initiation at that promoter with some mechanisms that allows it to be active in some conditions and inactive in other conditions</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:32665585</obo:IAO_0000119>
         <rdfs:comment>The fact that these proteins bind near the promoter should be represented in the transcription factor regulatory site class.</rdfs:comment>
+        <rdfs:comment>We added three equivalent class axioms to represent regulatory activity at different levels of observation: the promoter, the transcription unit (TU), or the gene. It is important to note that these axioms require at least one instance of a protein with an identified transcription factor regulatory site (TFRS) in order for the protein to be classified as a transcription factor (TF). Ontologically, this requirement ensures that TFs are defined by their DNA-binding activity. However, at the level of regulatory interaction representation, some TF–gene associations may actually reflect post-transcriptional regulation. For example, Aca2 has recently been shown to regulate translation by binding to RNA rather than DNA [PMID: 38987591]. This highlights the need for caution when inferring transcriptional regulation in the absence of a characterized TFRS.</rdfs:comment>
         <rdfs:label xml:lang="en">transcription factor</rdfs:label>
     </owl:Class>
     
