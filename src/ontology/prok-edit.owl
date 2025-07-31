@@ -1534,7 +1534,6 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000115>DNA-binding regulatory protein of transcription initiation that bind near a promoter and affect transcript initiation at that promoter with some mechanisms that allows it to be active in some conditions and inactive in other conditions</obo:IAO_0000115>
         <obo:IAO_0000119>PMID:32665585</obo:IAO_0000119>
         <rdfs:comment>The fact that these proteins bind near the promoter should be represented in the transcription factor regulatory site class.</rdfs:comment>
-        <rdfs:comment>We added three equivalent class axioms to represent regulatory activity at different levels of observation: the promoter, the transcription unit (TU), or the gene. It is important to note that these axioms require at least one instance of a protein with an identified transcription factor regulatory site (TFRS) in order for the protein to be classified as a transcription factor (TF). Ontologically, this requirement ensures that TFs are defined by their DNA-binding activity. However, at the level of regulatory interaction representation, some TF–gene associations may actually reflect post-transcriptional regulation. For example, Aca2 has recently been shown to regulate translation by binding to RNA rather than DNA [PMID: 38987591]. This highlights the need for caution when inferring transcriptional regulation in the absence of a characterized TFRS.</rdfs:comment>
         <rdfs:label xml:lang="en">transcription factor</rdfs:label>
     </owl:Class>
     
@@ -1960,9 +1959,8 @@ We also have the outstanding issue of how to aim different definitions to differ
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000119>Adapted from: https://www.merriam-webster.com/dictionary/polymer</obo:IAO_0000119>
-        <rdfs:isDefinedBy>a molecular entity that is carried or encoded in the genome and it is polymeric in nature</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">biomacromolecular entity</rdfs:label>
+        <obo:IAO_0000115>a molecular entity that is carried or encoded in the genome</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">genetically encoded biomacromolecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -2123,7 +2121,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000082 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000082">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000081"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000205"/>
         <obo:IAO_0000115>a regulatory protein that regulates the translation of a messenger RNA into a polypeptide chain</obo:IAO_0000115>
         <rdfs:label xml:lang="en">regulatory protein of translation</rdfs:label>
     </owl:Class>
@@ -2375,8 +2373,8 @@ COB_0000013</obo:IAO_0000119>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>a biomacromolecular entity that is part of a polymeric chain</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">biomacromolecular segment</rdfs:label>
+        <obo:IAO_0000115>a genetically encoded biomacromolecular entity that is part of a polymeric chain</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">genetically encoded biomacromolecular segment</rdfs:label>
     </owl:Class>
     
 
@@ -2386,7 +2384,7 @@ COB_0000013</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000097">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000071"/>
         <obo:IAO_0000115>a biomacromolecular entity that consists of one or more complete polymeric chains</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">biomacromolecule</rdfs:label>
+        <rdfs:label xml:lang="en">genetically encoded biomacromolecule</rdfs:label>
     </owl:Class>
     
 
@@ -3544,6 +3542,26 @@ COB_0000080</obo:IAO_0000119>
         <obo:IAO_0000115>A promoter motif recognized by the σ² domain, specifically by region σ1.2, of σ factors other than σ⁵⁴.</obo:IAO_0000115>
         <rdfs:comment>This is an element frequently found in promoters that regulate the response to amin acid starvation.</rdfs:comment>
         <rdfs:label xml:lang="en">discriminator element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000205 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000205">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000081"/>
+        <obo:IAO_0000115>a regulatory protein that regulates gene expression after the transcription unit is transcribed into an mRNA molecule</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">post-transcriptional regulatory protein</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000206 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000206">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000205"/>
+        <obo:IAO_0000115>a regulatory protein that binds to an RNA molecule and, by doing so, increases or decreases its degradation rate, thereby modulating its half-life without directly affecting its transcription or translation</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">protein that regulates mRNA stability</rdfs:label>
     </owl:Class>
     
 
