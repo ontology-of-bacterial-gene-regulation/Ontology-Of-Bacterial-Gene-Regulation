@@ -2914,7 +2914,7 @@ COB_0000013</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000152 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000152">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000207"/>
         <obo:IAO_0000115>a nucleotide segment constituted by a segment of DNA and a segment of RNA</obo:IAO_0000115>
         <rdfs:label xml:lang="en">heterotypic discontinuos nucleotide segment</rdfs:label>
     </owl:Class>
@@ -3562,6 +3562,29 @@ COB_0000080</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000205"/>
         <obo:IAO_0000115>a regulatory protein that binds to an RNA molecule and, by doing so, increases or decreases its degradation rate, thereby modulating its half-life without directly affecting its transcription or translation</obo:IAO_0000115>
         <rdfs:label xml:lang="en">protein that regulates mRNA stability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PROK_0000207 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000207">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000012"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000019"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">DNA discontinuos segment</rdfs:label>
     </owl:Class>
     
 
