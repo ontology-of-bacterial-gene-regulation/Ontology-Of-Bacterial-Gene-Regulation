@@ -1800,7 +1800,7 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Class>
         </owl:equivalentClass>
         <obo:IAO_0000115>a genomically carried regulator that is a nucleotide segment that acts on a genomic segment adjacent to its own locus</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">regulatory segment</rdfs:label>
+        <rdfs:label xml:lang="en">regulatory nucleotide segment</rdfs:label>
     </owl:Class>
     
 
