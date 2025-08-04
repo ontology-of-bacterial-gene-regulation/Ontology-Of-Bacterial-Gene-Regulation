@@ -2361,18 +2361,6 @@ COB_0000013</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000096">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000071"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000012"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000019"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>a genetically encoded biomacromolecular entity that is part of a polymeric chain</obo:IAO_0000115>
         <rdfs:label xml:lang="en">genetically encoded biomacromolecular segment</rdfs:label>
     </owl:Class>
