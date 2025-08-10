@@ -1799,7 +1799,7 @@ We also have the outstanding issue of how to aim different definitions to differ
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115>a genomically carried regulator that is a nucleotide segment that acts on a genomic segment adjacent to its own locus</obo:IAO_0000115>
+        <obo:IAO_0000115>a genomically carried regulator that is a nucleotide segment that acts on a genomic segment adjacent to its own locus, and modulates the rate, timing, or location of transcription or translation initiation.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">regulatory nucleotide segment</rdfs:label>
     </owl:Class>
     
@@ -2914,7 +2914,7 @@ COB_0000013</obo:IAO_0000119>
     <!-- http://purl.obolibrary.org/obo/PROK_0000152 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_0000152">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000207"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000050"/>
         <obo:IAO_0000115>a nucleotide segment constituted by a segment of DNA and a segment of RNA</obo:IAO_0000115>
         <rdfs:label xml:lang="en">heterotypic discontinuos nucleotide segment</rdfs:label>
     </owl:Class>
