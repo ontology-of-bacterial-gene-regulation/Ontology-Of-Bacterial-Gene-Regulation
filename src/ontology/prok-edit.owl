@@ -730,6 +730,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/PROK_0000151 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PROK_0000151">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000175"/>
         <rdfs:label xml:lang="en">is interaction type of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1089,7 +1090,33 @@ We also have the outstanding issue of how to aim different definitions to differ
                     </owl:Class>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000030"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000031"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000031"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000175"/>
+                                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000030"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000031"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000175"/>
+                                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1109,7 +1136,33 @@ We also have the outstanding issue of how to aim different definitions to differ
                     </owl:Class>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000124"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000175"/>
+                                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000124"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000002"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000175"/>
+                                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1129,13 +1182,39 @@ We also have the outstanding issue of how to aim different definitions to differ
                     </owl:Class>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000185"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000175"/>
+                                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000134"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PROK_0000185"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PROK_0000175"/>
+                                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/PROK_0000011"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PROK_0000045"/>
-        <obo:IAO_0000115>A DNA segment essential for the specific initiation of transcription at a defined location in a DNA molecule, although this location might not be one single base, it is recognized by a specific Eσ, and this recognition is not necessarily autonomous.</obo:IAO_0000115>
+        <obo:IAO_0000115>A DNA segment essential for the specific initiation of transcription at a defined location in a DNA molecule, although this location might not be one single base, it is recognized by a specific Eσ, and this recognition is not necessarily autonomous. A promoter initiates transcription in only one direction, with directionality determined by the strand on which its associated transcription start site resides.</obo:IAO_0000115>
         <rdfs:comment>Promoter coordinates are calculated based on the most upstream TSS. The left coordinate is 60 bases upstream and the right coordinate is 20 bases downstream the TSS.</rdfs:comment>
         <rdfs:label xml:lang="en">promoter</rdfs:label>
     </owl:Class>
@@ -1184,7 +1263,6 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000094"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PROK_0000185"/>
         <obo:IAO_0000115>A DNA segment delimited by different nonspurious TSS–TTS pairs or, more precisely, the DNA bases that correspond to the first and last bases of a transcript.</obo:IAO_0000115>
         <obo:IAO_0000119>PMID: ﻿32665585</obo:IAO_0000119>
         <obo:PROK_0000033>TU</obo:PROK_0000033>
