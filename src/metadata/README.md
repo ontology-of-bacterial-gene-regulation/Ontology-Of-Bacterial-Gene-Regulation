@@ -1,18 +1,18 @@
 Metadata files for the OBO Library
 
- * [prok.yml](prok.yml)
-     * Determines how your purl.obolibrary.org/obo/prok/ redirects will be handled
+ * [obare.yml](obare.yml)
+     * Determines how your purl.obolibrary.org/obo/obare/ redirects will be handled
      * Go here: https://github.com/OBOFoundry/purl.obolibrary.org/tree/master/config
      * Click [New File](https://github.com/OBOFoundry/purl.obolibrary.org/new/master/config)
-     * Paste in the contents of [prok.yml](prok.yml)
+     * Paste in the contents of [obare.yml](obare.yml)
      * Click "Commit new file"
      * IMPORTANT: remember to make a pull request
      * An OBO admin will merge your Pull Request *providing it meets the requirements of the OBO library*
- * [prok.md](prok.md)
+ * [obare.md](obare.md)
      * Determines how your metadata is shown on OBO Library, OLS and AberOWL
      * Go here: https://github.com/OBOFoundry/OBOFoundry.github.io/tree/master/ontology
      * Click [New File](https://github.com/OBOFoundry/OBOFoundry.github.io/new/master/ontology)
-     * Paste in the contents of [prok.md](prok.md)
+     * Paste in the contents of [obare.md](obare.md)
      * Click "Commit new file"
      * IMPORTANT: remember to make a pull request
      * An OBO admin will merge your Pull Request *providing it meets the requirements of the OBO library*
