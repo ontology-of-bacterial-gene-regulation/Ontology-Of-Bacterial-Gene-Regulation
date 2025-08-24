@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/prok
+
+idspace: OBARE
+base_url: /obo/obare
+
+products:
+- obare.owl: https://raw.githubusercontent.com/ontology-of-bacterial-regulation/ontology-of-bacterial-regulation/master/prok.owl
+- obare.obo: https://raw.githubusercontent.com/ontology-of-bacterial-regulation/ontology-of-bacterial-regulation/master/prok.obo
+
+term_browser: ontobee
+example_terms:
+- OBARE_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/ontology-of-bacterial-regulation/ontology-of-bacterial-regulation/v
+
+- prefix: /tracker/
+  replacement: https://github.com/ontology-of-bacterial-regulation/ontology-of-bacterial-regulation/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/OBARE?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/ontology-of-bacterial-regulation/ontology-of-bacterial-regulation/master/
