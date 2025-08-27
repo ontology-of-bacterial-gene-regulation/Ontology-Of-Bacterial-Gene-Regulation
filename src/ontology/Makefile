@@ -1,5 +1,5 @@
 # ----------------------------------------
-# Makefile for prok
+# Makefile for obare
 # Generated using ontology-starter-kit
 # ----------------------------------------
 # <do not edit above this line>
@@ -10,7 +10,7 @@
 # these can be overwritten on the command line
 
 OBO=http://purl.obolibrary.org/obo
-ONT=prok
+ONT=obare
 BASE=$(OBO)/$(ONT)
 SRC=$(ONT)-edit.owl
 RELEASEDIR=../..

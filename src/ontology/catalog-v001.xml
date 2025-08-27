@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/prok/imports/bfo_import.owl" uri="imports/bfo_import.owl"/>
-  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/prok/imports/mso_import.owl" uri="imports/mso_import.owl"/>
-  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/prok/imports/ogg_import.owl" uri="imports/ogg_import.owl"/>
-  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/prok/patterns/definitions.owl" uri="../patterns/definitions.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/obare/imports/bfo_import.owl" uri="imports/bfo_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/obare/imports/mso_import.owl" uri="imports/mso_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/obare/imports/ogg_import.owl" uri="imports/ogg_import.owl"/>
+  <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/obare/patterns/definitions.owl" uri="../patterns/definitions.owl"/>
     <group id="Folder Repository, directory=, recursive=false, Auto-Update=false, version=2" prefer="public" xml:base=""/>
 </catalog>
