@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology.svg?branch=master)](https://travis-ci.org/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology)
-[![DOI](https://zenodo.org/badge/13996/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology.svg)](https://zenodo.org/badge/latestdoi/13996/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology)
+[![Build Status](https://travis-ci.org/ontology-of-bacterial-regulation/Ontology-Of-Bacterial-Regulation.svg?branch=master)](https://travis-ci.org/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology)
+[![DOI](https://zenodo.org/badge/13996/ontology-of-bacterial-regulation/Ontology-Of-Bacterial-Regulation.svg)](https://zenodo.org/badge/latestdoi/13996/ontology-of-bacterial-regulation/Ontology-Of-Bacterial-Regulation)
 
-# prokaryotic-regulation-ontology
+# ontology-of-bacterial-regulation
 
 This ontology... YOUR DESCRIPTION HERE
 
@@ -11,17 +11,17 @@ This ontology... YOUR DESCRIPTION HERE
 
 The latest version of the ontology can always be found at:
 
-http://purl.obolibrary.org/obo/prok.owl
+http://purl.obolibrary.org/obo/obare.owl
 
 (note this will not show up until the request has been approved by obofoundry.org)
 
 ### Editors' version
 
-Editors of this ontology should use the edit version, [src/ontology/prok-edit.owl](src/ontology/prok-edit.owl)
+Editors of this ontology should use the edit version, [src/ontology/obare-edit.owl](src/ontology/obare-edit.owl)
 
 ## Contact
 
-Please use this GitHub repository's [Issue tracker](https://github.com/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
+Please use this GitHub repository's [Issue tracker](https://github.com/ontology-of-bacterial-regulation/Ontology-Of-Bacterial-Regulation/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
 
 ## Acknowledgements
 
