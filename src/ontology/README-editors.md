@@ -1,4 +1,4 @@
-These notes are for the EDITORS of prok
+These notes are for the EDITORS of obare
 
 This project was created using the [ontology starter kit](https://github.com/cmungall/ontology-starter-kit). See the site for details.
 
@@ -14,23 +14,23 @@ You may also want to read the [GO ontology editors guide](http://go-ontology.rea
 
 ## Editors Version
 
-Make sure you have an ID range in the [idranges file](prok-idranges.owl)
+Make sure you have an ID range in the [idranges file](obare-idranges.owl)
 
 If you do not have one, get one from the head curator.
 
-The editors version is [prok-edit.owl](prok-edit.owl)
+The editors version is [obare-edit.owl](obare-edit.owl)
 
-** DO NOT EDIT prok.obo OR prok.owl in the top level directory **
+** DO NOT EDIT obare.obo OR obare.owl in the top level directory **
 
-[../../prok.owl](../../prok.owl) is the release version
+[../../obare.owl](../../obare.owl) is the release version
 
-To edit, open the file in Protege. First make sure you have the repository cloned, see [the GitHub project](https://github.com/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology) for details.
+To edit, open the file in Protege. First make sure you have the repository cloned, see [the GitHub project](https://github.com/ontology-of-bacterial-regulation/ontology-of-bacterial-regulation) for details.
 
 ## ID Ranges
 
 These are stored in the file
 
- * [prok-idranges.owl](prok-idranges.owl)
+ * [obare-idranges.owl](obare-idranges.owl)
 
 ** ONLY USE IDs WITHIN YOUR RANGE!! **
 
@@ -116,7 +116,7 @@ If this looks good type:
 
     ./run.sh make prepare_release
 
-This generates derived files such as prok.owl and prok.obo and places
+This generates derived files such as obare.owl and obare.obo and places
 them in the top level (../..). The versionIRI will be added.
 
 Commit and push these files.
@@ -131,16 +131,16 @@ Finally type
 
 IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
 
- * https://github.com/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology/releases
- * https://github.com/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology/releases/new
+ * https://github.com/ontology-of-bacterial-regulation/ontology-of-bacterial-regulation/releases
+ * https://github.com/ontology-of-bacterial-regulation/ontology-of-bacterial-regulation/releases/new
 
 The value of the "Tag version" field MUST be
 
     vYYYY-MM-DD
 
 The initial lowercase "v" is REQUIRED. The YYYY-MM-DD *must* match
-what is in the versionIRI of the derived prok.owl (data-version in
-prok.obo).
+what is in the versionIRI of the derived obare.owl (data-version in
+obare.obo).
 
 Release title should be YYYY-MM-DD, optionally followed by a title (e.g. "january release")
 
@@ -152,20 +152,20 @@ The PURLs are already configured to pull from github. This means that
 BOTH ontology purls and versioned ontology purls will resolve to the
 correct ontologies. Try it!
 
- * http://purl.obolibrary.org/obo/prok.owl <-- current ontology PURL
- * http://purl.obolibrary.org/obo/prok/releases/YYYY-MM-DD.owl <-- change to the release you just made
+ * http://purl.obolibrary.org/obo/obare.owl <-- current ontology PURL
+ * http://purl.obolibrary.org/obo/obare/releases/YYYY-MM-DD.owl <-- change to the release you just made
 
 For questions on this contact Chris Mungall or email obo-admin AT obofoundry.org
 
 # Travis Continuous Integration System
 
-Check the build status here: [![Build Status](https://travis-ci.org/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology.svg?branch=master)](https://travis-ci.org/prokaryotic-regulation-ontology/prokaryotic-regulation-ontology)
+Check the build status here: [![Build Status](https://travis-ci.org/ontology-of-bacterial-regulation/ontology-of-bacterial-regulation.svg?branch=master)](https://travis-ci.org/ontology-of-bacterial-regulation/ontology-of-bacterial-regulation)
 
 Note: if you have only just created this project you will need to authorize travis for this repo.
 
- 1. Go to [https://travis-ci.org/profile/prokaryotic-regulation-ontology](https://travis-ci.org/profile/prokaryotic-regulation-ontology)
+ 1. Go to [https://travis-ci.org/profile/ontology-of-bacterial-regulation](https://travis-ci.org/profile/ontology-of-bacterial-regulation)
  2. click the "Sync account" button
- 3. Click the tick symbol next to prokaryotic-regulation-ontology
+ 3. Click the tick symbol next to ontology-of-bacterial-regulation
 
 Travis builds should now be activated
 

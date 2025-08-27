@@ -1,0 +1,342 @@
+format-version: 1.2
+data-version: 2024-11-18
+ontology: so
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/SO_0000110>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/SO_0000400>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/SO_0000110> (sequence_feature)\n\nSubClassOf(<http://purl.obolibrary.org/obo/SO_0000110> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/SO_0000400> (sequence_attribute)\n\nSubClassOf(<http://purl.obolibrary.org/obo/SO_0000400> owl:Thing)\n\n\n)
+
+[Term]
+id: SO:0000001
+name: region
+namespace: sequence
+def: "A sequence_feature with an extent greater than zero. A nucleotide region is composed of bases and a polypeptide region is composed of amino acids." [SO:ke]
+subset: SOFA
+synonym: "sequence" EXACT []
+is_a: SO:0000110 ! sequence_feature
+
+[Term]
+id: SO:0000110
+name: sequence_feature
+namespace: sequence
+def: "Any extent of continuous biological sequence." [LAMHDI:mb, SO:ke]
+subset: SOFA
+synonym: "INSDC_feature:misc_feature" EXACT []
+synonym: "INSDC_note:other" EXACT []
+synonym: "INSDC_note:sequence_feature" EXACT []
+synonym: "located sequence feature" RELATED []
+synonym: "located_sequence_feature" EXACT []
+synonym: "sequence feature" EXACT []
+
+[Term]
+id: SO:0000167
+name: promoter
+namespace: sequence
+def: "A regulatory_region composed of the TSS(s) and binding sites for TF_complexes of the core transcription machinery. A region (DNA) to which RNA polymerase binds, to begin transcription." [SO:regcreative]
+comment: This term is mapped to MGED. Do not obsolete without consulting MGED ontology. The region on a DNA molecule involved in RNA polymerase binding to initiate transcription. Moved from is_a: SO:0001055 transcriptional_cis_regulatory_region as per request from GREEKC initiative in August 2020. Merged with RNA_polymerase_promoter (SO:0001203) Aug 2020. Moved up one level from is_a CRM (SO:0000727) to is_a transcriptional_cis_regulatory_region (SO:0001055) as part of the GREEKC work January 2021. Pascale Gaudet from Gene Ontology pointed out that CRM can be located upstream of the promoter and therefore cannot include the promoter.
+subset: SOFA
+synonym: "INSDC_feature:regulatory" BROAD []
+synonym: "INSDC_qualifier:promoter" EXACT []
+synonym: "promoter sequence" EXACT []
+xref: http://en.wikipedia.org/wiki/Promoter "wiki"
+is_a: SO:0000842 ! gene_component_region
+is_a: SO:0001055 ! transcriptional_cis_regulatory_region
+
+[Term]
+id: SO:0000175
+name: minus_10_signal
+namespace: sequence
+def: "A conserved region about 10-bp upstream of the start point of bacterial transcription units which may be involved in binding RNA polymerase; consensus=TAtAaT. This region is associated with sigma factor 70." [http://www.insdc.org/files/feature_table.html]
+comment: Changed from is_a SO:0000713 DNA_motif to is_a SO:0002312 core_prokaryotic_promoter_element in response to GREEKC Initiative Dave Sant Aug 2020. Changed from is_a SO:0002312 core_prokaryotic_promoter_element back to is_a SO:0000713 DNA_motif to be consistent with minus_12_signal and minus_24_signal on 12 July 2021.
+synonym: "-10 signal" EXACT []
+synonym: "INSDC_feature:regulatory" BROAD []
+synonym: "INSDC_qualifier:minus_10_signal" EXACT []
+synonym: "minus 10 signal" EXACT []
+synonym: "Pribnow box" EXACT []
+synonym: "Pribnow Schaller box" EXACT []
+synonym: "Pribnow-Schaller box" EXACT []
+xref: http://en.wikipedia.org/wiki/Pribnow_box "wiki"
+is_a: SO:0000713 ! DNA_motif
+
+[Term]
+id: SO:0000176
+name: minus_35_signal
+namespace: sequence
+def: "A conserved hexamer about 35-bp upstream of the start point of bacterial transcription units; consensus=TTGACa or TGTTGACA. This region is associated with sigma factor 70." [http://www.insdc.org/files/feature_table.html]
+comment: Changed from is_a SO:0000713 DNA_motif to is_a SO:0002312 core_prokaryotic_promoter_element in response to GREEKC Initiative Dave Sant Aug 2020. Changed from is_a SO:0002312 core_prokaryotic_promoter_element back to is_a SO:0000713 DNA_motif to be consistent with minus_12_signal and minus_24_signal on 12 July 2021.
+synonym: "-35 signal" EXACT []
+synonym: "INSDC_feature:regulatory" BROAD []
+synonym: "INSDC_qualifier:minus_35_signal" EXACT []
+synonym: "minus 35 signal" EXACT []
+is_a: SO:0000713 ! DNA_motif
+
+[Term]
+id: SO:0000315
+name: TSS
+namespace: sequence
+def: "The first base where RNA polymerase begins to synthesize the RNA transcript." [SO:ke]
+comment: Added relationship is_a SO:0002309 core_promoter_element with the creation of core_promoter_element as part of GREEKC initiative August 2020 - Dave Sant.
+subset: SOFA
+synonym: "INSDC_feature:misc_feature" BROAD []
+synonym: "INSDC_note:transcription_start_site" EXACT []
+synonym: "transcription start site" EXACT []
+synonym: "transcription_start_site" EXACT []
+is_a: SO:0000835 ! primary_transcript_region
+is_a: SO:0002309 ! core_promoter_element
+
+[Term]
+id: SO:0000400
+name: sequence_attribute
+namespace: sequence
+def: "An attribute describes a quality of sequence." [SO:ke]
+synonym: "sequence attribute" EXACT []
+
+[Term]
+id: SO:0000613
+name: bacterial_RNApol_promoter
+namespace: sequence
+def: "A DNA sequence to which bacterial RNA polymerase binds, to begin transcription." [SO:ke]
+comment: former parent RNA_polymerase_promoter SO:0001203 was merged with promoter SO:0000167 in Aug 2020 as part of GREEKC.
+synonym: "bacterial RNApol promoter" EXACT []
+is_a: SO:0002222 ! prokaryotic_promoter
+
+[Term]
+id: SO:0000713
+name: DNA_motif
+namespace: sequence
+def: "A motif that is active in the DNA form of the sequence." [SO:ke]
+synonym: "DNA motif" EXACT []
+xref: http://en.wikipedia.org/wiki/DNA_motif "wiki"
+is_a: SO:0000714 ! nucleotide_motif
+
+[Term]
+id: SO:0000714
+name: nucleotide_motif
+namespace: sequence
+def: "A region of nucleotide sequence corresponding to a known motif." [SO:ke]
+subset: SOFA
+synonym: "INSDC_feature:misc_feature" BROAD []
+synonym: "INSDC_note:nucleotide_motif" EXACT []
+synonym: "nucleotide motif" EXACT []
+is_a: SO:0001683 ! sequence_motif
+
+[Term]
+id: SO:0000733
+name: feature_attribute
+namespace: sequence
+def: "An attribute describing a located_sequence_feature." [SO:ke]
+synonym: "feature attribute" EXACT []
+is_a: SO:0000400 ! sequence_attribute
+
+[Term]
+id: SO:0000831
+name: gene_member_region
+namespace: sequence
+def: "A region of a gene." [SO:ke]
+comment: A manufactured term used to allow the parts of a gene to have an is_a path to the root.
+subset: SOFA
+synonym: "gene member region" EXACT []
+is_a: SO:0001411 ! biological_region
+
+[Term]
+id: SO:0000833
+name: transcript_region
+namespace: sequence
+def: "A region of a transcript." [SO:ke]
+comment: This term was added to provide a grouping term for the region parts of transcript, thus giving them an is_a path back to the root.
+subset: SOFA
+synonym: "transcript region" EXACT []
+is_a: SO:0001411 ! biological_region
+
+[Term]
+id: SO:0000835
+name: primary_transcript_region
+namespace: sequence
+def: "A part of a primary transcript." [SO:ke]
+comment: This term was added to provide a grouping term for the region parts of primary_transcript, thus giving them an is_a path back to the root.
+subset: SOFA
+synonym: "primary transcript region" EXACT []
+is_a: SO:0000833 ! transcript_region
+
+[Term]
+id: SO:0000842
+name: gene_component_region
+namespace: sequence
+def: "A region of a gene that has a specific function." []
+subset: SOFA
+synonym: "gene component region" EXACT []
+is_a: SO:0001411 ! biological_region
+
+[Term]
+id: SO:0001029
+name: direction_attribute
+namespace: sequence
+def: "The attribute of whether the sequence is the same direction as a feature (forward) or the opposite direction as a feature (reverse)." []
+synonym: "direction attribute" EXACT []
+is_a: SO:0000733 ! feature_attribute
+
+[Term]
+id: SO:0001030
+name: forward
+namespace: sequence
+def: "Forward is an attribute of the feature, where the feature is in the 5' to 3' direction." [SO:ke]
+is_a: SO:0001029 ! direction_attribute
+
+[Term]
+id: SO:0001031
+name: reverse
+namespace: sequence
+def: "Reverse is an attribute of the feature, where the feature is in the 3' to 5' direction. Again could be applied to primer." [SO:ke]
+is_a: SO:0001029 ! direction_attribute
+
+[Term]
+id: SO:0001055
+name: transcriptional_cis_regulatory_region
+namespace: sequence
+def: "A regulatory_region that modulates the transcription of a gene or genes." [PMID:9679020, SO:regcreative]
+comment: Previous parent term transcription_regulatory_region (SO:0001067) has been merged with this term on 11 Feb 2021 as part of the GREEKC consortium. See GitHub Issue #527.
+subset: SOFA
+synonym: "INSDC_feature:regulatory" BROAD []
+synonym: "INSDC_qualifier:transcriptional_cis_regulatory_region" EXACT []
+synonym: "transcription-control region" EXACT []
+synonym: "transcriptional cis regulatory region" EXACT []
+is_a: SO:0005836 ! regulatory_region
+
+[Term]
+id: SO:0001411
+name: biological_region
+namespace: sequence
+def: "A region defined by its disposition to be involved in a biological process." [SO:cb]
+subset: SOFA
+synonym: "biological region" EXACT []
+synonym: "INSDC_misc_feature" BROAD []
+synonym: "INSDC_note:biological_region" EXACT []
+is_a: SO:0000001 ! region
+
+[Term]
+id: SO:0001659
+name: promoter_element
+namespace: sequence
+def: "An element that can exist within the promoter region of a gene." []
+comment: Mmoved from is_a: SO:0001055 transcriptional_cis_regulatory_region as per request from GREEKC initiative in August 2020.
+synonym: "promoter element" EXACT []
+is_a: SO:0000713 ! DNA_motif
+created_by: kareneilbeck
+creation_date: 2010-10-01T11:48:32Z
+
+[Term]
+id: SO:0001671
+name: bacterial_RNApol_promoter_sigma_70_element
+namespace: sequence
+def: "A DNA sequence to which bacterial RNA polymerase sigma 70 binds, to begin transcription." []
+synonym: "bacterial RNA polymerase promoter sigma 70" EXACT []
+is_a: SO:0000613 ! bacterial_RNApol_promoter
+created_by: kareneilbeck
+creation_date: 2010-10-06T01:41:34Z
+
+[Term]
+id: SO:0001672
+name: bacterial_RNApol_promoter_sigma54_element
+namespace: sequence
+def: "A DNA sequence to which bacterial RNA polymerase sigma 54 binds, to begin transcription." []
+synonym: "<new synonym>" RELATED []
+synonym: "bacterial RNA polymerase promoter sigma54" EXACT []
+is_a: SO:0000613 ! bacterial_RNApol_promoter
+created_by: kareneilbeck
+creation_date: 2010-10-06T01:42:37Z
+
+[Term]
+id: SO:0001673
+name: minus_12_signal
+namespace: sequence
+def: "A conserved region about 12-bp upstream of the start point of bacterial transcription units, involved with sigma factor 54." [PMID:18331472]
+synonym: "minus 12 signal" EXACT []
+is_a: SO:0000713 ! DNA_motif
+created_by: kareneilbeck
+creation_date: 2010-10-06T01:44:57Z
+
+[Term]
+id: SO:0001674
+name: minus_24_signal
+namespace: sequence
+def: "A conserved region about 24-bp upstream of the start point of bacterial transcription units, involved with sigma factor 54." [PMID:18331472]
+synonym: "minus 24 signal" RELATED []
+is_a: SO:0000713 ! DNA_motif
+created_by: kareneilbeck
+creation_date: 2010-10-06T01:45:24Z
+
+[Term]
+id: SO:0001683
+name: sequence_motif
+namespace: sequence
+def: "A sequence motif is a nucleotide or amino-acid sequence pattern that may have biological significance." [http://en.wikipedia.org/wiki/Sequence_motif]
+subset: SOFA
+synonym: "sequence motif" RELATED []
+xref: http://en.wikipedia.org/wiki/Sequence_motif "wikipedia"
+is_a: SO:0001411 ! biological_region
+created_by: kareneilbeck
+creation_date: 2010-10-14T04:13:22Z
+
+[Term]
+id: SO:0001913
+name: bacterial_RNApol_promoter_sigma_ecf_element
+namespace: sequence
+def: "A bacterial promoter with sigma ecf factor binding dependency. This is a type of bacterial promoters that requires a sigma ECF factor to bind to identified -10 and -35 sequence regions in order to mediate binding of the RNA polymerase to the promoter region as part of transcription initiation." [Invitrogen:kc]
+comment: Requested by Kevin Clancy - invitrogen -May 2012.
+synonym: "bacterial RNApol promoter sigma ecf " EXACT []
+is_a: SO:0000613 ! bacterial_RNApol_promoter
+created_by: kareneilbeck
+creation_date: 2012-06-11T02:41:33Z
+
+[Term]
+id: SO:0002222
+name: prokaryotic_promoter
+namespace: sequence
+def: "A regulatory_region essential for the specific initiation of transcription at a defined location in a DNA molecule, although this location might not be one single base. It is recognized by a specific RNA polymerase(RNAP)-holoenzyme, and this recognition is not necessarily autonomous." [PMID:32665585]
+synonym: "Prokaryotic promoter" EXACT []
+is_a: SO:0000167 ! promoter
+created_by: david
+creation_date: 2019-07-31T14:02:26Z
+
+[Term]
+id: SO:0002300
+name: unit_of_gene_expression
+namespace: sequence
+def: "Transcription units or transcribed coding sequences." [Bacterial_regulation_working_group:CMA, PMID:32665585]
+comment: Added as per Mejia-Almonte et.al PMID:32665585
+synonym: "unit of gene expression" EXACT []
+is_a: SO:0001411 ! biological_region
+created_by: david
+creation_date: 2020-08-05T11:49:30Z
+
+[Term]
+id: SO:0002301
+name: transcription_unit
+namespace: sequence
+def: "DNA regions delimited by different nonspurious TSS-TTS pairs." [Bacterial_regulation_working_group:CMA, PMID:32665585]
+comment: Added as per Mejia-Almonte et.al PMID:32665585
+synonym: "transcription unit" EXACT []
+is_a: SO:0002300 ! unit_of_gene_expression
+created_by: david
+creation_date: 2020-08-05T11:49:30Z
+
+[Term]
+id: SO:0002309
+name: core_promoter_element
+namespace: sequence
+def: "An element that always exists within the promoter region of a gene. When multiple transcripts exist for a gene, the separate transcripts may have separate core_promoter_elements." [GREEKC:rl]
+comment: Added by Dave to be consistent with other ontologies updated with GREEKC initiative.
+synonym: "core promoter element" EXACT []
+is_a: SO:0001659 ! promoter_element
+created_by: david
+creation_date: 2020-08-12T14:01:30Z
+
+[Term]
+id: SO:0005836
+name: regulatory_region
+namespace: sequence
+def: "A region of sequence that is involved in the control of a biological process." [SO:ke]
+subset: SOFA
+synonym: "INSDC_feature:regulatory" BROAD []
+synonym: "INSDC_qualifier:other" EXACT []
+synonym: "regulatory region" EXACT []
+xref: http://en.wikipedia.org/wiki/Regulatory_region "wiki"
+is_a: SO:0000831 ! gene_member_region
+
