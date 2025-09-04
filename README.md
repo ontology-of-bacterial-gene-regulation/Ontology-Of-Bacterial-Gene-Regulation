@@ -3,7 +3,9 @@
 
 # ontology-of-bacterial-regulation
 
-This ontology... YOUR DESCRIPTION HERE
+The Ontology of Bacterial Regulation (OBARE) is an ontology developed to formally represent the concepts and relationships underlying bacterial gene regulation. It translates expert-reviewed definitions of promoters, transcription units, transcription factors, and related entities into formal OWL axioms, enabling logical consistency and future integration with FAIR data initiatives.
+
+Unlike instance-based models, OBARE focuses on TBox-level definitions: necessary and sufficient conditions are defined at the class level to capture our best current understanding of regulatory biology. These definitions are provisional but expert-informed, designed to be transparent and extensible as new biological evidence emerges.
 
 ## Versions
 
