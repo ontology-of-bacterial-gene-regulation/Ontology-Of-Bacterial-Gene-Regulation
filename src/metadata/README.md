@@ -1,18 +1,18 @@
 Metadata files for the OBO Library
 
- * [obare.yml](obare.yml)
-     * Determines how your purl.obolibrary.org/obo/obare/ redirects will be handled
+ * [obager.yml](obager.yml)
+     * Determines how your purl.obolibrary.org/obo/obager/ redirects will be handled
      * Go here: https://github.com/OBOFoundry/purl.obolibrary.org/tree/master/config
      * Click [New File](https://github.com/OBOFoundry/purl.obolibrary.org/new/master/config)
-     * Paste in the contents of [obare.yml](obare.yml)
+     * Paste in the contents of [obager.yml](obager.yml)
      * Click "Commit new file"
      * IMPORTANT: remember to make a pull request
      * An OBO admin will merge your Pull Request *providing it meets the requirements of the OBO library*
- * [obare.md](obare.md)
+ * [obager.md](obager.md)
      * Determines how your metadata is shown on OBO Library, OLS and AberOWL
      * Go here: https://github.com/OBOFoundry/OBOFoundry.github.io/tree/master/ontology
      * Click [New File](https://github.com/OBOFoundry/OBOFoundry.github.io/new/master/ontology)
-     * Paste in the contents of [obare.md](obare.md)
+     * Paste in the contents of [obager.md](obager.md)
      * Click "Commit new file"
      * IMPORTANT: remember to make a pull request
      * An OBO admin will merge your Pull Request *providing it meets the requirements of the OBO library*

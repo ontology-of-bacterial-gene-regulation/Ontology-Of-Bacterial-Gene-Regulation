@@ -1,0 +1,67 @@
+Prefix: allocatedto: <http://purl.obolibrary.org/obo/IAO_0000597>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: iddigits: <http://purl.obolibrary.org/obo/IAO_0000596>
+Prefix: idprefix: <http://purl.obolibrary.org/obo/IAO_0000599>
+Prefix: idrange: <http://purl.obolibrary.org/obo/ro/idrange/>
+Prefix: idsfor: <http://purl.obolibrary.org/obo/IAO_0000598>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://purl.obolibrary.org/obo/obager/obager-idranges.owl>
+
+
+Annotations: 
+    <http://purl.obolibrary.org/obo/IAO_0000596> 7,
+    <http://purl.obolibrary.org/obo/IAO_0000598> "OBAGER",
+    <http://purl.obolibrary.org/obo/IAO_0000599> "http://purl.obolibrary.org/obo/OBAGER_"
+
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000596>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000597>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000598>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000599>
+
+    
+Datatype: <http://purl.obolibrary.org/obo/ro/idrange/1>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000597> "ONTOLOGY-CREATOR"
+    
+    EquivalentTo: 
+        xsd:integer[>= 0 , <= 999999]
+    
+    
+Datatype: <http://purl.obolibrary.org/obo/ro/idrange/2>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000597> "ADDITIONAL EDITOR"
+    
+    EquivalentTo: 
+        xsd:integer[>= 1000000 , <= 1999999]
+    
+    
+Datatype: <http://purl.obolibrary.org/obo/ro/idrange/3>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000597> "TermGenie"
+    
+    EquivalentTo: 
+        xsd:integer[> 2000000 , <= 2999999]
+    
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:integer
+
+    

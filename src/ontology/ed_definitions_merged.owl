@@ -8,8 +8,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/obare.owl">
-        <rdfs:comment>Ontology of Bacterial Regulation</rdfs:comment>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/obager.owl">
+        <rdfs:comment>Ontology of Bacterial Gene Regulation</rdfs:comment>
     </owl:Ontology>
     
 
@@ -98,7 +98,7 @@
     <!-- http://purl.obolibrary.org/obo/PROK_00000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PROK_00000000">
-        <rdfs:label xml:lang="en">prok</rdfs:label>
+        <rdfs:label xml:lang="en">obager</rdfs:label>
     </owl:Class>
     
 

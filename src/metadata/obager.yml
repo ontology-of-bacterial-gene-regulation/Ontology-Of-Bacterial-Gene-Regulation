@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/obager
+
+idspace: OBAGER
+base_url: /obo/obager
+
+products:
+- obager.owl: https://raw.githubusercontent.com/ontology-of-bacterial-gene-regulation/Ontology-Of-Bacterial-Gene-Regulation/master/obager.owl
+- obager.obo: https://raw.githubusercontent.com/ontology-of-bacterial-gene-regulation/Ontology-Of-Bacterial-Gene-Regulation/master/obager.obo
+
+term_browser: ontobee
+example_terms:
+- OBAGER_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/ontology-of-bacterial-gene-regulation/Ontology-Of-Bacterial-Gene-Regulation/v
+
+- prefix: /tracker/
+  replacement: https://github.com/ontology-of-bacterial-gene-regulation/Ontology-Of-Bacterial-Gene-Regulation/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/OBAGER?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/ontology-of-bacterial-gene-regulation/Ontology-Of-Bacterial-Gene-Regulation/master/
