@@ -2511,8 +2511,8 @@ COB_0000013</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBAGER_0000096">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBAGER_0000071"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a genetically encoded biomacromolecular entity that is part of a polymeric chain</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">genetically encoded biomacromolecular segment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a genetically carried biomacromolecular entity that is part of a polymeric chain</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">genetically carried biomacromolecular segment</rdfs:label>
     </owl:Class>
     
 
@@ -2522,7 +2522,7 @@ COB_0000013</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBAGER_0000097">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBAGER_0000071"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a biomacromolecular entity that consists of one or more complete polymeric chains</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">genetically encoded biomacromolecule</rdfs:label>
+        <rdfs:label xml:lang="en">genetically carried biomacromolecule</rdfs:label>
     </owl:Class>
     
 
