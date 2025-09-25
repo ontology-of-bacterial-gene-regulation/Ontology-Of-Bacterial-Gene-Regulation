@@ -1273,7 +1273,7 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBAGER_0000045"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A DNA segment essential for the specific initiation of transcription at a defined location in a DNA molecule, although this location might not be one single base, it is recognized by a specific Eσ, and this recognition is not necessarily autonomous. A promoter initiates transcription in only one direction, with directionality determined by the strand on which its associated transcription start site resides.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A DNA segment essential for the initiation of transcription at a defined location in a DNA molecule, although this location might not be one single base, it is recognized by a specific Eσ, and this recognition is not necessarily autonomous. A promoter guides transcription initiation in only one direction, with directionality determined by the strand on which its associated transcription start site resides.</obo:IAO_0000115>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Promoter coordinates are calculated based on the most upstream TSS. The left coordinate is 60 bases upstream and the right coordinate is 20 bases downstream the TSS.</rdfs:comment>
         <rdfs:label xml:lang="en">promoter</rdfs:label>
     </owl:Class>
