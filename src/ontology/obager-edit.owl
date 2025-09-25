@@ -2109,7 +2109,8 @@ We also have the outstanding issue of how to aim different definitions to differ
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a molecular entity that is carried or encoded in the genome</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">genetically encoded biomacromolecular entity</rdfs:label>
+        <rdfs:comment>Since the genetic code is used to translate RNA into protein, we use the broader term &apos;carried&apos; to include RNAs that are carried but not encoded in the genome.</rdfs:comment>
+        <rdfs:label xml:lang="en">genetically carried biomacromolecular entity</rdfs:label>
     </owl:Class>
     
 
