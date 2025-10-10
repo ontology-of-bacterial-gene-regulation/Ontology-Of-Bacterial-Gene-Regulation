@@ -605,7 +605,7 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBAGER_0000112">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/OBAGER_0000129"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a relation that holds between an entity (activator) and a biomacromolecuar entity, in which the activator brings about a change necessary for the biomacromolecular entity to be functional</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a relation that holds between an entity (activator) and a biomacromolecular entity, in which the activator brings about a change necessary for the biomacromolecular entity to be functional</obo:IAO_0000115>
         <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBAGER_0000112</owlr:python_name>
         <rdfs:label xml:lang="en">activates</rdfs:label>
     </owl:ObjectProperty>
@@ -617,7 +617,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBAGER_0000113">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/OBAGER_0000129"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/OBAGER_0000114"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a relation that holds between an entity (deactivator) and a biomacromolecuar entity, in which the deactivator brings about a change necessary for the biomacromolecular entity to stop being functional</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a relation that holds between an entity (deactivator) and a biomacromolecular entity, in which the deactivator brings about a change necessary for the biomacromolecular entity to stop being functional</obo:IAO_0000115>
         <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBAGER_0000113</owlr:python_name>
         <rdfs:label xml:lang="en">deactivates</rdfs:label>
     </owl:ObjectProperty>
@@ -678,6 +678,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/OBAGER_0000002"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a relationshipt that holds between a promoter and the transcription unit whose transcription it initiates</obo:IAO_0000115>
         <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBAGER_0000124</owlr:python_name>
+        <rdfs:comment>TO DO: change label to &quot;locates initiation of transcription of&quot; and it is not a regulatory property.</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a regulatory property since promoter, by definition is the site for the union for the RNAP holoenzyme and it is recognized by a sigma factor, which means that sigma factor selects where to start transcription in a specific manner.</rdfs:comment>
         <rdfs:label xml:lang="en">specifically inititates transcription of</rdfs:label>
     </owl:ObjectProperty>
@@ -690,6 +691,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/OBAGER_0000134"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a relationshipt that holds between a terminator and the transcription unit whose transcription it ends</obo:IAO_0000115>
         <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBAGER_0000125</owlr:python_name>
+        <rdfs:comment>TO DO: change label to &quot;locates initiation of transcription of&quot; and it is not a subproperty of regulates.</rdfs:comment>
         <rdfs:label xml:lang="en">terminates transcription of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -711,7 +713,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBAGER_0000129">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/OBAGER_0000038"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/OBAGER_0000132"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a relation that holds between a regulator entity and a biomacromolecuar entity, in which the regulator changes the functional state of the biomacromolecular entity</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a relation that holds between a regulator entity and a biomacromolecular entity, in which the regulator changes the functional state of the biomacromolecular entity</obo:IAO_0000115>
         <owlr:python_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBAGER_0000129</owlr:python_name>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We use this property to describe the relation between all promoter regulators and the promoter, and the relation between effectors and its targets. Since the targets of effectors can be enzymes, we did not make this property a subproperty of “regulates expression of”.</rdfs:comment>
         <rdfs:label xml:lang="en">regulates activity of</rdfs:label>
@@ -1275,6 +1277,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBAGER_0000045"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A DNA segment essential for the initiation of transcription at a defined location in a DNA molecule, although this location might not be one single base, it is recognized by a specific Eσ, and this recognition is not necessarily autonomous. A promoter guides transcription initiation in only one direction, with directionality determined by the strand on which its associated transcription start site resides.</obo:IAO_0000115>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Promoter coordinates are calculated based on the most upstream TSS. The left coordinate is 60 bases upstream and the right coordinate is 20 bases downstream the TSS.</rdfs:comment>
+        <rdfs:comment>TO DO: eliminate the &quot;regulates expression of some gene&quot; axiom. Do it after confirming with Steve that promoter, terminator and TU are the primary objects subject to regulation, and that they are not regulators.</rdfs:comment>
         <rdfs:label xml:lang="en">promoter</rdfs:label>
     </owl:Class>
     
